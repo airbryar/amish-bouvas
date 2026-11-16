@@ -5,7 +5,7 @@ lineups, Median Watch, trades and waiver pickups, team pages and a Record Book o
 seasons. It reads everything from ESPN on its own. During games, scores refresh about once a
 minute.
 
-Once it's set up, the site lives at **https://YOUR-GITHUB-USERNAME.github.io/amish-bouvas/**.
+Once it's set up, the site lives at **https://amishbouva.github.io/amish-bouvas/**.
 Everyone in the league can add it to their iPhone's Home Screen like an app (in Safari, tap
 Share, then **Add to Home Screen**).
 

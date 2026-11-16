@@ -7,7 +7,8 @@ This repository is the website for **The Amish Bouvas Fantasy League** ("Amish B
 "ABFL"), a 12-team ESPN fantasy football league with a weekly median game; the top 6 make
 the playoffs. ESPN league ID 147882, season 2026. It's hosted on GitHub Pages from this repo,
 at `https://<owner>.github.io/<repo>/` (the address follows whichever GitHub account owns
-the repo).
+the repo): owned by GitHub user `amishbouva`, so the live site is
+`https://amishbouva.github.io/amish-bouvas/`.
 
 It started in Nov 2026 as a copy of another league's site (the "BBFC"), set up by a friend
 and handed over. Some internal names still start with `bbfc` (saved-setting keys such as
