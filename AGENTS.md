@@ -121,8 +121,9 @@ Other workflows:
 - `history.yml` reads past seasons into `data/history.json` for the Record Book. Daily until
   the first history is saved, then on the 3rd of each month or by hand.
 - `newsroom.yml` gathers player scores, trades and history into `data/newsroom.json`
-  (Tuesday, Thursday and Saturday mornings, or by hand). Team pages use it for Top Players;
-  a Newspaper writer would use it too.
+  (Monday, Tuesday, Thursday and Saturday mornings, or by hand). It runs
+  `fetch-lineups.mjs` first so the data has who's still to play (`thisWeek.liveStatus`, for
+  the Monday edition). Team pages use it for Top Players; the Newspaper writer uses it too.
 - `newspaper.yml` writes Newspaper editions automatically once he adds an OpenAI API key
   (see Optional extras).
 - `pictures.yml` runs when pictures are uploaded to `team-pictures/` or `league-logo/`.
@@ -197,8 +198,8 @@ appear by first name only, and ESPN member IDs must never be saved in this publi
   `https://<owner>.github.io`). Put the App ID in `onesignalAppId` and have him add the App
   API Key himself as the `ONESIGNAL_API_KEY` secret. Alerts only work from the Home Screen
   icon on iPhone (iOS 16.4+).
-- **Newspaper:** three stories per edition, Tuesday (recap), Thursday (midweek) and Saturday
-  (preview). **`docs/newspaper.md` is the writer's rulebook** (focus by day, house style,
+- **Newspaper:** three stories per edition, Monday (where the week stands before Monday
+  night), Tuesday (recap), Thursday (midweek) and Saturday (preview). **`docs/newspaper.md` is the writer's rulebook** (focus by day, house style,
   facts, format, steps); follow it whenever you write an edition, and edit its House style
   section when he asks for a different voice. Two ways to run it:
   - **Automatic:** `.github/workflows/newspaper.yml` runs Codex (`openai/codex-action`) on
@@ -206,9 +207,9 @@ appear by first name only, and ESPN member IDs must never be saved in this publi
     from ChatGPT). The `write` job (read-only) produces `draft.json`; the `publish` job
     checks it with `scripts/add-edition.mjs`, commits `data/news.json` and updates the site.
     No key, or February–August, means scheduled runs end quietly. Run it by hand from
-    Actions → Newspaper (choose recap, midweek or preview, or auto).
+    Actions → Newspaper (choose monday, recap, midweek or preview, or auto).
   - **On request:** he asks his AI to write today's edition; follow `docs/newspaper.md`
-    (`data/newsroom.json` is refreshed Tue/Thu/Sat by `newsroom.yml`, or run that by hand).
+    (`data/newsroom.json` is refreshed Mon/Tue/Thu/Sat by `newsroom.yml`, or run that by hand).
   The News section appears with the first edition.
 
 ## Pictures
