@@ -1,0 +1,72 @@
+name: Refresh league history
+
+# Reads past seasons from ESPN into data/history.json for the Record Book. Past seasons
+# don't change, so after the first read it only runs on the 3rd of each month (to pick up a
+# season once it ends), or when started by hand. Until the first history is saved, it tries
+# once a day. It does nothing until the ESPN_S2 / ESPN_SWID secrets are added.
+on:
+  workflow_dispatch: {}
+  schedule:
+    - cron: "23 9 * * *" # daily check; it only reads ESPN when one of the reasons above applies
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: league-history
+  cancel-in-progress: false
+
+jobs:
+  history:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Decide whether to read ESPN today
+        id: go
+        env:
+          ESPN_S2: ${{ secrets.ESPN_S2 }}
+          ESPN_SWID: ${{ secrets.ESPN_SWID }}
+        run: |
+          if [ -z "$ESPN_S2" ] || [ -z "$ESPN_SWID" ]; then
+            echo "::notice::Not set up yet: add the ESPN_S2 and ESPN_SWID secrets (see README.md)."
+            echo "run=false" >> "$GITHUB_OUTPUT"
+          elif [ "${{ github.event_name }}" = "workflow_dispatch" ] || [ ! -f data/history.json ] || [ "$(date -u +%d)" = "03" ]; then
+            echo "run=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "History already saved; next refresh on the 3rd"
+            echo "run=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - uses: actions/setup-node@v4
+        if: steps.go.outputs.run == 'true'
+        with:
+          node-version: 20
+
+      - name: Read past seasons from ESPN
+        if: steps.go.outputs.run == 'true'
+        run: node scripts/fetch-history.mjs
+        env:
+          ESPN_S2: ${{ secrets.ESPN_S2 }}
+          ESPN_SWID: ${{ secrets.ESPN_SWID }}
+
+      - name: Save the history and update the site
+        if: steps.go.outputs.run == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          [ -f data/history.json ] || { echo "No history to save yet"; exit 0; }
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/history.json
+          if git diff --cached --quiet; then
+            echo "History unchanged"
+          else
+            git commit -m "Update league history"
+            git push origin HEAD:${{ github.ref_name }} || (git pull --rebase origin ${{ github.ref_name }} && git push origin HEAD:${{ github.ref_name }})
+            curl -sf -X POST -H "Authorization: Bearer $GH_TOKEN" -H "Accept: application/vnd.github+json" \
+              "https://api.github.com/repos/${{ github.repository }}/actions/workflows/update.yml/dispatches" -d '{"ref":"main"}' \
+              && echo "Site update started" || echo "::warning::Couldn't start a site update; the next scheduled one will pick it up"
+          fi

@@ -1,0 +1,174 @@
+name: Update the league site
+
+# Each run takes about a minute. During game windows a run starts the next one as it
+# finishes, so scores refresh about once a minute; the schedule below is the backup.
+# Times are in UTC. Eastern time is 4-5 hours behind, so "0-5" on a Friday
+# covers Thursday night games, and so on.
+on:
+  schedule:
+    - cron: "3-58/5 0-5 * * 5"    # Thursday night games, every 5 minutes
+    - cron: "3-58/5 17-23 * * 0"  # Sunday afternoon games
+    - cron: "3-58/5 0-5 * * 1"    # Sunday night game
+    - cron: "3-58/5 0-5 * * 2"    # Monday night game
+    - cron: "3-58/5 17-23 * * 6"  # Saturday games late in the season
+    - cron: "3-58/5 0-5 * * 0"    # Saturday night games late in the season
+    - cron: "41 * * * *"          # Hourly the rest of the week (roster moves, podcast check)
+    - cron: "17 13 * * 2"         # Tuesday morning: save a weekly copy of the data
+  workflow_dispatch:
+    inputs:
+      trades:
+        description: "Re-read trades from ESPN now (skips the hourly wait)"
+        type: boolean
+        default: false
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+  actions: write
+
+concurrency:
+  group: league-site
+  cancel-in-progress: false
+
+jobs:
+  # Until setup is finished (the ESPN_S2 / ESPN_SWID secrets added and GitHub Pages turned
+  # on with Source "GitHub Actions"), runs end here quietly instead of failing. See README.md.
+  ready:
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    outputs:
+      ok: ${{ steps.check.outputs.ok }}
+    steps:
+      - id: check
+        env:
+          ESPN_S2: ${{ secrets.ESPN_S2 }}
+          ESPN_SWID: ${{ secrets.ESPN_SWID }}
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          ok=true
+          if [ -z "$ESPN_S2" ] || [ -z "$ESPN_SWID" ]; then
+            echo "::notice::Not set up yet: add the ESPN_S2 and ESPN_SWID secrets (see README.md)."
+            ok=false
+          fi
+          code=$(curl -s -o /dev/null -w "%{http_code}" -H "Authorization: Bearer $GH_TOKEN" -H "Accept: application/vnd.github+json" \
+            "https://api.github.com/repos/${{ github.repository }}/pages" || true)
+          if [ "$code" = "404" ]; then
+            echo "::notice::Not set up yet: turn on GitHub Pages with Source set to GitHub Actions (see README.md)."
+            ok=false
+          fi
+          echo "ok=$ok" >> "$GITHUB_OUTPUT"
+
+  update:
+    needs: ready
+    if: needs.ready.outputs.ok == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Get the latest scores from ESPN
+        run: node scripts/fetch-espn.mjs
+        env:
+          ESPN_S2: ${{ secrets.ESPN_S2 }}
+          ESPN_SWID: ${{ secrets.ESPN_SWID }}
+
+      # Trades change rarely, so this reads ESPN about once an hour and keeps the last
+      # good list otherwise. It can never stop the site from updating.
+      # Both lineups for every game, for the matchup details sheet. Never blocks an update.
+      - name: Get this week's lineups
+        run: node scripts/fetch-lineups.mjs
+        continue-on-error: true
+        env:
+          ESPN_S2: ${{ secrets.ESPN_S2 }}
+          ESPN_SWID: ${{ secrets.ESPN_SWID }}
+
+      - name: Check for trades
+        run: node scripts/fetch-trades.mjs
+        continue-on-error: true
+        env:
+          FORCE_TRADES: ${{ inputs.trades && '1' || '' }}
+          ESPN_S2: ${{ secrets.ESPN_S2 }}
+          ESPN_SWID: ${{ secrets.ESPN_SWID }}
+
+      - name: Check for new podcast episodes
+        run: node scripts/fetch-podcast.mjs
+
+      - name: Build the site
+        run: node scripts/build.mjs
+
+      # Alerts for anything new (trades, Newspaper, podcast, weekly results). What's been
+      # sent is kept in data/alerts-sent.json, saved below, so nothing goes out twice.
+      - name: Send alerts
+        run: node scripts/notify.mjs
+        continue-on-error: true
+        env:
+          ONESIGNAL_API_KEY: ${{ secrets.ONESIGNAL_API_KEY }}
+
+      - name: Save new episodes and the weekly data copy
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/pod.json
+          if [ -f data/alerts-sent.json ]; then git add data/alerts-sent.json; fi
+          if [ "${{ github.event.schedule }}" = "17 13 * * 2" ]; then git add data/espn.json; fi
+          if git diff --cached --quiet; then
+            echo "Nothing new to save"
+          else
+            git commit -m "Update league data"
+            git push || (git pull --rebase origin main && git push) || echo "::warning::Couldn't save the data copy this time"
+          fi
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - id: deploy
+        uses: actions/deploy-pages@v4
+        continue-on-error: true
+
+      # GitHub Pages sometimes gets stuck on one commit and refuses to deploy it
+      # again. A fresh, empty commit gets it moving; only one try per stuck commit.
+      - name: Unstick GitHub Pages if the deploy failed
+        if: steps.deploy.outcome == 'failure'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if git log -1 --format=%s | grep -q "^Republish the site"; then
+            echo "::error::GitHub Pages didn't deploy, even after a fresh commit."
+            exit 1
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git stash push --include-untracked -q || true
+          git pull --rebase origin main
+          git commit --allow-empty -m "Republish the site (automatic)"
+          git push
+          curl -sf -X POST -H "Authorization: Bearer $GH_TOKEN" -H "Accept: application/vnd.github+json" \
+            "https://api.github.com/repos/${{ github.repository }}/actions/workflows/update.yml/dispatches" -d '{"ref":"main"}'
+          echo "::warning::GitHub Pages didn't deploy; started a fresh run."
+
+      # Pages can also report a deploy as a success while the live site stays on an older
+      # version (Nov 8, 2026). If the live site is 5+ minutes behind, push a fresh commit.
+      - name: Make sure the live site changed
+        if: steps.deploy.outcome == 'success'
+        continue-on-error: true
+        run: node scripts/check-live.mjs
+
+      # During games, start the next update right away (about once a minute).
+      - name: Queue the next update during games
+        if: success() && github.event_name != 'push' && steps.deploy.outcome == 'success'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: node scripts/next-run.mjs

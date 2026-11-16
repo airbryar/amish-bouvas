@@ -1,0 +1,74 @@
+# The Amish Bouvas Fantasy League
+
+The league's website: standings, playoff odds, power rankings, the weekly scoreboard with
+lineups, Median Watch, trades and waiver pickups, team pages and a Record Book of past
+seasons. It reads everything from ESPN on its own. During games, scores refresh about once a
+minute.
+
+Once it's set up, the site lives at **https://YOUR-GITHUB-USERNAME.github.io/amish-bouvas/**.
+Everyone in the league can add it to their iPhone's Home Screen like an app (in Safari, tap
+Share, then **Add to Home Screen**).
+
+## Setup: three steps
+
+You do these once. They take about 10 minutes, and step 1 needs a computer.
+
+### 1. Add your ESPN sign-in codes
+
+ESPN leagues are private, so the site reads the league with two codes from your own ESPN
+sign-in. They're stored as GitHub "secrets": hidden, never shown on the site, and nobody
+else can see them. Never paste them anywhere else.
+
+**Get the codes (Chrome on a computer):**
+
+1. Go to **fantasy.espn.com** and sign in, if you aren't already.
+2. Right-click anywhere on the page and choose **Inspect**.
+3. In the panel that opens, click the **Application** tab (if you don't see it, click **»**).
+4. On the left, open **Cookies** and click **https://fantasy.espn.com**.
+5. Find **espn_s2** in the list and copy its whole value (it's long).
+6. Find **SWID** and copy its value, including the curly braces `{ }`.
+
+**Save them here on GitHub:**
+
+1. In this project, click **Settings**, then **Secrets and variables**, then **Actions**.
+2. Click **New repository secret**. Name: `ESPN_S2`. Secret: paste the espn_s2 value.
+   Click **Add secret**.
+3. Click **New repository secret** again. Name: `ESPN_SWID`. Secret: paste the SWID value.
+   Click **Add secret**.
+
+If you ever sign out of ESPN everywhere or change your password, the codes can stop working.
+Then repeat this step and replace both secrets with the new values (click each one, then
+**Update**).
+
+### 2. Turn on publishing
+
+1. In this project, click **Settings**, then **Pages** (on the left).
+2. Under **Build and deployment**, set **Source** to **GitHub Actions**.
+
+### 3. Start the first update
+
+1. Click the **Actions** tab.
+2. Click **Update the league site** on the left, then **Run workflow**, then the green
+   **Run workflow** button.
+
+In a minute or two, the site is live at the address above. From then on it updates by itself:
+every minute or so during games and hourly the rest of the week. The Record Book (past
+seasons) shows up within a day.
+
+Until steps 1 and 2 are done, the updates just wait quietly. Nothing breaks.
+
+## Optional extras
+
+- **Team pictures and a league logo:** see the README in the `team-pictures` and
+  `league-logo` folders. Until you add a logo, the site uses a built-in "ABFL" seal.
+- **League name:** the names on the site come from `data/league.json` (`name`, `shortName`
+  and `abbrev`).
+- **Podcast, phone alerts and a league Newspaper:** the site can do these too. They're off
+  for now. Ask Claude to set one up (see below).
+
+## Making changes
+
+The easiest way is to ask Claude. Point it at this project and describe what you want, in
+plain words ("make the colors green and gold," "change the power-rankings formula"). The
+notes in [CLAUDE.md](CLAUDE.md) explain to Claude how the site works. Add your own
+preferences there as you go.
