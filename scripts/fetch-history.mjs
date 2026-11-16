@@ -44,7 +44,10 @@ const cap = (s) => (s ? s.charAt(0).toUpperCase() + s.slice(1) : s);
 // This season: who manages each team now, and the managers' first names
 const cur = await get(`${leagueUrl(SEASON)}?view=mTeam&view=mSettings&view=mStatus`);
 const firstName = {};
-for (const m of cur.members || []) firstName[m.id] = cap((m.firstName || "").trim()) || null;
+for (const m of cur.members || []) {
+  const name = cap((m.firstName || "").trim());
+  firstName[m.id] = name === "Jay" ? "Randy" : name || null;
+}
 
 const keyOf = {}; // ESPN member id -> short key; kept in memory only
 const managers = {};
