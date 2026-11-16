@@ -66,7 +66,7 @@ Until steps 1 and 2 are done, the updates just wait quietly. Nothing breaks.
   the site uses a built-in "ABFL" seal.
 - **League name:** the names on the site come from `data/league.json` (`name`, `shortName`
   and `abbrev`).
-- **League Newspaper:** three stories every Tuesday, Thursday and Saturday, written by AI
+- **League Newspaper:** three stories every Monday, Tuesday, Thursday and Saturday, written by AI
   from your league's data. Your AI can write one whenever you ask, or it can run by itself
   with an OpenAI API key. See [docs/newspaper.md](docs/newspaper.md).
 - **Podcast and phone alerts:** the site can do these too. They're off for now. Ask your AI
