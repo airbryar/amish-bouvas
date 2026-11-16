@@ -52,15 +52,18 @@ Then repeat this step and replace both secrets with the new values (click each o
    **Run workflow** button.
 
 In a minute or two, the site is live at the address above. From then on it updates by itself:
-every minute or so during games and hourly the rest of the week. The Record Book (past
-seasons) shows up within a day.
+every minute or so during games and hourly the rest of the week. That first run also brings in
+the Record Book (past seasons) and each team's picture from its ESPN logo, a few minutes later.
 
 Until steps 1 and 2 are done, the updates just wait quietly. Nothing breaks.
 
 ## Optional extras
 
-- **Team pictures and a league logo:** see the README in the `team-pictures` and
-  `league-logo` folders. Until you add a logo, the site uses a built-in "ABFL" seal.
+- **Team pictures:** each team gets its ESPN logo automatically. To use a different picture
+  for a team, upload one to the `team-pictures` folder (see the README there). To pick up new
+  ESPN logos later: **Actions** → **Pictures** → **Run workflow**.
+- **League logo:** upload one to the `league-logo` folder (see the README there). Until then,
+  the site uses a built-in "ABFL" seal.
 - **League name:** the names on the site come from `data/league.json` (`name`, `shortName`
   and `abbrev`).
 - **Podcast, phone alerts and a league Newspaper:** the site can do these too. They're off
@@ -68,7 +71,11 @@ Until steps 1 and 2 are done, the updates just wait quietly. Nothing breaks.
 
 ## Making changes
 
-The easiest way is to ask Claude. Point it at this project and describe what you want, in
-plain words ("make the colors green and gold," "change the power-rankings formula"). The
-notes in [CLAUDE.md](CLAUDE.md) explain to Claude how the site works. Add your own
-preferences there as you go.
+The easiest way is to ask an AI assistant that can work on GitHub projects, such as ChatGPT's
+Codex or Claude. Connect it to this project and describe what you want in plain words ("make
+the colors green and gold," "change the power-rankings formula"). The notes in
+[AGENTS.md](AGENTS.md) explain to any AI how the site works. Add your own preferences there as
+you go.
+
+A change goes live once it's on the `main` branch. If your AI opens a "pull request," open it
+on GitHub and tap **Merge pull request**, then **Confirm merge**.

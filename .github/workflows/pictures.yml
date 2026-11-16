@@ -2,11 +2,20 @@ name: Pictures
 
 # When a team picture or the league logo is added, changed or removed, resize it
 # for the site, save the result, and republish.
+#
+# Started by hand (or automatically once after setup), it can also fill in missing team
+# pictures from each team's ESPN logo (scripts/import-espn-logos.mjs). Uploaded pictures are
+# never replaced.
 on:
   push:
     branches: [main]
     paths: ["team-pictures/**", "league-logo/**"]
-  workflow_dispatch: {}
+  workflow_dispatch:
+    inputs:
+      from_espn:
+        description: "Also fill in missing team pictures from each team's ESPN logo"
+        type: boolean
+        default: true
 
 permissions:
   contents: write
@@ -30,6 +39,22 @@ jobs:
       - name: Get the image tool
         run: npm install --no-save --no-package-lock --no-audit --no-fund sharp@0.33.5
 
+      # Team pictures are matched to the current team names, so read them fresh
+      - name: Get the latest team names from ESPN
+        run: node scripts/fetch-espn.mjs
+        continue-on-error: true
+        env:
+          ESPN_S2: ${{ secrets.ESPN_S2 }}
+          ESPN_SWID: ${{ secrets.ESPN_SWID }}
+
+      - name: Fill in missing team pictures from ESPN
+        if: github.event_name == 'workflow_dispatch' && github.event.inputs.from_espn != 'false'
+        run: node scripts/import-espn-logos.mjs
+        continue-on-error: true
+        env:
+          ESPN_S2: ${{ secrets.ESPN_S2 }}
+          ESPN_SWID: ${{ secrets.ESPN_SWID }}
+
       - name: Make the site-size team pictures
         run: node scripts/make-logos.mjs
 
@@ -40,7 +65,8 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A site data team-pictures/README.md
+          git checkout -- data/espn.json 2>/dev/null || true # the site update saves this one
+          git add -A site data team-pictures
           if git diff --cached --quiet; then
             echo "Pictures already up to date"
           else

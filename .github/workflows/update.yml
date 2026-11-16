@@ -166,6 +166,25 @@ jobs:
         continue-on-error: true
         run: node scripts/check-live.mjs
 
+      # First setup: start the Record Book (past seasons) and the team pictures from ESPN right
+      # away instead of waiting for their schedules. Only on runs a person started, never on
+      # scheduled or automatic ones, and only until each has been done once.
+      - name: Start the Record Book and team pictures (first run)
+        if: steps.deploy.outcome == 'success' && github.event_name != 'schedule' && github.actor != 'github-actions[bot]'
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          api="https://api.github.com/repos/${{ github.repository }}/actions/workflows"
+          if [ ! -f data/history.json ]; then
+            curl -sf -X POST -H "Authorization: Bearer $GH_TOKEN" -H "Accept: application/vnd.github+json" \
+              "$api/history.yml/dispatches" -d '{"ref":"main"}' && echo "Started reading past seasons for the Record Book"
+          fi
+          if [ ! -f data/espn-logos.json ]; then
+            curl -sf -X POST -H "Authorization: Bearer $GH_TOKEN" -H "Accept: application/vnd.github+json" \
+              "$api/pictures.yml/dispatches" -d '{"ref":"main","inputs":{"from_espn":"true"}}' && echo "Started getting team pictures from ESPN"
+          fi
+
       # During games, start the next update right away (about once a minute).
       - name: Queue the next update during games
         if: success() && github.event_name != 'push' && steps.deploy.outcome == 'success'
