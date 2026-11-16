@@ -52,7 +52,10 @@ const a = await get(`${leagueUrl(SEASON)}?view=mTeam&view=mStandings&view=mMatch
 const live = await get(`${leagueUrl(SEASON)}?view=mScoreboard&view=mMatchupScore`);
 
 const firstName = {};
-for (const m of a.members || []) firstName[m.id] = cap((m.firstName || "").trim()) || null;
+for (const m of a.members || []) {
+  const name = cap((m.firstName || "").trim());
+  firstName[m.id] = name === "Jay" ? "Randy" : name || null;
+}
 
 const ss = a.settings.scheduleSettings || {};
 const REG = ss.matchupPeriodCount || 14;
