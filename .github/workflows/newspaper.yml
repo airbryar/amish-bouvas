@@ -1,6 +1,6 @@
 name: Newspaper
 
-# Writes a Newspaper edition automatically (Tuesday, Thursday and Saturday mornings) with
+# Writes a Newspaper edition automatically (Monday, Tuesday, Thursday and Saturday mornings) with
 # Codex, OpenAI's coding agent, following docs/newspaper.md. Needs an OpenAI API key saved as
 # the OPENAI_API_KEY secret (OpenAI bills that use separately from a ChatGPT plan). Without
 # the key, or outside football season (February-August), runs end quietly. Started by hand
@@ -15,11 +15,11 @@ on:
       edition:
         description: "Which edition to write (auto = by today's day)"
         type: choice
-        options: [auto, recap, midweek, preview]
+        options: [auto, monday, recap, midweek, preview]
         default: auto
   schedule:
     - cron: "41 12 * * 2"   # Tuesday about 7:40 AM Eastern (after ESPN finalizes the week)
-    - cron: "46 9 * * 4,6"  # Thursday and Saturday about 4:45 AM Eastern
+    - cron: "46 9 * * 1,4,6"  # Monday, Thursday and Saturday about 4:45 AM Eastern
 
 concurrency:
   group: newspaper
@@ -60,7 +60,8 @@ jobs:
           edition="$PICK"
           if [ "$edition" = "auto" ]; then
             case "$day" in
-              1|2) edition=recap ;;
+              1) edition=monday ;;
+              2) edition=recap ;;
               3|4|5) edition=midweek ;;
               *) edition=preview ;;
             esac
@@ -73,6 +74,15 @@ jobs:
         if: steps.plan.outputs.go == 'true'
         with:
           node-version: 20
+
+      # Who's still to play this week (the Monday edition uses it); never blocks the rest
+      - name: Get this week's lineups
+        if: steps.plan.outputs.go == 'true'
+        run: node scripts/fetch-lineups.mjs
+        continue-on-error: true
+        env:
+          ESPN_S2: ${{ secrets.ESPN_S2 }}
+          ESPN_SWID: ${{ secrets.ESPN_SWID }}
 
       - name: Get fresh league data from ESPN
         if: steps.plan.outputs.go == 'true'
@@ -91,7 +101,7 @@ jobs:
           allow-users: airbryar
           prompt: |
             Write today's edition of this fantasy football league's Newspaper.
-            Edition type: ${{ steps.plan.outputs.edition }} (recap = Tuesday, midweek = Thursday, preview = Saturday).
+            Edition type: ${{ steps.plan.outputs.edition }} (monday = Monday, recap = Tuesday, midweek = Thursday, preview = Saturday).
 
             Follow docs/newspaper.md exactly. In short: read data/newsroom.json (fresh league
             data) and the two newest editions in data/news.json, write three stories to
@@ -125,6 +135,13 @@ jobs:
           node-version: 20
 
       # Fresh data again here (it's also what team pages use for Top Players)
+      - name: Get this week's lineups
+        run: node scripts/fetch-lineups.mjs
+        continue-on-error: true
+        env:
+          ESPN_S2: ${{ secrets.ESPN_S2 }}
+          ESPN_SWID: ${{ secrets.ESPN_SWID }}
+
       - name: Get fresh league data from ESPN
         run: node scripts/fetch-newsroom.mjs
         env:
