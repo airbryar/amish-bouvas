@@ -1,0 +1,153 @@
+name: Newspaper
+
+# Writes a Newspaper edition automatically (Tuesday, Thursday and Saturday mornings) with
+# Codex, OpenAI's coding agent, following docs/newspaper.md. Needs an OpenAI API key saved as
+# the OPENAI_API_KEY secret (OpenAI bills that use separately from a ChatGPT plan). Without
+# the key, or outside football season (February-August), runs end quietly. Started by hand
+# (Actions → Newspaper → Run workflow) it always writes one, any day.
+#
+# Two jobs, so the AI never holds write access: "write" runs Codex with read-only repo
+# permissions and hands over only draft.json; "publish" checks the draft with
+# scripts/add-edition.mjs, saves it to data/news.json and updates the site.
+on:
+  workflow_dispatch:
+    inputs:
+      edition:
+        description: "Which edition to write (auto = by today's day)"
+        type: choice
+        options: [auto, recap, midweek, preview]
+        default: auto
+  schedule:
+    - cron: "41 12 * * 2"   # Tuesday about 7:40 AM Eastern (after ESPN finalizes the week)
+    - cron: "46 9 * * 4,6"  # Thursday and Saturday about 4:45 AM Eastern
+
+concurrency:
+  group: newspaper
+  cancel-in-progress: false
+
+jobs:
+  write:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: read
+    outputs:
+      go: ${{ steps.plan.outputs.go }}
+      edition: ${{ steps.plan.outputs.edition }}
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Decide whether to write today
+        id: plan
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          ESPN_S2: ${{ secrets.ESPN_S2 }}
+          ESPN_SWID: ${{ secrets.ESPN_SWID }}
+          PICK: ${{ github.event.inputs.edition || 'auto' }}
+        run: |
+          go=true
+          if [ -z "$OPENAI_API_KEY" ]; then
+            echo "::notice::Automatic Newspaper is off: no OPENAI_API_KEY secret (see docs/newspaper.md)."; go=false
+          fi
+          if [ -z "$ESPN_S2" ] || [ -z "$ESPN_SWID" ]; then
+            echo "::notice::Not set up yet: add the ESPN_S2 and ESPN_SWID secrets (see README.md)."; go=false
+          fi
+          month=$(TZ=America/New_York date +%-m)
+          if [ "${{ github.event_name }}" = "schedule" ] && [ "$month" -ge 2 ] && [ "$month" -le 8 ]; then
+            echo "::notice::Offseason: no automatic edition."; go=false
+          fi
+          day=$(TZ=America/New_York date +%u)   # 1 = Monday ... 7 = Sunday
+          edition="$PICK"
+          if [ "$edition" = "auto" ]; then
+            case "$day" in
+              1|2) edition=recap ;;
+              3|4|5) edition=midweek ;;
+              *) edition=preview ;;
+            esac
+          fi
+          echo "go=$go" >> "$GITHUB_OUTPUT"
+          echo "edition=$edition" >> "$GITHUB_OUTPUT"
+          echo "Edition: $edition (write: $go)"
+
+      - uses: actions/setup-node@v4
+        if: steps.plan.outputs.go == 'true'
+        with:
+          node-version: 20
+
+      - name: Get fresh league data from ESPN
+        if: steps.plan.outputs.go == 'true'
+        run: node scripts/fetch-newsroom.mjs
+        env:
+          ESPN_S2: ${{ secrets.ESPN_S2 }}
+          ESPN_SWID: ${{ secrets.ESPN_SWID }}
+
+      - name: Write the stories
+        if: steps.plan.outputs.go == 'true'
+        uses: openai/codex-action@v1
+        with:
+          openai-api-key: ${{ secrets.OPENAI_API_KEY }}
+          # Scheduled runs are credited to whoever last edited this schedule, which may be the
+          # friend who set the site up; let those runs through the action's write-access check.
+          allow-users: airbryar
+          prompt: |
+            Write today's edition of this fantasy football league's Newspaper.
+            Edition type: ${{ steps.plan.outputs.edition }} (recap = Tuesday, midweek = Thursday, preview = Saturday).
+
+            Follow docs/newspaper.md exactly. In short: read data/newsroom.json (fresh league
+            data) and the two newest editions in data/news.json, write three stories to
+            draft.json in the repository root, then run `node scripts/add-edition.mjs draft.json`.
+            If it lists problems, fix draft.json and run it again until it passes.
+            Use only facts from data/newsroom.json. Keep draft.json; change no other file except
+            what add-edition.mjs writes. Finish by listing the three headlines.
+
+      - name: Hand over the draft
+        if: steps.plan.outputs.go == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: newspaper-draft
+          path: draft.json
+          if-no-files-found: error
+          retention-days: 7
+
+  publish:
+    needs: write
+    if: needs.write.outputs.go == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+      actions: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      # Fresh data again here (it's also what team pages use for Top Players)
+      - name: Get fresh league data from ESPN
+        run: node scripts/fetch-newsroom.mjs
+        env:
+          ESPN_S2: ${{ secrets.ESPN_S2 }}
+          ESPN_SWID: ${{ secrets.ESPN_SWID }}
+
+      - uses: actions/download-artifact@v4
+        with:
+          name: newspaper-draft
+          path: ${{ runner.temp }}/newspaper
+
+      - name: Check the draft and add the edition
+        run: node scripts/add-edition.mjs "${{ runner.temp }}/newspaper/draft.json"
+
+      - name: Save it and update the site
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/news.json data/newsroom.json
+          git commit -m "Newspaper: ${{ needs.write.outputs.edition }} edition"
+          git push origin HEAD:${{ github.ref_name }} || (git pull --rebase origin ${{ github.ref_name }} && git push origin HEAD:${{ github.ref_name }})
+          curl -sf -X POST -H "Authorization: Bearer $GH_TOKEN" -H "Accept: application/vnd.github+json" \
+            "https://api.github.com/repos/${{ github.repository }}/actions/workflows/update.yml/dispatches" -d '{"ref":"main"}' \
+            && echo "Site update started" || echo "::warning::Couldn't start a site update; the next scheduled one will publish it"
