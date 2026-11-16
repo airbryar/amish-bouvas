@@ -61,6 +61,7 @@ for (const t of [...cur.teams].sort((x, y) => x.id - y.id)) currentTeams[t.id] =
 const prev = (cur.status.previousSeasons || []).filter((y) => y < SEASON).sort();
 const seasons = [];
 for (const year of prev) {
+  console.log(`Fetching ESPN history for ${year}...`);
   const h = await get(`${leagueUrl(year)}?view=mTeam&view=mMatchupScore&view=mSettings`);
   const ss = h.settings.scheduleSettings || {};
   const reg = ss.matchupPeriodCount || 14;
