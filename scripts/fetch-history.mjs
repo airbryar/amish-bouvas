@@ -66,8 +66,8 @@ const seasons = [];
 for (const year of prev) {
   console.log(`Fetching ESPN history for ${year}...`);
 const separator = year < 2018 ? "&" : "?";
-const h = await get(`${leagueUrl(year)}${separator}view=mTeam&view=mMatchupScore&view=mSettings`);
-  console.log(`ESPN ${year} response:`, Array.isArray(h) ? "ARRAY" : "OBJECT", "keys:", Object.keys(h));
+const response = await get(`${leagueUrl(year)}${separator}view=mTeam&view=mMatchupScore&view=mSettings`);
+const h = Array.isArray(response) ? response[0] : response;
   const ss = h.settings.scheduleSettings || {};
   const reg = ss.matchupPeriodCount || 14;
   const owner = Object.fromEntries(h.teams.map((t) => [t.id, key(t.primaryOwner)]));
