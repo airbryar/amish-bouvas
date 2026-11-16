@@ -12,7 +12,10 @@ const OUT = "data/history.json";
 const cfg = JSON.parse(fs.readFileSync("data/league.json", "utf8"));
 const { id: LEAGUE_ID, season: SEASON } = cfg.league;
 const ROOT = "https://lm-api-reads.fantasy.espn.com/apis/v3/games/ffl";
-const leagueUrl = (season) => `${ROOT}/seasons/${season}/segments/0/leagues/${LEAGUE_ID}`;
+const leagueUrl = (season) =>
+  season < 2018
+    ? `https://lm-api-reads.fantasy.espn.com/apis/v3/games/ffl/leagueHistory/${LEAGUE_ID}?seasonId=${season}`
+    : `${ROOT}/seasons/${season}/segments/0/leagues/${LEAGUE_ID}`;
 
 const s2 = (process.env.ESPN_S2 || "").trim();
 const swid = (process.env.ESPN_SWID || "").trim();
@@ -62,7 +65,8 @@ const prev = (cur.status.previousSeasons || []).filter((y) => y < SEASON).sort()
 const seasons = [];
 for (const year of prev) {
   console.log(`Fetching ESPN history for ${year}...`);
-  const h = await get(`${leagueUrl(year)}?view=mTeam&view=mMatchupScore&view=mSettings`);
+const separator = year < 2018 ? "&" : "?";
+const h = await get(`${leagueUrl(year)}${separator}view=mTeam&view=mMatchupScore&view=mSettings`);
   const ss = h.settings.scheduleSettings || {};
   const reg = ss.matchupPeriodCount || 14;
   const owner = Object.fromEntries(h.teams.map((t) => [t.id, key(t.primaryOwner)]));
