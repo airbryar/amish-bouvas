@@ -51,7 +51,8 @@ never hand-edited: `data/espn.json`, `data/trades.json`, `data/lineups.json`,
 ### What only he can do
 
 Things an AI can't do for him, so walk him through them step by step: accept the repo
-transfer; add or replace GitHub secrets (`ESPN_S2`, `ESPN_SWID`, `ONESIGNAL_API_KEY`);
+transfer; add or replace GitHub secrets (`ESPN_S2`, `ESPN_SWID`, `ONESIGNAL_API_KEY`,
+`OPENAI_API_KEY`);
 change repo Settings (Pages, collaborators); merge pull requests; run a workflow by hand
 (Actions tab → pick the workflow → **Run workflow**); upload pictures on github.com; sign up
 for outside services (OneSignal). Never ask him to paste a secret into chat or into a file.
@@ -122,6 +123,8 @@ Other workflows:
 - `newsroom.yml` gathers player scores, trades and history into `data/newsroom.json`
   (Tuesday, Thursday and Saturday mornings, or by hand). Team pages use it for Top Players;
   a Newspaper writer would use it too.
+- `newspaper.yml` writes Newspaper editions automatically once he adds an OpenAI API key
+  (see Optional extras).
 - `pictures.yml` runs when pictures are uploaded to `team-pictures/` or `league-logo/`.
   Started by hand (Actions → Pictures → Run workflow, "fill in from ESPN" ticked by default)
   it also saves each team's ESPN logo as its picture where none was uploaded
@@ -194,14 +197,19 @@ appear by first name only, and ESPN member IDs must never be saved in this publi
   `https://<owner>.github.io`). Put the App ID in `onesignalAppId` and have him add the App
   API Key himself as the `ONESIGNAL_API_KEY` secret. Alerts only work from the Home Screen
   icon on iPhone (iOS 16.4+).
-- **Newspaper:** an AI writes three stories from `data/newsroom.json` (refreshed Tuesday,
-  Thursday and Saturday mornings), saves them as a draft JSON file and runs
-  `node scripts/add-edition.mjs draft.json`, which validates them (exactly 3 stories;
-  kicker ≤ 32 characters, headline 10–90, dek ≤ 170, 3–8 paragraphs and 250–520 words each)
-  and adds the edition to `data/news.json`; then the change goes to `main`. It can be done on
-  request ("write this week's Newspaper") or by a scheduled AI task if his assistant offers
-  one. Facts only from the league data. The News section appears with the first edition.
-  Read `scripts/add-edition.mjs` for the draft's exact format.
+- **Newspaper:** three stories per edition, Tuesday (recap), Thursday (midweek) and Saturday
+  (preview). **`docs/newspaper.md` is the writer's rulebook** (focus by day, house style,
+  facts, format, steps); follow it whenever you write an edition, and edit its House style
+  section when he asks for a different voice. Two ways to run it:
+  - **Automatic:** `.github/workflows/newspaper.yml` runs Codex (`openai/codex-action`) on
+    that schedule with his OpenAI API key (`OPENAI_API_KEY` secret, billed by OpenAI apart
+    from ChatGPT). The `write` job (read-only) produces `draft.json`; the `publish` job
+    checks it with `scripts/add-edition.mjs`, commits `data/news.json` and updates the site.
+    No key, or February–August, means scheduled runs end quietly. Run it by hand from
+    Actions → Newspaper (choose recap, midweek or preview, or auto).
+  - **On request:** he asks his AI to write today's edition; follow `docs/newspaper.md`
+    (`data/newsroom.json` is refreshed Tue/Thu/Sat by `newsroom.yml`, or run that by hand).
+  The News section appears with the first edition.
 
 ## Pictures
 
