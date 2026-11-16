@@ -1,3 +1,49 @@
 {
-  "editions": []
+  "editions": [
+    {
+      "id": "2026-11-16",
+      "date": "2026-11-16",
+      "label": "Monday Edition",
+      "week": 10,
+      "publishedAt": "2026-11-16T21:15:03.417Z",
+      "stories": [
+        {
+          "kicker": "Monday Night Watch",
+          "headline": "Henry holds the last word in Burnie's chase of Thatcher",
+          "dek": "Burnin Ballers trail by less than a point, with Derrick Henry still to play against the Chargers on Monday night.",
+          "body": [
+            "Thatcher's Wackers have the lead. Burnin Ballers have Derrick Henry. The narrowest matchup on the Week 10 board heads into Monday night with Thatcher ahead 85.9 to 85.1 so far and Burnie waiting for his last starter to take the field. The next meaningful move belongs to Baltimore's running back.",
+            "At the league's 4:11 p.m. Eastern snapshot Monday, Henry had not started. His Ravens face the Chargers at 8:15 p.m. Eastern, and his projection is 19.3 fantasy points. That puts Burnin Ballers' projected total at 104.4, against 85.9 for the Wackers. Thatcher has all nine starters finished; Burnie has eight finished and Henry left.",
+            "The standings give that small current gap some weight. Both teams entered the week 10-8, with Thatcher fourth and Burnie sixth. Only six teams make the playoffs, and the regular season runs 14 weeks. This is a direct meeting between teams sitting inside the field, with the last qualifying seed on one side of the scoreboard.",
+            "There is a second contest to watch, though Henry's projected workload on the fantasy scoreboard does not put Burnie above the median. Burnin Ballers sit 35.8 points below the current median of 120.9. Their projected total remains 22.4 below the projected median of 126.8. A head-to-head comeback and a median win are separate assignments.",
+            "Thatcher, meanwhile, is 35.0 below the current median and has no starters left to add points. The Wackers' immediate hope is that their slim matchup lead survives. Burnie's is that Henry supplies enough to pass it, then keeps going. Neither the matchup nor the week's median result is being treated as final; Monday's remaining game still has its say."
+          ]
+        },
+        {
+          "kicker": "Median Watch",
+          "headline": "Scott chases a moving line while Chad waits at 131.0",
+          "dek": "VillageRd Buttkickers are below both median measures, with Ravens D/ST left and The Fishsticks just above the projected line.",
+          "body": [
+            "The league leader has work left on two scoreboards. VillageRd Buttkickers sit at 114.8 points so far, below the current median and behind The Bike slashers in their matchup. Scott still has Ravens D/ST against the Chargers on Monday night, but the projection leaves him short of both targets.",
+            "The current median is 120.9, putting VillageRd 6.1 points below it. The projected median rises to 126.8, while Scott's projected total is 122.6, a gap of 4.2. Baltimore's defense is projected for 7.8 points in the 8:15 p.m. Eastern game. The distinction matters: gaining on today's line is not the same as clearing where the line is projected to finish.",
+            "Chad's Fishsticks occupy the other side of that squeeze. Their nine starters have finished with 131.0 points, leaving them 10.1 above the current median but only 4.2 above the projected one. They have no remaining starter to answer any late movement. Their head-to-head score so far is also favorable, ahead of Intercourse Encroachment's 106.7.",
+            "Brandon has more than a spectator's role. The Bike slashers lead VillageRd with 127.9 points and still have Mark Andrews in the same Baltimore game. Their projected total is 134.8, which sits 8.0 above the projected median. Scott must chase a matchup opponent who can still add points, as well as a league threshold that can move.",
+            "That makes Monday's defensive points especially relevant to a team that entered Week 10 first at 14-4. The Fishsticks and Bike slashers both entered 7-11, looking up at the six-team playoff field. The top six weekly scores earn median wins regardless of opponent. For now Chad and Brandon are above both measures, while Scott is below both; those are live positions, not settled results."
+          ]
+        },
+        {
+          "kicker": "Flowers Watch",
+          "headline": "Flowers gets the chase as Cow Tippers sit on 152.5",
+          "dek": "Smoketown have one starter left to cut Doug's lead, while Todd's 176.9 sets the scoring pace so far.",
+          "body": [
+            "Cow Tippers have put up their number. Smoketown Rumspringas still have Zay Flowers. Doug leads their Week 10 matchup 152.5 to 127.1 so far, leaving Roger's last starter to pursue a total that will receive no more points from Cow Tippers' lineup. Flowers faces the Chargers with Baltimore at 8:15 p.m. Eastern Monday.",
+            "The projection favors Doug's current position. Flowers is projected for 14.9 points, taking Smoketown to a projected 141.9. Cow Tippers have all nine starters finished; Roger has eight finished. A performance above the receiver's projection would be needed to threaten the lead. Nothing has been recorded as a final matchup result in the live snapshot.",
+            "Both quarterbacks have already supplied plenty. Brock Purdy scored 43.7 fantasy points for Cow Tippers, while Joe Burrow contributed 41.2 for Smoketown. Doug also received 37.1 from running back Emmett Johnson. Those are already-played contributions, giving Flowers a clear target rather than a duel with an opposing starter still on the field.",
+            "The median picture offers Roger a separate route to a useful week. Smoketown stand 6.2 above the current median of 120.9, and their projected total is 15.1 above the projected median of 126.8. Cow Tippers are 31.6 above the current line and 25.7 above the projected one. Even as the head-to-head chase continues, both teams occupy the upper half of the live scoring table.",
+            "Above them all so far are Todd's Pig Killers at 176.9, with all nine starters finished and a lead over Angry Mennonites' 103.6. Todd entered last at 5-13; Doug entered 11th at 6-12, while Roger stood third at 11-7. Two teams near the bottom have supplied the highest totals so far. Monday now asks whether Flowers can change one of their matchup leads before Week 10 closes."
+          ]
+        }
+      ]
+    }
+  ]
 }
