@@ -90,6 +90,7 @@ export function computeOdds(E) {
 
   const made = Object.fromEntries(ids.map((id) => [id, 0]));
   const bye = Object.fromEntries(ids.map((id) => [id, 0]));
+  const suspended = Object.fromEntries(ids.map((id) => [id, 0]));
   const winsSum = Object.fromEntries(ids.map((id) => [id, 0]));
   // This week's result in each simulation, and how often the team made it after each one
   const perWeek0 = medianOn ? 2 : 1;
@@ -134,6 +135,7 @@ export function computeOdds(E) {
       if (before) for (const id of ids) wk[id] = Math.floor(w[id] - before[id]); // a tie counts as no win
     }
     const final = ids.slice().sort((x, y) => w[y] - w[x] || (h2h ? (h2h[y + "|" + x] || 0) - (h2h[x + "|" + y] || 0) : 0) || pf[y] - pf[x]);
+    suspended[final[final.length - 1]]++;
     final.forEach((id, i) => {
       if (id in wk) { wkCount[id][wk[id]]++; if (i < spots) wkMade[id][wk[id]]++; }
       if (i < spots) made[id]++;
@@ -167,9 +169,10 @@ export function computeOdds(E) {
         week.push(nSims >= SIMS / 100 ? Math.round((wkMade[id][k] / nSims) * 1000) / 1000 : null); // too rare to say
       }
     }
-    out[id] = {
-      playoffs: made[id] / SIMS,
-      bye: byes ? bye[id] / SIMS : null,
+   out[id] = {
+  playoffs: made[id] / SIMS,
+  suspension: suspended[id] / SIMS,
+  bye: byes ? bye[id] / SIMS : null,
       projW: Math.round(projW),
       projL: games - Math.round(projW),
       clinched: canReach <= spots - 1,
