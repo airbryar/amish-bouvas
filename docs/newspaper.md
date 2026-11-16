@@ -6,10 +6,11 @@ workflow) or an AI asked by hand ("write today's Newspaper"). Follow them exactl
 ## What it is
 
 Three news-style stories about the league, published on the site's News section. Editions
-come out **Tuesday, Thursday and Saturday mornings**. Each one has a focus:
+come out **Monday, Tuesday, Thursday and Saturday mornings**. Each one has a focus:
 
 | Day | Edition | Focus |
 | --- | --- | --- |
+| Monday | monday | Where the week stands going into Monday night: the close matchups, the median race (who's above and below the current and projected median), and which teams still have players left to play and in which games. Use `thisWeek.liveStatus`; nothing is final yet |
 | Tuesday | recap | The week that just finished: results, upsets, who won the median game, top performances and duds, what it means for the playoff race, power-ranking moves |
 | Thursday | midweek | Trades, waiver pickups and FAAB spending, pickups that paid off, trends, the trade deadline, league history and all-time records |
 | Saturday | preview | This week's matchups: the game of the week, the median race, players to watch, playoff stakes |
@@ -32,6 +33,9 @@ Pick the three most newsworthy stories for that focus. The first story is the le
 - Use **only** facts from `data/newsroom.json` (fresh league data from ESPN). Don't invent
   quotes, injuries, real-world NFL news or anything not in the data.
 - Read its `notes` first: they explain the median game, records and fields.
+- `thisWeek.liveStatus` is a week still in progress (as of its `asOf` time). Write about it
+  as "so far" and "projected", never as final results. If it's missing, use
+  `thisWeek.matchups` instead.
 - Points are fantasy points. Round to one decimal, as the data does.
 - Past seasons list managers, not team names. Don't attach a current team name to a past
   season.
@@ -43,7 +47,7 @@ Pick the three most newsworthy stories for that focus. The first story is the le
 Each story has:
 
 - **kicker**: a short label above the headline, 32 characters or fewer
-  ("Week 10 Recap", "Median Watch", "Trade Desk", "Waiver Wire", "Playoff Race")
+  ("Monday Night Watch", "Week 10 Recap", "Median Watch", "Trade Desk", "Playoff Race")
 - **headline**: 10 to 90 characters, newspaper style, in normal case
 - **dek**: one sentence under the headline, 170 characters or fewer
 - **body**: 3 to 8 paragraphs, 250 to 520 words in total, plain text (no markdown or HTML)
