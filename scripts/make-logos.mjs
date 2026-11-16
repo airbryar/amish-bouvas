@@ -46,7 +46,9 @@ for (const file of fs.readdirSync(SRC).sort()) {
 
 fs.writeFileSync("data/logos.json", JSON.stringify(map, null, 2) + "\n");
 
-// Keep the folder's instructions in step with the current team names.
+// Keep the folder's instructions in step with the current team names (once ESPN has been
+// read; before that, the folder keeps its general instructions).
+if (teams.length) {
 const rows = teams
   .slice()
   .sort((a, b) => a.name.localeCompare(b.name))
@@ -70,6 +72,7 @@ badge, delete the team's picture from this folder.
 ${rows.join("\n")}
 `
 );
+}
 
 for (const n of notes) console.log(`::warning::${n}`);
 console.log(`${Object.keys(map).length} team pictures ready`);
