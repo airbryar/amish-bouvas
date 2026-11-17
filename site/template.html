@@ -1407,7 +1407,58 @@ __ESPN__
     back.addEventListener("click", function (e) { if (e.target === back) close(); });
     on(document, "keydown", function (e) { if (e.key === "Escape" && !back.hidden) close(); });
   })();
+// High Score Belt Holder: highest single-week team score,
+// including regular season and playoffs.
+(function () {
+  var box = document.getElementById("high-score-belt-content");
+  if (!box || !E || !E.teams) return;
 
+  var best = null;
+
+  function consider(id, score, week) {
+    if (id == null || !Number.isFinite(Number(score))) return;
+    score = Number(score);
+    if (!best || score > best.score) {
+      best = { id: id, score: score, week: week };
+    }
+  }
+
+  // Completed matchups, including playoff games.
+  (E.games || []).forEach(function (g) {
+    if (g.h) consider(g.h[0], g.h[1], g.p);
+    if (g.a) consider(g.a[0], g.a[1], g.p);
+  });
+
+  // Current week: a provisional belt holder can take the lead.
+  (E.current || []).forEach(function (g) {
+    if (g.h) consider(g.h[0], g.h[1], E.currentWeek);
+    if (g.a) consider(g.a[0], g.a[1], E.currentWeek);
+  });
+
+  if (!best) {
+    box.textContent = "No scores available yet.";
+    return;
+  }
+
+  var team = E.teams.find(function (t) {
+    return String(t.id) === String(best.id);
+  });
+
+  var name = team ? team.name : "Unknown Team";
+  var phase = best.week > (E.regSeasonWeeks || 99)
+    ? "Playoffs"
+    : "Regular Season";
+
+  box.innerHTML = "";
+
+  var holder = el("div", "belt-holder");
+  var heading = el("h3", null, name);
+  var score = el("div", "belt-score", best.score.toFixed(2) + " points");
+  var details = el("p", "how", "Week " + best.week + " · " + phase);
+
+  holder.append(heading, score, details);
+  box.append(holder);
+})();
   // Playoff odds: a second view of Standings (Table / Playoff odds)
   var stView = "table";
   var ODDS = null;
