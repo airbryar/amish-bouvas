@@ -1,0 +1,38 @@
+
+name: Test Suspension Watch
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - amishbouva-patch-1
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Check out test branch
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Check JavaScript syntax
+        run: |
+          node --check scripts/odds.mjs
+          node --check scripts/build.mjs
+
+      - name: Build website
+        run: node scripts/build.mjs
+
+      - name: Verify Suspension Watch output
+        run: |
+          grep -R -q 'id="suspension-list"' _site
+          echo "Suspension Watch section found."
