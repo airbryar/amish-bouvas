@@ -41,6 +41,10 @@ jobs:
           echo "Homepage size:"
           wc -c _site/index.html
           echo "Suspension Watch matches:"
+                    echo "Suspension section location:"
+          grep -n 'id="suspension"' _site/index.html
+          echo "Suspension list location:"
+          grep -n 'id="suspension-list"' _site/index.html
           grep -n -i 'suspension' _site/index.html | head -20 || true
           echo "Newspaper matches:"
           grep -n 'id="news"' _site/index.html | head -5 || true
