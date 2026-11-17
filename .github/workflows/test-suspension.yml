@@ -28,7 +28,11 @@ jobs:
         run: |
           node --check scripts/odds.mjs
           node --check scripts/build.mjs
-
+      - name: Fetch ESPN data for testing
+        run: node scripts/fetch-espn.mjs
+        env:
+          ESPN_S2: ${{ secrets.ESPN_S2 }}
+          ESPN_SWID: ${{ secrets.ESPN_SWID }}
       - name: Build website
         run: node scripts/build.mjs
 
