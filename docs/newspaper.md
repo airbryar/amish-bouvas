@@ -5,17 +5,21 @@ workflow) or an AI asked by hand ("write today's Newspaper"). Follow them exactl
 
 ## What it is
 
-Three news-style stories about the league, published on the site's News section. Editions
-come out **Monday, Tuesday, Thursday and Saturday mornings**. Each one has a focus:
+Three news-style stories about the league, published on the site's News section. Editions come out **Monday, Tuesday, Wednesday, Thursday and Saturday mornings**. Each one has a focus:
 
 | Day | Edition | Focus |
 | --- | --- | --- |
-| Monday | monday | Where the week stands going into Monday night: the close matchups, the median race (who's above and below the current and projected median), and which teams still have players left to play and in which games. Use `thisWeek.liveStatus`; nothing is final yet |
-| Tuesday | recap | The week that just finished: results, upsets, who won the median game, top performances and duds, what it means for the playoff race, power-ranking moves |
-| Thursday | midweek | Trades, waiver pickups and FAAB spending, pickups that paid off, trends, the trade deadline, league history and all-time records |
-| Saturday | preview | This week's matchups: the game of the week, the median race, players to watch, playoff stakes |
+| Monday | monday | Where the week stands going into Monday night: close matchups, the median race, and which teams still have players left to play. Use `thisWeek.liveStatus`; nothing is final yet. |
+| Tuesday | recap | The week that just finished: results, upsets, median victories, top performances and duds, playoff implications, and power-ranking moves. |
+| Wednesday | aftermath | **Waiver Wire & Suspension Watch.** Examine waiver additions, FAAB spending, notable roster improvements, and questionable acquisitions. Dedicate at least one of the three stories to Suspension Watch: identify the teams in greatest danger of finishing last and receiving a one-year suspension. Discuss their records, recent performances, remaining schedule, and realistic paths to survival. Use actual suspension probabilities only if provided in the available data. Be especially sharp and sarcastic about teams whose seasons are unraveling. Avoid repeating Tuesday's game recaps. |
+| Thursday | midweek | **League Intelligence.** Focus on trades, longer-term roster trends, playoff positioning, league history, all-time records, and developing rivalries. Discuss significant waiver moves only when there's a new angle beyond Wednesday's coverage. |
+| Saturday | preview | This week's matchups: the game of the week, the median race, players to watch, playoff stakes, and potentially decisive games in the suspension race. |
 
 Pick the three most newsworthy stories for that focus. The first story is the lead.
+
+**Wednesday editorial requirement:** One story must focus on Suspension Watch, even if no major standings changes occurred. Another should focus on waiver acquisitions and FAAB activity when that information is available. If waiver activity is limited, substitute the most significant roster or league development supported by the data. Do not invent transactions, probabilities, or future outcomes.
+
+All editions must follow the House style, Facts, and Format instructions below.
 
 ## House style
 
