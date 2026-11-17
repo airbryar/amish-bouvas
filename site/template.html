@@ -809,7 +809,20 @@ footer { margin-top: 40px; border-top: 1px solid var(--line); padding-block: 18p
 
 <main class="wrap">
   <p class="note" id="sample-note"><strong>Preview.</strong> The podcast episodes below are samples until the real links go in.</p>
-
+  
+  <!-- Suspension Watch -->
+  <section id="suspension" aria-labelledby="h-suspension">
+    <div class="sec-head">
+      <h2 id="h-suspension">Suspension Watch</h2>
+      <span class="tag">THE RACE TO AVOID LAST PLACE</span>
+    </div>
+    <p class="how">
+      10,000 simulations of the remaining regular season.
+      The team finishing last faces a one-year suspension.
+    </p>
+    <div class="odds" id="suspension-list"></div>
+  </section>
+  
   <!--news--><section id="news" aria-labelledby="h-news">
     <div class="sec-head">
       <h2 id="h-news">Newspaper</h2>
@@ -1388,6 +1401,63 @@ __ESPN__
   var stView = "table";
   var ODDS = null;
   try { ODDS = JSON.parse(document.getElementById("odds-data").textContent); } catch (e) {}
+  // Hide Suspension Watch when regular-season simulations are unavailable.
+var suspensionSection = document.getElementById("suspension");
+if (suspensionSection && (!ODDS || !ODDS.teams)) {
+  suspensionSection.hidden = true;
+}
+  // Suspension Watch: rank teams by risk of finishing last.
+if (ODDS && ODDS.teams) {
+  var suspensionBox = document.getElementById("suspension-list");
+
+  if (suspensionBox) {
+    var suspensionTeams = E.teams.map(function (t) {
+      return {
+        id: t.id,
+        name: t.name,
+        risk: (ODDS.teams[t.id] || {}).suspension || 0
+      };
+    }).sort(function (a, b) {
+      return b.risk - a.risk;
+    });
+
+    var suspensionHead = el("div", "od-row od-head");
+    suspensionHead.append(
+      el("span"),
+      el("span", null, "Team"),
+      el("span", "od-num", ""),
+      el("span", "od-num", ""),
+      el("span", "od-num", "Risk")
+    );
+    suspensionBox.append(suspensionHead);
+
+    suspensionTeams.forEach(function (t, i) {
+      var row = el("div", "od-row" + (mine(t.id) ? " mine" : ""));
+
+      row.append(el("span", "od-rk", String(i + 1)));
+
+      var nameCol = el("div", "od-name");
+      var teamName = el("div", "od-team");
+      teamName.append(badge(t.id, t.name), teamLink(t.id, t.name));
+      nameCol.append(teamName);
+
+      var bar = el("div", "od-bar");
+      var fill = el("span");
+      fill.style.width = (t.risk * 100).toFixed(1) + "%";
+      bar.append(fill);
+      nameCol.append(bar);
+
+      row.append(nameCol);
+      row.append(el("span", "od-num", ""));
+      row.append(el("span", "od-num", ""));
+      row.append(
+        el("span", "od-num od-pct", Math.round(t.risk * 100) + "%")
+      );
+
+      suspensionBox.append(row);
+    });
+  }
+}
   function showStandings(v) {
     stView = v;
     document.getElementById("st-table-btn").setAttribute("aria-pressed", String(v === "table"));
