@@ -1,6 +1,51 @@
 {
   "editions": [
     {
+      "id": "2026-11-17",
+      "date": "2026-11-17",
+      "label": "Tuesday Edition",
+      "week": 11,
+      "publishedAt": "2026-11-17T13:57:08.008Z",
+      "stories": [
+        {
+          "kicker": "Week 10 Recap",
+          "headline": "McCaffrey scores 50.3, but the supporting cast cannot keep pace",
+          "dek": "The Fishsticks beat Intercourse Encroachment as both of the top two seeds finish Week 10 without a win.",
+          "body": [
+            "Christian McCaffrey delivered the week's highest listed individual score. Intercourse Encroachment still left Week 10 empty-handed. Bryan's team lost 131.0 to 106.7 against The Fishsticks and finished below the 124.9 median, turning a 50.3-point performance into two losses in the combined standings.",
+            "McCaffrey supplied nearly half of Intercourse's total. The rest of the starting lineup combined for 56.4 points, with Michael Penix Jr. the next-highest starter at 12.3. That left little room to absorb the Fishsticks' more evenly shared production: Amon-Ra St. Brown scored 27.3 and C.J. Stroud added 26.4. Chad won despite getting just 1.5 from Rhamondre Stevenson.",
+            "The same problem visited the first-place team. Jahmyr Gibbs scored 46.2 for VillageRd Buttkickers and Jared Goff added 29.4, but Scott finished at 118.8. The Bike slashers won with 144.1, led by George Pickens' 44.5 and Mark Andrews' 16.2. VillageRd missed the median as well as the matchup, while Brandon collected both wins.",
+            "Those defeats leave Scott first at 14-6 and Bryan second at 13-7. Their positions in the power rankings also survive: Intercourse remains first and VillageRd second. Bryan still leads the league at 142.3 points per game, ahead of Scott's 138.6. One disappointing week has narrowed their room for error without overturning the season's scoring order.",
+            "For Chad, the reward reaches beyond beating a higher seed. The Fishsticks are seventh at 9-11 and jump from eighth to fifth in the power rankings, one combined win behind the final playoff position. Brandon is also 9-11, in eighth. The two teams chasing the field did their damage against the league's top two seeds, showing how quickly even a star's best work can disappear into a losing total."
+          ]
+        },
+        {
+          "kicker": "Power Rankings",
+          "headline": "Likely leads Randy's climb as Manny's SexPistols take two wins",
+          "dek": "A 135.2-point week lifts Randy to fourth in the power rankings, with the playoffs four regular-season weeks away.",
+          "body": [
+            "Randy had 46.4 points sitting on the bench and still found enough in his starting lineup to win twice. Manny's SexPistols beat Elam's Ramblers 135.2 to 113.1 in Week 10, cleared the median and climbed from sixth to fourth in the power rankings. Isaiah Likely led the starters with 30.2 points.",
+            "Jayden Daniels supplied another 26.8 at quarterback. Patrick Mahomes' 46.4 stayed on the bench, part of a 103.3-point reserve total that could have made the result feel wasteful. Instead, the chosen lineup delivered the two results that count. Randy sits fourth in the standings at 12-8, level on combined wins with third-place Smoketown Rumspringas.",
+            "The contrast with Dwayne's lineup was clear. Ja'Marr Chase scored 34.1 and Cam Skattebo added 27.2 for Elam's Ramblers, but Mike Gesicki contributed only 1.9. Dwayne finished below the 124.9 median and took two losses. His team is now 12th at 7-13 and falls from ninth to 12th in the power rankings.",
+            "Randy's result follows a 127.2-point win over Angry Mennonites in Week 9, another week above the median. Across those two finished weeks, Manny's SexPistols have banked four combined wins. Their latest score also improves on their 108.2 in Week 8, when they lost to Cow Tippers and finished below the line. The recent sequence offers a concrete reason for the rise.",
+            "The current position comes with a useful cushion: Randy has two more combined wins than sixth-place Thatcher's Wackers, with four weeks left in the 14-week regular season. His next opponent is second-place Intercourse Encroachment, which stands one combined win ahead. The Week 10 recap is a story of points actually converted into progress: a productive tight end, enough quarterback scoring and a lineup that did not need its biggest bench number to move up."
+          ]
+        },
+        {
+          "kicker": "Playoff Race",
+          "headline": "Five double winners tighten the chase below the playoff line",
+          "dek": "The median rewards five matchup winners, while Smoketown and Burnin Ballers split their two games in very different ways.",
+          "body": [
+            "Week 10 rewarded five teams with the full two wins: The Pig Killers, Cow Tippers, The Bike slashers, Manny's SexPistols and The Fishsticks. Each won its matchup and finished above the 124.9 median. With only six playoff places available, those paired results gave several teams outside the field a useful push toward the line.",
+            "Todd set the scoring pace at 176.9 in a 73.2-point victory over Angry Mennonites. Trevor Lawrence contributed 32.8 and Parker Washington added 29.2. The Pig Killers had scored 104.0 the previous week, so this was a 72.9-point improvement. Todd stands 11th at 7-13, three combined wins behind sixth-place Thatcher's Wackers; Seth is 10th at 8-12.",
+            "Doug's Cow Tippers joined the double winners by beating Smoketown Rumspringas 152.5 to 138.5. The loss did not leave Roger empty-handed: his total still ranked in the top six and earned a median win. Smoketown remain third at 12-8, while Cow Tippers stand ninth at 8-12. Roger's 152.2-point average across the last three finished weeks is the highest in the power-ranking table.",
+            "Burnin Ballers took the opposite route to a split. Burnie's 104.1 beat Thatcher's 85.9 but missed the median, leaving him fifth at 11-9. Jaxon Smith-Njigba scored 33.6 and Tony Pollard added 23.9 for the winners. Thatcher received 34.2 from Chuba Hubbard, but the league's lowest team total brought two losses and left the Wackers sixth at 10-10.",
+            "That makes the boundary especially narrow. The Fishsticks and Bike slashers are both 9-11, one combined win behind Thatcher, while Cow Tippers and Angry Mennonites sit another win back. Four regular-season weeks remain, with a matchup and a median result available each week. Burnie's split and Roger's split underline the same point from opposite directions: the weekly opponent settles only half of the standings business."
+          ]
+        }
+      ]
+    },
+    {
       "id": "2026-11-16",
       "date": "2026-11-16",
       "label": "Monday Edition",

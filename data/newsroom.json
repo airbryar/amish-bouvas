@@ -1,5 +1,5 @@
 {
- "fetchedAt": "2026-11-17T10:31:57.297Z",
+ "fetchedAt": "2026-11-17T13:57:07.025Z",
  "notes": [
   "Each week a team plays two games: its head-to-head matchup, plus a game against the league median (the top 6 scores of the week win it). 'record' combines both; 'h2h' and 'vsMedian' split them.",
   "The top 6 seeds make the playoffs. The regular season is 14 weeks.",
@@ -1979,7 +1979,7 @@
     "home": "Manny's SexPistols",
     "away": "Intercourse Encroachment",
     "livePoints": "0-0",
-    "projected": "102.19-77.76",
+    "projected": "102.08-80.44",
     "allTimeHeadToHead": "Randy 5-7 vs Bryan",
     "homeRecord": "12-8",
     "awayRecord": "13-7"
@@ -1988,7 +1988,7 @@
     "home": "Angry Mennonites",
     "away": "Smoketown Rumspringas",
     "livePoints": "0-0",
-    "projected": "120.74-111.89",
+    "projected": "120.75-111.89",
     "allTimeHeadToHead": "Seth 6-3 vs Roger",
     "homeRecord": "8-12",
     "awayRecord": "12-8"
@@ -1997,7 +1997,7 @@
     "home": "The Fishsticks",
     "away": "The Bike slashers",
     "livePoints": "0-0",
-    "projected": "89.69-96.3",
+    "projected": "93.4-96.34",
     "allTimeHeadToHead": "Chad 12-4 vs Brandon",
     "homeRecord": "9-11",
     "awayRecord": "9-11"
@@ -2015,7 +2015,7 @@
     "home": "Elam's Ramblers",
     "away": "The Pig  Killers",
     "livePoints": "0-0",
-    "projected": "114.02-93.92",
+    "projected": "127.5-93.92",
     "allTimeHeadToHead": "Dwayne 3-10 vs Todd",
     "homeRecord": "7-13",
     "awayRecord": "7-13"
@@ -2024,7 +2024,7 @@
     "home": "Burnin  Ballers",
     "away": "Cow Tippers",
     "livePoints": "0-0",
-    "projected": "65.05-101.41",
+    "projected": "65.05-102.94",
     "allTimeHeadToHead": "Burnie 4-7 vs Doug",
     "homeRecord": "11-9",
     "awayRecord": "8-12"
