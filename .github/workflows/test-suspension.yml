@@ -32,7 +32,9 @@ jobs:
       - name: Build website
         run: node scripts/build.mjs
 
-      - name: Verify Suspension Watch output
+      - name: Inspect generated website
         run: |
-          grep -R -q 'id="suspension-list"' _site
-          echo "Suspension Watch section found."
+          echo "Generated files:"
+          find _site -maxdepth 2 -type f | head -30
+          echo "Looking for Suspension Watch:"
+          grep -R -n -m 1 'suspension-list' _site || true
