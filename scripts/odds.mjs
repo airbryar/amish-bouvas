@@ -47,7 +47,7 @@ export function computeOdds(E) {
   // Weekly scores so far (finished regular-season games)
   const scores = Object.fromEntries(ids.map((id) => [id, []]));
   let finishedWeeks = 0;
-  for (const g of E.games || []) {
+for (const g of E.games || []) {
     if (g.p > reg) continue;
     scores[g.h[0]].push(g.h[1]);
     scores[g.a[0]].push(g.a[1]);
@@ -84,7 +84,13 @@ export function computeOdds(E) {
   const baseH2h = {}; // "x|y" -> times x beat y this season
   const baseH2hTies = {};
 for (const g of E.games || []) {
-    if (g.p > reg || g.w === "T") continue;
+      if (g.p > reg) continue;
+    if (g.w === "T") {
+      const a = g.h[0], b = g.a[0];
+      baseH2hTies[a + "|" + b] = (baseH2hTies[a + "|" + b] || 0) + 1;
+      baseH2hTies[b + "|" + a] = (baseH2hTies[b + "|" + a] || 0) + 1;
+      continue;
+    }
     const [win, lose] = g.w === "H" ? [g.h[0], g.a[0]] : [g.a[0], g.h[0]];
     baseH2h[win + "|" + lose] = (baseH2h[win + "|" + lose] || 0) + 1;
   }
@@ -92,7 +98,7 @@ for (const g of E.games || []) {
  // Determine who finishes last under the suspension tiebreaker.
 // Worst record, then H2H winning percentage among tied teams,
 // then fewest regular-season points.
-function suspensionLoser(w, pf, h2h) {
+function suspensionLoser(w, pf, h2h, h2hTies) {
   const worst = Math.min(...ids.map(id => w[id]));
   let tied = ids.filter(id => w[id] === worst);
 
@@ -104,9 +110,10 @@ function suspensionLoser(w, pf, h2h) {
     for (const other of tied) {
       if (other === id) continue;
       const a = h2h[id + "|" + other] || 0;
-      const b = h2h[other + "|" + id] || 0;
-      won += a;
-      played += a + b;
+const b = h2h[other + "|" + id] || 0;
+const ties = h2hTies[id + "|" + other] || 0;
+won += a + ties * 0.5;
+played += a + b + ties;
     }
     pct[id] = played ? won / played : null;
   }
@@ -142,6 +149,7 @@ function suspensionLoser(w, pf, h2h) {
     const w = {}, pf = {}, wk = {};
     for (const id of ids) { w[id] = team[id].w + (team[id].t || 0) / 2; pf[id] = team[id].pf; }
    const h2h = Object.assign({}, baseH2h);
+    const h2hTies = Object.assign({}, baseH2hTies);
     for (const p of weekList) {
       const sc = {};
       for (const id of ids) {
@@ -156,10 +164,19 @@ function suspensionLoser(w, pf, h2h) {
       }
       const before = p === cur ? Object.assign({}, w) : null;
       for (const [h, a] of weeks[p]) {
-        if (sc[h] > sc[a]) { w[h]++; if (h2h) h2h[h + "|" + a] = (h2h[h + "|" + a] || 0) + 1; }
-        else if (sc[a] > sc[h]) { w[a]++; if (h2h) h2h[a + "|" + h] = (h2h[a + "|" + h] || 0) + 1; }
-        else { w[h] += 0.5; w[a] += 0.5; }
-      }
+  if (sc[h] > sc[a]) {
+    w[h]++;
+    h2h[h + "|" + a] = (h2h[h + "|" + a] || 0) + 1;
+  } else if (sc[a] > sc[h]) {
+    w[a]++;
+    h2h[a + "|" + h] = (h2h[a + "|" + h] || 0) + 1;
+  } else {
+    w[h] += 0.5;
+    w[a] += 0.5;
+    h2hTies[h + "|" + a] = (h2hTies[h + "|" + a] || 0) + 1;
+    h2hTies[a + "|" + h] = (h2hTies[a + "|" + h] || 0) + 1;
+  }
+}
       if (medianOn) {
         const order = ids.slice().sort((x, y) => sc[y] - sc[x]);
         for (let i = 0; i < Math.floor(order.length / 2); i++) w[order[i]]++;
@@ -167,7 +184,7 @@ function suspensionLoser(w, pf, h2h) {
       if (before) for (const id of ids) wk[id] = Math.floor(w[id] - before[id]); // a tie counts as no win
     }
 const final = ids.slice().sort((x, y) => w[y] - w[x] || (byH2h ? (h2h[y + "|" + x] || 0) - (h2h[x + "|" + y] || 0) : 0) || pf[y] - pf[x]);
-    suspended[suspensionLoser(w, pf, h2h)]++;
+    suspended[suspensionLoser(w, pf, h2h, h2hTies)]++;
     final.forEach((id, i) => {
       if (id in wk) { wkCount[id][wk[id]]++; if (i < spots) wkMade[id][wk[id]]++; }
       if (i < spots) made[id]++;
