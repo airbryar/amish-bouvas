@@ -15,12 +15,11 @@ on:
       edition:
         description: "Which edition to write (auto = by today's day)"
         type: choice
-        options: [auto, monday, recap, midweek, preview]
+        options: [auto, monday, recap, aftermath, midweek, preview]
         default: auto
-  schedule:
-    - cron: "41 12 * * 2"   # Tuesday about 7:40 AM Eastern (after ESPN finalizes the week)
-    - cron: "46 9 * * 1,4,6"  # Monday, Thursday and Saturday about 4:45 AM Eastern
-
+    schedule:
+    - cron: "41 12 * * 2"     # Tuesday about 7:40 AM Eastern
+    - cron: "46 9 * * 1,3,4,6" # Monday, Wednesday, Thursday and Saturday about 4:45 AM Eastern
 concurrency:
   group: newspaper
   cancel-in-progress: false
@@ -62,7 +61,8 @@ jobs:
             case "$day" in
               1) edition=monday ;;
               2) edition=recap ;;
-              3|4|5) edition=midweek ;;
+              3) edition=aftermath ;;
+              4|5) edition=midweek ;;
               *) edition=preview ;;
             esac
           fi
@@ -101,8 +101,7 @@ jobs:
           allow-users: airbryar
           prompt: |
             Write today's edition of this fantasy football league's Newspaper.
-            Edition type: ${{ steps.plan.outputs.edition }} (monday = Monday, recap = Tuesday, midweek = Thursday, preview = Saturday).
-
+            Edition type: ${{ steps.plan.outputs.edition }} (monday = Monday, recap = Tuesday, aftermath = Wednesday, midweek = Thursday, preview = Saturday).
             Follow docs/newspaper.md exactly. In short: read data/newsroom.json (fresh league
             data) and the two newest editions in data/news.json, write three stories to
             draft.json in the repository root, then run `node scripts/add-edition.mjs draft.json`.
