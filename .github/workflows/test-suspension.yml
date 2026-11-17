@@ -32,7 +32,7 @@ jobs:
       - name: Build website
         run: node scripts/build.mjs
 
-           - name: Inspect generated homepage
+      - name: Inspect generated homepage
         run: |
           echo "Homepage size:"
           wc -c _site/index.html
