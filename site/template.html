@@ -1438,7 +1438,17 @@ if (ODDS && ODDS.teams) {
 
       var nameCol = el("div", "od-name");
       var teamName = el("div", "od-team");
-      teamName.append(badge(t.id, t.name), teamLink(t.id, t.name));
+      var currentTeam = E.teams.find(function (x) {
+  return x.id === t.id;
+});
+var record = currentTeam.w + "-" + currentTeam.l;
+if (currentTeam.t) record += "-" + currentTeam.t;
+
+teamName.append(
+  badge(t.id, t.name),
+  teamLink(t.id, t.name),
+  el("span", "od-record", "(" + record + ")")
+);
       nameCol.append(teamName);
 
       var bar = el("div", "od-bar");
