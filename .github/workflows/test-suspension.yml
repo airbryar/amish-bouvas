@@ -51,3 +51,11 @@ jobs:
           echo "Homepage beginning:"
           head -c 500 _site/index.html
           echo
+          
+      - name: Save website preview
+        uses: actions/upload-artifact@v4
+        with:
+          name: suspension-watch-preview
+          path: _site/
+          retention-days: 1
+
