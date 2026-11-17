@@ -32,9 +32,14 @@ jobs:
       - name: Build website
         run: node scripts/build.mjs
 
-      - name: Inspect generated website
+           - name: Inspect generated homepage
         run: |
-          echo "Generated files:"
-          find _site -maxdepth 2 -type f | head -30
-          echo "Looking for Suspension Watch:"
-          grep -R -n -m 1 'suspension-list' _site || true
+          echo "Homepage size:"
+          wc -c _site/index.html
+          echo "Suspension Watch matches:"
+          grep -n -i 'suspension' _site/index.html | head -20 || true
+          echo "Newspaper matches:"
+          grep -n 'id="news"' _site/index.html | head -5 || true
+          echo "Homepage beginning:"
+          head -c 500 _site/index.html
+          echo
