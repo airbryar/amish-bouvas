@@ -1,6 +1,48 @@
 {
   "editions": [
     {
+      "id": "2026-11-18",
+      "date": "2026-11-18",
+      "label": "Wednesday Edition",
+      "week": 11,
+      "publishedAt": "2026-11-18T19:14:53.990Z",
+      "stories": [
+        {
+          "kicker": "Suspension Watch",
+          "headline": "The Ramblers and Pig Killers must settle who gets the basement",
+          "dek": "Elam and Todd meet at 7-13, with four weeks left to avoid last place and a one-year suspension.",
+          "body": [
+            "Elam's Ramblers and the Pig Killers have spent ten weeks assembling matching 7-13 records. On the Week 11 schedule, they take their work directly to one another. The winner gets a head-to-head win over the team most immediately in the way of survival. A median win would make it a sweep, and a sweep against an opponent who also misses the median would open a two-win gap. At this end of the table, that qualifies as breathing room.",
+            "Elam sits 12th with 1,070.5 season points. Its last three starting totals read 119.7, 127.5 and 113.1. Todd's lineup went 106.8, 104.0 and 176.9 over the same stretch. That last number establishes what the Pig Killers can do. Their 2-8 median record establishes how often the rest of the league has had to worry about it. Todd needs another top-half score while the schedule still offers somebody equally desperate.",
+            "After this, Elam gets the 8-12 Cow Tippers, another opponent it can pull closer by beating outright. Todd draws the 14-6 VillageRd Buttkickers. Finding a median win that week would be valuable insurance if the matchup gets away. Elam has managed only three head-to-head wins all season, so having two reachable opponents in a row is an opportunity it can scarcely afford to waste.",
+            "The Angry Mennonites are one win above both clubs at 8-12, with a 3-7 median record and consecutive scores of 87.3 and 103.6. They get third-place Smoketown this week, then the Fishsticks. A top-six score against Smoketown would buy Seth some protection while the bottom two play each other. The current cushion is a single win. The standings have issued thicker receipts."
+          ]
+        },
+        {
+          "kicker": "Waiver Wire",
+          "headline": "The Fishsticks buy most of Wednesday's waiver bill",
+          "dek": "Chad spent $125 on Emari Demercado and Pat Bryant, while the team holding the final playoff spot spent zero.",
+          "body": [
+            "The Fishsticks made the most expensive claim on Wednesday's wire and came back for another. Emari Demercado cost $100 with Geno Smith dropped, and Pat Bryant cost $25 with Jordan Addison dropped. That's $125 of the $208 in recorded bids for the day. Chad entered Week 11 at 9-11, one win out of sixth place, and has bought some depth at running back and a different answer at receiver.",
+            "Demercado is the more consequential reshuffle because the roster gives up a quarterback slot for a running back. The Fishsticks already have 121.3 points from four C.J. Stroud starts after acquiring him for $8. There's a plausible case for using Smith's spot elsewhere. Demercado's fee, more than twelve times Stroud's, buys the chance to make that case on a starting lineup. The invoice has arrived ahead of the evidence.",
+            "VillageRd paid $58 for receiver Elic Ayomanor, with no corresponding drop listed. The move gives the 14-6 league leader another receiver option. Burnin Ballers spent $25 on the Jets defense, while Manny's SexPistols took the Panthers defense for free and dropped Cleveland. Those are two different prices for a new option at the same position, and the eventual starting scores will make a more interesting comparison than the bids alone.",
+            "Thatcher's Wackers, the team Chad is chasing, swapped Tutu Atwell for Kalif Raymond on a zero-dollar claim. Atwell himself arrived as a free agent a week earlier. The Wackers have held a weeklong audition at the back of the receiver room for a total charge of zero. Chad needs Bryant or Demercado to give him something he can actually use. The Fishsticks already lead Thatcher in Wednesday's spending, a category ESPN has yet to award a playoff berth for."
+          ]
+        },
+        {
+          "kicker": "Trade Desk",
+          "headline": "Thatcher has points on the receipt while Elam waits to cash in",
+          "dek": "Drake London and Travis Kelce have started for the Wackers, while both running backs sent to Elam await their first start there.",
+          "body": [
+            "A week after Thatcher's Wackers and Elam's Ramblers traded two players apiece, one side has found room for its acquisitions in the lineup. Drake London has put up 17.9 points in one start for Thatcher, and Travis Kelce has added 5.0 in one. D'Andre Swift and TreVeyon Henderson have yet to start for Elam. The trade has already changed how Thatcher fills two positions. Elam's half of the transaction is still waiting to be called from the bench.",
+            "Swift is the interesting piece for a team trying to climb out of 12th. He scored 155.8 points in Thatcher's starting lineup before the deal. Henderson supplied 12.9 there. Those totals describe two very different bodies of work, and Swift gives Elam a running back with a substantial record of usable production in this league. The next question is which existing starter he can improve on. A point scored for Thatcher in October has very little interest in helping Elam in November.",
+            "Thatcher can put a figure on what left Elam's lineup, too. London had scored 123.6 for the Ramblers when started, while Kelce had provided 90.2. London has already delivered the larger share of the pair's first 22.9 points for the Wackers. Kelce joins a roster that has already collected 172.5 from Trey McBride across ten starts, so the interesting question is when Thatcher can get useful points from both tight ends.",
+            "The timing gives the two clubs different demands. Thatcher has the sixth seed at 10-10 and can use London immediately while sorting out Kelce's place. Elam is 7-13 and has four regular-season weeks to turn a reshaped roster into wins. Swift's first start for the Ramblers, whenever it comes, will tell us more about the deal than another week of admiring his old totals."
+          ]
+        }
+      ]
+    },
+    {
       "id": "2026-11-17",
       "date": "2026-11-17",
       "label": "Tuesday Edition",
