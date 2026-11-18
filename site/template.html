@@ -845,46 +845,8 @@ footer { margin-top: 40px; border-top: 1px solid var(--line); padding-block: 18p
 
 <main class="wrap">
   <p class="note" id="sample-note"><strong>Preview.</strong> The podcast episodes below are samples until the real links go in.</p>
-  
-  <!-- Suspension Watch -->
-  <section id="suspension" aria-labelledby="h-suspension">
-    <div class="sec-head">
-      <h2 id="h-suspension">Suspension Watch</h2>
-      <span class="tag">THE RACE TO AVOID LAST PLACE</span>
-    </div>
-    <p class="how">
-      10,000 simulations of the remaining regular season.
-      The team finishing last faces a one-year suspension.
-    </p>
-    <div class="odds" id="suspension-list"></div>
-  </section>
-  <!-- High Score Belt Holder -->
-<section id="high-score-belt" aria-labelledby="h-high-score-belt">
-  <div class="sec-head">
-    <h2 id="h-high-score-belt">🏆 High Score Belt Holder</h2>
-    <span class="tag">$100 SEASON PRIZE</span>
-  </div>
-  <p class="how">
-    The highest single-week team score of the season,
-    including regular season and playoffs.
-  </p>
-  <div id="high-score-belt-content"></div>
-</section>
-  <!--news--><section id="news" aria-labelledby="h-news">
-    <div class="sec-head">
-      <h2 id="h-news">Newspaper</h2>
-      <span class="tag" id="news-tag"></span>
-    </div>
-    <div class="edition" id="news-edition"></div>
-    <div class="news" id="news-body"></div>
-    <details class="news-past" id="news-past" hidden>
-      <summary>Earlier editions</summary>
-      <div class="news-past-list" id="news-past-list"></div>
-    </details>
-    <p class="news-credit">Written by AI from ESPN league data. New editions Monday, Tuesday, Thursday and Saturday mornings.</p>
-  </section><!--/news-->
 
-  <section id="standings" aria-labelledby="h-standings">
+<section id="standings" aria-labelledby="h-standings">
     <div class="sec-head">
       <h2 id="h-standings">Standings</h2>
       <span class="tag" id="median-tag"></span>
@@ -919,19 +881,44 @@ footer { margin-top: 40px; border-top: 1px solid var(--line); padding-block: 18p
     </div>
   </section>
 
-  <section id="rankings" aria-labelledby="h-rankings">
+ <!--news--><section id="news" aria-labelledby="h-news">
     <div class="sec-head">
-      <h2 id="h-rankings">Power Rankings</h2>
-      <span class="tag" id="rankings-tag"></span>
+      <h2 id="h-news">Newspaper</h2>
+      <span class="tag" id="news-tag"></span>
     </div>
-    <p class="lede">Recalculated every Tuesday morning from ESPN results. Arrows show movement from the week before. Tap a team for its breakdown.</p>
-    <details class="how">
-      <summary>How the formula works</summary>
-      <ul id="how-list"></ul>
-      <p>Each part is scored 0 to 100 against the rest of the league, then the four are blended into the power score.</p>
+    <div class="edition" id="news-edition"></div>
+    <div class="news" id="news-body"></div>
+    <details class="news-past" id="news-past" hidden>
+      <summary>Earlier editions</summary>
+      <div class="news-past-list" id="news-past-list"></div>
     </details>
-    <ol class="pr" id="rankings-list"></ol>
+    <p class="news-credit">Written by AI from ESPN league data. New editions Monday, Tuesday, Thursday and Saturday mornings.</p>
+  </section><!--/news-->
+  
+  <!-- Suspension Watch -->
+  <section id="suspension" aria-labelledby="h-suspension">
+    <div class="sec-head">
+      <h2 id="h-suspension">Suspension Watch</h2>
+      <span class="tag">THE RACE TO AVOID LAST PLACE</span>
+    </div>
+    <p class="how">
+      10,000 simulations of the remaining regular season.
+      The team finishing last faces a one-year suspension.
+    </p>
+    <div class="odds" id="suspension-list"></div>
   </section>
+  <!-- High Score Belt Holder -->
+<section id="high-score-belt" aria-labelledby="h-high-score-belt">
+  <div class="sec-head">
+    <h2 id="h-high-score-belt">🏆 High Score Belt Holder</h2>
+    <span class="tag">$100 SEASON PRIZE</span>
+  </div>
+  <p class="how">
+    The highest single-week team score of the season,
+    including regular season and playoffs.
+  </p>
+  <div id="high-score-belt-content"></div>
+</section>
 
   <section id="this-week" aria-labelledby="h-week">
     <div class="sec-head">
@@ -967,6 +954,20 @@ footer { margin-top: 40px; border-top: 1px solid var(--line); padding-block: 18p
     <p class="mw-tap" id="mw-tap" hidden>Tap a team for its lineup.</p>
   </section>
 
+  <section id="rankings" aria-labelledby="h-rankings">
+    <div class="sec-head">
+      <h2 id="h-rankings">Power Rankings</h2>
+      <span class="tag" id="rankings-tag"></span>
+    </div>
+    <p class="lede">Recalculated every Tuesday morning from ESPN results. Arrows show movement from the week before. Tap a team for its breakdown.</p>
+    <details class="how">
+      <summary>How the formula works</summary>
+      <ul id="how-list"></ul>
+      <p>Each part is scored 0 to 100 against the rest of the league, then the four are blended into the power score.</p>
+    </details>
+    <ol class="pr" id="rankings-list"></ol>
+  </section>
+  
   <section id="trades" aria-labelledby="h-trades">
     <div class="sec-head">
       <h2 id="h-trades">Transactions</h2>
