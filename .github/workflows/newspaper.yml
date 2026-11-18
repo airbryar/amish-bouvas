@@ -102,6 +102,13 @@ jobs:
           prompt: |
             Write today's edition of this fantasy football league's Newspaper.
             Edition type: ${{ steps.plan.outputs.edition }} (monday = Monday, recap = Tuesday, aftermath = Wednesday, midweek = Thursday, preview = Saturday).
+            
+            PRIORITIZE COMEDY OVER JOURNALISM. This is a fantasy league roast, not ESPN.
+            Write short, punchy, aggressively funny stories with outrageous but clearly
+            fictional hyperbole. Every article must make the league laugh.
+            Roast managers like a sarcastic older brother mercilessly teasing his friends.
+            Cut filler, generic sports analysis, unnecessary explanations, and repetition.
+            Get to the punchline quickly. Be ruthless, playful, and genuinely hilarious.
             Follow docs/newspaper.md exactly. In short: read data/newsroom.json (fresh league
             data) and the two newest editions in data/news.json, write three stories to
             draft.json in the repository root, then run `node scripts/add-edition.mjs draft.json`.
