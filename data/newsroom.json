@@ -1,10 +1,12 @@
 {
- "fetchedAt": "2026-11-19T13:49:58.607Z",
+ "fetchedAt": "2026-11-19T14:48:05.251Z",
  "notes": [
   "Each week a team plays two games: its head-to-head matchup, plus a game against the league median (the top 6 scores of the week win it). 'record' combines both; 'h2h' and 'vsMedian' split them.",
   "The top 6 seeds make the playoffs. The regular season is 14 weeks.",
   "Points are fantasy points. 'ptsWhileStarted' and similar fields only count weeks the player was in that team's starting lineup.",
   "Managers are listed by first name. Past seasons list managers, not team names.",
+  "Historical playoff appearances, wins, and losses come from commissioner-maintained records for 2004–2025. These take precedence over ESPN playoff seed data.",
+  "Brandon's 2004 championship is confirmed, but his three playoff wins that season are an assumption approved by the commissioner, not verified individual game results. Do not describe those three wins as independently verified.",
   "allTimeHeadToHead covers every past season plus this one, playoffs included.",
   "Past-season records come from ESPN season records and include median games in seasons that had them; allTimeHeadToHead counts only head-to-head matchups.",
   "thisWeek.liveStatus (when present) is the week in progress as of 'asOf': each team's points so far and projection, how far it sits from the current and projected median (the midpoint of the 6th and 7th scores), and its starters still to play with their NFL games (times Eastern). Nothing in it is final."
@@ -2032,7 +2034,7 @@
   ],
   "alreadyPlayedStandouts": [],
   "liveStatus": {
-   "asOf": "2026-11-19T13:49:55.091Z",
+   "asOf": "2026-11-19T14:48:01.495Z",
    "currentMedian": 0,
    "projectedMedian": 121.4,
    "teams": [
@@ -3755,11 +3757,11 @@
    },
    {
     "season": 2005,
-    "champion": "a former manager",
+    "champion": "Kendall Kurtz",
     "runnerUp": "a former manager",
     "finalStandings": [
      {
-      "manager": "a former manager",
+      "manager": "Kendall Kurtz",
       "finish": 1,
       "seed": 2,
       "record": "9-4",
@@ -3773,7 +3775,7 @@
       "pf": 984
      },
      {
-      "manager": "a former manager",
+      "manager": "Josh Harter",
       "finish": 3,
       "seed": 1,
       "record": "10-3",
@@ -3808,7 +3810,7 @@
       "pf": 960
      },
      {
-      "manager": "a former manager",
+      "manager": "Shawn Erb",
       "finish": 8,
       "seed": 7,
       "record": "6-7",
@@ -3864,7 +3866,7 @@
       "pf": 1207
      },
      {
-      "manager": "a former manager",
+      "manager": "Kendall Kurtz",
       "finish": 3,
       "seed": 4,
       "record": "8-5",
@@ -3913,14 +3915,14 @@
       "pf": 1006
      },
      {
-      "manager": "a former manager",
+      "manager": "Josh Harter",
       "finish": 10,
       "seed": 7,
       "record": "7-6",
       "pf": 936
      },
      {
-      "manager": "a former manager",
+      "manager": "Shawn Erb",
       "finish": 11,
       "seed": 11,
       "record": "5-8",
@@ -3937,11 +3939,11 @@
    },
    {
     "season": 2007,
-    "champion": "a former manager",
+    "champion": "Josh Harter",
     "runnerUp": "Scott",
     "finalStandings": [
      {
-      "manager": "a former manager",
+      "manager": "Josh Harter",
       "finish": 1,
       "seed": 1,
       "record": "9-4",
@@ -4011,14 +4013,14 @@
       "pf": 1059
      },
      {
-      "manager": "a former manager",
+      "manager": "Shawn Erb",
       "finish": 11,
       "seed": 11,
       "record": "3-10",
       "pf": 883
      },
      {
-      "manager": "a former manager",
+      "manager": "Kendall Kurtz",
       "finish": 12,
       "seed": 12,
       "record": "1-12",
@@ -4028,11 +4030,11 @@
    },
    {
     "season": 2008,
-    "champion": "a former manager",
+    "champion": "Shawn Erb",
     "runnerUp": "a former manager",
     "finalStandings": [
      {
-      "manager": "a former manager",
+      "manager": "Shawn Erb",
       "finish": 1,
       "seed": 2,
       "record": "10-3",
@@ -4081,14 +4083,14 @@
       "pf": 1011
      },
      {
-      "manager": "a former manager",
+      "manager": "Kendall Kurtz",
       "finish": 8,
       "seed": 12,
       "record": "4-9",
       "pf": 892
      },
      {
-      "manager": "a former manager",
+      "manager": "Josh Harter",
       "finish": 9,
       "seed": 7,
       "record": "5-8",
@@ -4120,7 +4122,7 @@
    {
     "season": 2009,
     "champion": "Burnie",
-    "runnerUp": "a former manager",
+    "runnerUp": "Kendall Kurtz",
     "finalStandings": [
      {
       "manager": "Burnie",
@@ -4130,7 +4132,7 @@
       "pf": 1252
      },
      {
-      "manager": "a former manager",
+      "manager": "Kendall Kurtz",
       "finish": 2,
       "seed": 1,
       "record": "9-4",
@@ -4172,7 +4174,7 @@
       "pf": 1060
      },
      {
-      "manager": "a former manager",
+      "manager": "Shawn Erb",
       "finish": 8,
       "seed": 8,
       "record": "6-7",
@@ -4186,7 +4188,7 @@
       "pf": 951
      },
      {
-      "manager": "a former manager",
+      "manager": "Josh Harter",
       "finish": 10,
       "seed": 10,
       "record": "5-8",
@@ -4249,7 +4251,7 @@
       "pf": 1044
      },
      {
-      "manager": "a former manager",
+      "manager": "Josh Harter",
       "finish": 6,
       "seed": 4,
       "record": "8-5",
@@ -4277,7 +4279,7 @@
       "pf": 1040
      },
      {
-      "manager": "a former manager",
+      "manager": "Kendall Kurtz",
       "finish": 10,
       "seed": 12,
       "record": "3-10",
@@ -4301,11 +4303,11 @@
    },
    {
     "season": 2011,
-    "champion": "a former manager",
+    "champion": "Josh Harter",
     "runnerUp": "Doug",
     "finalStandings": [
      {
-      "manager": "a former manager",
+      "manager": "Josh Harter",
       "finish": 1,
       "seed": 2,
       "record": "8-5",
@@ -5673,6 +5675,10 @@
     "titles": 0,
     "runnerUps": 1,
     "playoffTrips": 10,
+    "playoffWins": 5,
+    "playoffLosses": 10,
+    "playoffWinPercentage": 0.333,
+    "assumed2004PlayoffWins": 0,
     "pastRecord": "154-151-1",
     "pastPointsFor": 26536.9
    },
@@ -5683,6 +5689,10 @@
     "titles": 0,
     "runnerUps": 1,
     "playoffTrips": 5,
+    "playoffWins": 1,
+    "playoffLosses": 5,
+    "playoffWinPercentage": 0.167,
+    "assumed2004PlayoffWins": 0,
     "pastRecord": "95-120",
     "pastPointsFor": 19270.6
    },
@@ -5693,6 +5703,10 @@
     "titles": 5,
     "runnerUps": 1,
     "playoffTrips": 12,
+    "playoffWins": 17,
+    "playoffLosses": 7,
+    "playoffWinPercentage": 0.708,
+    "assumed2004PlayoffWins": 0,
     "pastRecord": "166-140",
     "pastPointsFor": 27237.9
    },
@@ -5703,6 +5717,10 @@
     "titles": 4,
     "runnerUps": 1,
     "playoffTrips": 8,
+    "playoffWins": 11,
+    "playoffLosses": 4,
+    "playoffWinPercentage": 0.733,
+    "assumed2004PlayoffWins": 0,
     "pastRecord": "112-90",
     "pastPointsFor": 18609.4
    },
@@ -5713,6 +5731,10 @@
     "titles": 2,
     "runnerUps": 1,
     "playoffTrips": 13,
+    "playoffWins": 9,
+    "playoffLosses": 11,
+    "playoffWinPercentage": 0.45,
+    "assumed2004PlayoffWins": 0,
     "pastRecord": "153-152-1",
     "pastPointsFor": 27199.2
    },
@@ -5723,6 +5745,10 @@
     "titles": 0,
     "runnerUps": 1,
     "playoffTrips": 8,
+    "playoffWins": 4,
+    "playoffLosses": 8,
+    "playoffWinPercentage": 0.333,
+    "assumed2004PlayoffWins": 0,
     "pastRecord": "124-104",
     "pastPointsFor": 21191.7
    },
@@ -5733,6 +5759,10 @@
     "titles": 2,
     "runnerUps": 4,
     "playoffTrips": 11,
+    "playoffWins": 13,
+    "playoffLosses": 9,
+    "playoffWinPercentage": 0.591,
+    "assumed2004PlayoffWins": 0,
     "pastRecord": "147-159",
     "pastPointsFor": 26603.6
    },
@@ -5742,7 +5772,11 @@
     "pastSeasons": 15,
     "titles": 2,
     "runnerUps": 3,
-    "playoffTrips": 9,
+    "playoffTrips": 12,
+    "playoffWins": 11,
+    "playoffLosses": 10,
+    "playoffWinPercentage": 0.524,
+    "assumed2004PlayoffWins": 0,
     "pastRecord": "114-114",
     "pastPointsFor": 21005.6
    },
@@ -5753,6 +5787,10 @@
     "titles": 1,
     "runnerUps": 1,
     "playoffTrips": 9,
+    "playoffWins": 7,
+    "playoffLosses": 8,
+    "playoffWinPercentage": 0.467,
+    "assumed2004PlayoffWins": 0,
     "pastRecord": "140-153",
     "pastPointsFor": 25715.4
    },
@@ -5763,6 +5801,10 @@
     "titles": 0,
     "runnerUps": 1,
     "playoffTrips": 7,
+    "playoffWins": 4,
+    "playoffLosses": 7,
+    "playoffWinPercentage": 0.364,
+    "assumed2004PlayoffWins": 0,
     "pastRecord": "148-158",
     "pastPointsFor": 26947.3
    },
@@ -5772,7 +5814,11 @@
     "pastSeasons": 12,
     "titles": 1,
     "runnerUps": 1,
-    "playoffTrips": 8,
+    "playoffTrips": 12,
+    "playoffWins": 6,
+    "playoffLosses": 11,
+    "playoffWinPercentage": 0.353,
+    "assumed2004PlayoffWins": 3,
     "pastRecord": "101-88",
     "pastPointsFor": 17300.6
    },
@@ -5783,6 +5829,10 @@
     "titles": 1,
     "runnerUps": 2,
     "playoffTrips": 8,
+    "playoffWins": 6,
+    "playoffLosses": 7,
+    "playoffWinPercentage": 0.462,
+    "assumed2004PlayoffWins": 0,
     "pastRecord": "131-123",
     "pastPointsFor": 22599.8
    }
