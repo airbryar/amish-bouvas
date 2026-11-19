@@ -362,6 +362,10 @@ const manualChampions = fs.existsSync("data/manual-champions.json")
   ? JSON.parse(fs.readFileSync("data/manual-champions.json", "utf8")).champions || []
   : [];
 
+// Commissioner-maintained historical playoff results.
+const manualPlayoffs = fs.existsSync("data/manual-playoffs.json")
+  ? JSON.parse(fs.readFileSync("data/manual-playoffs.json", "utf8"))
+  : null;
 const history = [];
 const h2h = {}; // "managerA|managerB" -> [winsA, winsB, ties]
 const allTime = {};
