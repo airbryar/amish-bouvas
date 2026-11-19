@@ -628,6 +628,8 @@ const out = {
     `The top ${PLAYOFF_TEAMS} seeds make the playoffs. The regular season is ${REG} weeks.`,
     "Points are fantasy points. 'ptsWhileStarted' and similar fields only count weeks the player was in that team's starting lineup.",
     "Managers are listed by first name. Past seasons list managers, not team names.",
+    "Historical playoff appearances, wins, and losses come from commissioner-maintained records for 2004–2025. These take precedence over ESPN playoff seed data.",
+    "Brandon's 2004 championship is confirmed, but his three playoff wins that season are an assumption approved by the commissioner, not verified individual game results. Do not describe those three wins as independently verified.",
     "allTimeHeadToHead covers every past season plus this one, playoffs included.",
     "Past-season records come from ESPN season records and include median games in seasons that had them; allTimeHeadToHead counts only head-to-head matchups.",
     "thisWeek.liveStatus (when present) is the week in progress as of 'asOf': each team's points so far and projection, how far it sits from the current and projected median (the midpoint of the 6th and 7th scores), and its starters still to play with their NFL games (times Eastern). Nothing in it is final.",
