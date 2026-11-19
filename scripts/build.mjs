@@ -57,6 +57,9 @@ if (history) {
     : { champions: [] };
 
   history.manualChampions = manual.champions || [];
+  history.manualPlayoffs = fs.existsSync("data/manual-playoffs.json")
+  ? JSON.parse(read("data/manual-playoffs.json"))
+  : null;
   for (const [id, name] of Object.entries(manual.managerNames || {})) {
   history.managers[id] = name;
 }
