@@ -383,6 +383,11 @@ function seasonGames(schedule, ownerOf) {
 }
 
 const names = recordBook.managers || {};
+for (const [id, name] of Object.entries(
+  JSON.parse(fs.readFileSync("data/manual-champions.json", "utf8")).managerNames || {}
+)) {
+  names[id] = name;
+}
 
 for (const s of recordBook.seasons || []) {
   if (s.season >= SEASON) continue;
