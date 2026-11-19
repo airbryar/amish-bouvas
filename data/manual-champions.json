@@ -1,9 +1,10 @@
-
 {
   "champions": [
-    {
-      "season": 2004,
-      "manager": "m11"
-    }
-  ]
+    { "season": 2004, "manager": "m11" }
+  ],
+  "managerNames": {
+    "m13": "Josh Harter",
+    "m15": "Kendall Kurtz",
+    "m18": "Shawn Erb"
+  }
 }
