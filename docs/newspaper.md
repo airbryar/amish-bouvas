@@ -107,6 +107,22 @@ Before submitting any edition, ask:
 - Use **only** facts from `data/newsroom.json` (fresh league data from ESPN). Don't invent
   quotes, injuries, real-world NFL news or anything not in the data.
 - Read its `notes` first: they explain the median game, records and fields.
+- Before making any historical claim, verify it against the complete
+  league history and career statistics in `data/newsroom.json`.
+- Never claim a manager has zero championships, has never won,
+  or is seeking a first title unless the historical data confirms it.
+- Distinguish past-season records from all-time records that include
+  the current season. Label each accurately.
+- Before claiming someone leads the league in career wins, titles,
+  playoff appearances, or points, compare their total against every
+  eligible manager in the same dataset.
+- Do not treat missing historical information as evidence that an
+  event never happened.
+- If historical data is incomplete or ambiguous, omit the claim
+  rather than inventing a conclusion.
+- Verify every numerical claim in the headline, dek, and body
+  before submitting the edition. Humor can be fictional;
+  statistics and historical accomplishments cannot.
 - `thisWeek.liveStatus` is a week still in progress (as of its `asOf` time). Write about it
   as "so far" and "projected", never as final results. If it's missing, use
   `thisWeek.matchups` instead.
