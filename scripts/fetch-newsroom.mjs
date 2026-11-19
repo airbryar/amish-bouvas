@@ -358,6 +358,10 @@ const powerRankings = prNow
 const recordBook = JSON.parse(
   fs.readFileSync("data/history.json", "utf8")
 );
+// Personal facts and running jokes for the AI Newspaper.
+const managerFacts = fs.existsSync("data/manager-facts.json")
+  ? JSON.parse(fs.readFileSync("data/manager-facts.json", "utf8"))
+  : { managers: {} };
 const manualChampions = fs.existsSync("data/manual-champions.json")
   ? JSON.parse(fs.readFileSync("data/manual-champions.json", "utf8")).champions || []
   : [];
