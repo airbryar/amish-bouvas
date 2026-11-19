@@ -410,6 +410,36 @@ manualChamps.forEach(function (c) {
   }
 });
 
+    // Prefer commissioner-maintained playoff history when available.
+var playoffManagers = (H.manualPlayoffs && H.manualPlayoffs.managers) || [];
+var playoffIds = {
+  "Randy F": "m3",
+  "Bryan A": "m4",
+  "Scott S": "m7",
+  "Doug S": "m8",
+  "Chad F": "m5",
+  "Josh H": "m13",
+  "Burnie S": "m9",
+  "Todd S": "m12",
+  "Brandon S": "m11",
+  "Kendall K": "m15",
+  "Shawn E": "m18",
+  "Thatcher B": "m10",
+  "Dwayne L": "m1",
+  "Seth B": "m6",
+  "Roger M": "m2"
+};
+
+playoffManagers.forEach(function (entry) {
+  var match = entry.manager.match(/\(([^)]+)\)$/);
+  var id = match && playoffIds[match[1]];
+  if (!id || !rows[id]) return;
+
+  // Count each season once, even if there were multiple playoff games.
+  rows[id].playoffs = entry.seasons.filter(function (s) {
+    return s.wins + s.losses > 0;
+  }).length;
+});
     var list = Object.keys(rows).map(function (k) { return rows[k]; });
     list.forEach(function (r) { var g = r.w + r.l + r.t; r.p = g ? (r.w + r.t / 2) / g : 0; });
     list.sort(function (a, b) { return b.p - a.p || b.titles - a.titles || b.w - a.w; });
