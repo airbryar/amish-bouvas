@@ -109,6 +109,12 @@ Before submitting any edition, ask:
 - Read its `notes` first: they explain the median game, records and fields.
 - Before making any historical claim, verify it against the complete
   league history and career statistics in `data/newsroom.json`.
+- Use `history.allTimeCurrentManagers` for historical playoff appearances,
+  wins, losses, and winning percentages. Look for opportunities to connect
+  current performances to a manager's playoff history, especially in
+  Thursday's League Intelligence edition. Use these facts naturally to
+  support jokes and rivalries, not as a statistical recap. Brandon's
+  three assumed 2004 playoff wins are not verified game results.
 - Never claim a manager has zero championships, has never won,
   or is seeking a first title unless the historical data confirms it.
 - Distinguish past-season records from all-time records that include
