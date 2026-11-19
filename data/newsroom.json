@@ -1,5 +1,49 @@
 {
- "fetchedAt": "2026-11-19T14:48:05.251Z",
+ "managerFacts": {
+  "Bryan": {
+   "facts": []
+  },
+  "Brandon": {
+   "facts": [
+    "Brandon and Burnie are brothers."
+   ]
+  },
+  "Burnie": {
+   "facts": [
+    "Burnie and Brandon are brothers."
+   ]
+  },
+  "Scott": {
+   "facts": [
+    "Scott broke his wrist in 2026."
+   ]
+  },
+  "Chad": {
+   "facts": []
+  },
+  "Randy": {
+   "facts": []
+  },
+  "Roger": {
+   "facts": []
+  },
+  "Doug": {
+   "facts": []
+  },
+  "Seth": {
+   "facts": []
+  },
+  "Thatcher": {
+   "facts": []
+  },
+  "Todd": {
+   "facts": []
+  },
+  "Dwayne": {
+   "facts": []
+  }
+ },
+ "fetchedAt": "2026-11-19T15:01:36.069Z",
  "notes": [
   "Each week a team plays two games: its head-to-head matchup, plus a game against the league median (the top 6 scores of the week win it). 'record' combines both; 'h2h' and 'vsMedian' split them.",
   "The top 6 seeds make the playoffs. The regular season is 14 weeks.",
@@ -1981,7 +2025,7 @@
     "home": "Manny's SexPistols",
     "away": "Intercourse Encroachment",
     "livePoints": "0-0",
-    "projected": "121.19-129.7",
+    "projected": "121.46-117.48",
     "allTimeHeadToHead": "Randy 9-9 vs Bryan",
     "homeRecord": "12-8",
     "awayRecord": "13-7"
@@ -1990,7 +2034,7 @@
     "home": "Angry Mennonites",
     "away": "Smoketown Rumspringas",
     "livePoints": "0-0",
-    "projected": "129.31-142.74",
+    "projected": "129.99-142.74",
     "allTimeHeadToHead": "Seth 10-6 vs Roger",
     "homeRecord": "8-12",
     "awayRecord": "12-8"
@@ -1999,7 +2043,7 @@
     "home": "The Fishsticks",
     "away": "The Bike slashers",
     "livePoints": "0-0",
-    "projected": "106.97-121.56",
+    "projected": "107.89-121.6",
     "allTimeHeadToHead": "Chad 14-6 vs Brandon",
     "homeRecord": "9-11",
     "awayRecord": "9-11"
@@ -2008,7 +2052,7 @@
     "home": "VillageRd Buttkickers",
     "away": "Thatcher's Wackers",
     "livePoints": "0-0",
-    "projected": "117.41-113.25",
+    "projected": "117.34-113.09",
     "allTimeHeadToHead": "Scott 18-19 vs Thatcher",
     "homeRecord": "14-6",
     "awayRecord": "10-10"
@@ -2017,7 +2061,7 @@
     "home": "Elam's Ramblers",
     "away": "The Pig  Killers",
     "livePoints": "0-0",
-    "projected": "129.02-130.4",
+    "projected": "129.02-130.31",
     "allTimeHeadToHead": "Dwayne 11-17 vs Todd",
     "homeRecord": "7-13",
     "awayRecord": "7-13"
@@ -2026,7 +2070,7 @@
     "home": "Burnin  Ballers",
     "away": "Cow Tippers",
     "livePoints": "0-0",
-    "projected": "113.32-110.96",
+    "projected": "113.34-123.72",
     "allTimeHeadToHead": "Burnie 11-11 vs Doug",
     "homeRecord": "11-9",
     "awayRecord": "8-12"
@@ -2034,9 +2078,9 @@
   ],
   "alreadyPlayedStandouts": [],
   "liveStatus": {
-   "asOf": "2026-11-19T14:48:01.495Z",
+   "asOf": "2026-11-19T15:01:33.224Z",
    "currentMedian": 0,
-   "projectedMedian": 121.4,
+   "projectedMedian": 121.5,
    "teams": [
     {
      "team": "Smoketown Rumspringas",
@@ -2044,7 +2088,7 @@
      "pts": 0,
      "proj": 142.7,
      "vsCurrentMedian": 0,
-     "vsProjectedMedian": 21.3,
+     "vsProjectedMedian": 21.2,
      "startersFinished": 0,
      "startersLeft": [
       {
@@ -2134,9 +2178,9 @@
      "team": "The Pig  Killers",
      "opponent": "Elam's Ramblers",
      "pts": 0,
-     "proj": 130.4,
+     "proj": 130.3,
      "vsCurrentMedian": 0,
-     "vsProjectedMedian": 9,
+     "vsProjectedMedian": 8.8,
      "startersFinished": 0,
      "startersLeft": [
       {
@@ -2218,99 +2262,7 @@
        "game": "vs IND, Thu 8:15 PM",
        "status": "not started",
        "ptsSoFar": 0,
-       "proj": 6.8
-      }
-     ]
-    },
-    {
-     "team": "Intercourse Encroachment",
-     "opponent": "Manny's SexPistols",
-     "pts": 0,
-     "proj": 129.7,
-     "vsCurrentMedian": 0,
-     "vsProjectedMedian": 8.3,
-     "startersFinished": 0,
-     "startersLeft": [
-      {
-       "player": "Caleb Williams",
-       "pos": "QB",
-       "nfl": "CHI",
-       "game": "vs NO, Sun 1:00 PM",
-       "status": "not started",
-       "ptsSoFar": 0,
-       "proj": 22.6
-      },
-      {
-       "player": "Christian McCaffrey",
-       "pos": "RB",
-       "nfl": "SF",
-       "game": "vs MIN, Sun 8:20 PM",
-       "status": "not started",
-       "ptsSoFar": 0,
-       "proj": 20.3
-      },
-      {
-       "player": "Javonte Williams",
-       "pos": "RB",
-       "nfl": "DAL",
-       "game": "vs TEN, Sun 1:00 PM",
-       "status": "not started",
-       "ptsSoFar": 0,
-       "proj": 20.3
-      },
-      {
-       "player": "Tee Higgins",
-       "pos": "WR",
-       "nfl": "CIN",
-       "game": "@ WSH, Mon 8:15 PM",
-       "status": "not started",
-       "ptsSoFar": 0,
-       "proj": 17
-      },
-      {
-       "player": "Luther Burden III",
-       "pos": "WR",
-       "nfl": "CHI",
-       "game": "vs NO, Sun 1:00 PM",
-       "status": "not started",
-       "ptsSoFar": 0,
-       "proj": 15.3
-      },
-      {
-       "player": "Dalton Kincaid",
-       "pos": "TE",
-       "nfl": "BUF",
-       "game": "vs MIA, Sun 1:00 PM",
-       "status": "not started",
-       "ptsSoFar": 0,
-       "proj": 8.7
-      },
-      {
-       "player": "Mike Evans",
-       "pos": "WR",
-       "nfl": "SF",
-       "game": "vs MIN, Sun 8:20 PM",
-       "status": "not started",
-       "ptsSoFar": 0,
-       "proj": 12.2
-      },
-      {
-       "player": "Tank Dell",
-       "pos": "WR",
-       "nfl": "HOU",
-       "game": "vs IND, Thu 8:15 PM",
-       "status": "not started",
-       "ptsSoFar": 0,
-       "proj": 10.5
-      },
-      {
-       "player": "Raiders D/ST",
-       "pos": "D/ST",
-       "nfl": "LV",
-       "game": "@ DEN, Sun 4:25 PM",
-       "status": "not started",
-       "ptsSoFar": 0,
-       "proj": 2.7
+       "proj": 6.7
       }
      ]
     },
@@ -2318,9 +2270,9 @@
      "team": "Angry Mennonites",
      "opponent": "Smoketown Rumspringas",
      "pts": 0,
-     "proj": 129.3,
+     "proj": 130,
      "vsCurrentMedian": 0,
-     "vsProjectedMedian": 7.9,
+     "vsProjectedMedian": 8.5,
      "startersFinished": 0,
      "startersLeft": [
       {
@@ -2393,7 +2345,7 @@
        "game": "vs MIN, Sun 8:20 PM",
        "status": "not started",
        "ptsSoFar": 0,
-       "proj": 10.6
+       "proj": 11.3
       },
       {
        "player": "Bengals D/ST",
@@ -2412,7 +2364,7 @@
      "pts": 0,
      "proj": 129,
      "vsCurrentMedian": 0,
-     "vsProjectedMedian": 7.6,
+     "vsProjectedMedian": 7.5,
      "startersFinished": 0,
      "startersLeft": [
       {
@@ -2499,12 +2451,104 @@
      ]
     },
     {
+     "team": "Cow Tippers",
+     "opponent": "Burnin  Ballers",
+     "pts": 0,
+     "proj": 123.7,
+     "vsCurrentMedian": 0,
+     "vsProjectedMedian": 2.2,
+     "startersFinished": 0,
+     "startersLeft": [
+      {
+       "player": "Brock Purdy",
+       "pos": "QB",
+       "nfl": "SF",
+       "game": "vs MIN, Sun 8:20 PM",
+       "status": "not started",
+       "ptsSoFar": 0,
+       "proj": 20.8
+      },
+      {
+       "player": "Rachaad White",
+       "pos": "RB",
+       "nfl": "WSH",
+       "game": "vs CIN, Mon 8:15 PM",
+       "status": "not started",
+       "ptsSoFar": 0,
+       "proj": 7.8
+      },
+      {
+       "player": "Emmett Johnson",
+       "pos": "RB",
+       "nfl": "KC",
+       "game": "vs ARI, Sun 1:00 PM",
+       "status": "not started",
+       "ptsSoFar": 0,
+       "proj": 21
+      },
+      {
+       "player": "Justin Jefferson",
+       "pos": "WR",
+       "nfl": "MIN",
+       "game": "@ SF, Sun 8:20 PM",
+       "status": "not started",
+       "ptsSoFar": 0,
+       "proj": 20.4
+      },
+      {
+       "player": "Adonai Mitchell",
+       "pos": "WR",
+       "nfl": "NYJ",
+       "game": "@ LAC, Sun 4:05 PM",
+       "status": "not started",
+       "ptsSoFar": 0,
+       "proj": 10.8
+      },
+      {
+       "player": "George Kittle",
+       "pos": "TE",
+       "nfl": "SF",
+       "game": "vs MIN, Sun 8:20 PM",
+       "status": "not started",
+       "ptsSoFar": 0,
+       "proj": 14.5
+      },
+      {
+       "player": "Travis Etienne Jr.",
+       "pos": "RB",
+       "nfl": "NO",
+       "game": "@ CHI, Sun 1:00 PM",
+       "status": "not started",
+       "ptsSoFar": 0,
+       "proj": 11.4
+      },
+      {
+       "player": "Caleb Douglas",
+       "pos": "WR",
+       "nfl": "MIA",
+       "game": "@ BUF, Sun 1:00 PM",
+       "status": "not started",
+       "ptsSoFar": 0,
+       "proj": 9.8
+      },
+      {
+       "player": "Bills D/ST",
+       "pos": "D/ST",
+       "nfl": "BUF",
+       "game": "vs MIA, Sun 1:00 PM",
+       "status": "not started",
+       "ptsSoFar": 0,
+       "proj": 7.1
+      }
+     ]
+    },
+    {
      "team": "The Bike slashers",
      "opponent": "The Fishsticks",
      "pts": 0,
      "proj": 121.6,
      "vsCurrentMedian": 0,
-     "vsProjectedMedian": 0.2,
+     "vsProjectedMedian": 0.1,
      "startersFinished": 0,
      "startersLeft": [
       {
@@ -2594,9 +2638,9 @@
      "team": "Manny's SexPistols",
      "opponent": "Intercourse Encroachment",
      "pts": 0,
-     "proj": 121.2,
+     "proj": 121.5,
      "vsCurrentMedian": 0,
-     "vsProjectedMedian": -0.2,
+     "vsProjectedMedian": 0,
      "startersFinished": 0,
      "startersLeft": [
       {
@@ -2606,7 +2650,7 @@
        "game": "vs ARI, Sun 1:00 PM",
        "status": "not started",
        "ptsSoFar": 0,
-       "proj": 27
+       "proj": 27.2
       },
       {
        "player": "Alvin Kamara",
@@ -2683,12 +2727,104 @@
      ]
     },
     {
+     "team": "Intercourse Encroachment",
+     "opponent": "Manny's SexPistols",
+     "pts": 0,
+     "proj": 117.5,
+     "vsCurrentMedian": 0,
+     "vsProjectedMedian": -4,
+     "startersFinished": 0,
+     "startersLeft": [
+      {
+       "player": "Caleb Williams",
+       "pos": "QB",
+       "nfl": "CHI",
+       "game": "vs NO, Sun 1:00 PM",
+       "status": "not started",
+       "ptsSoFar": 0,
+       "proj": 22.6
+      },
+      {
+       "player": "Christian McCaffrey",
+       "pos": "RB",
+       "nfl": "SF",
+       "game": "vs MIN, Sun 8:20 PM",
+       "status": "not started",
+       "ptsSoFar": 0,
+       "proj": 20.3
+      },
+      {
+       "player": "Javonte Williams",
+       "pos": "RB",
+       "nfl": "DAL",
+       "game": "vs TEN, Sun 1:00 PM",
+       "status": "not started",
+       "ptsSoFar": 0,
+       "proj": 20.3
+      },
+      {
+       "player": "Tee Higgins",
+       "pos": "WR",
+       "nfl": "CIN",
+       "game": "@ WSH, Mon 8:15 PM",
+       "status": "not started",
+       "ptsSoFar": 0,
+       "proj": 17
+      },
+      {
+       "player": "Luther Burden III",
+       "pos": "WR",
+       "nfl": "CHI",
+       "game": "vs NO, Sun 1:00 PM",
+       "status": "not started",
+       "ptsSoFar": 0,
+       "proj": 15.3
+      },
+      {
+       "player": "Dalton Kincaid",
+       "pos": "TE",
+       "nfl": "BUF",
+       "game": "vs MIA, Sun 1:00 PM",
+       "status": "not started",
+       "ptsSoFar": 0,
+       "proj": 8.7
+      },
+      {
+       "player": "Mike Evans",
+       "pos": "WR",
+       "nfl": "SF",
+       "game": "vs MIN, Sun 8:20 PM",
+       "status": "not started",
+       "ptsSoFar": 0,
+       "proj": 0
+      },
+      {
+       "player": "Tank Dell",
+       "pos": "WR",
+       "nfl": "HOU",
+       "game": "vs IND, Thu 8:15 PM",
+       "status": "not started",
+       "ptsSoFar": 0,
+       "proj": 10.5
+      },
+      {
+       "player": "Raiders D/ST",
+       "pos": "D/ST",
+       "nfl": "LV",
+       "game": "@ DEN, Sun 4:25 PM",
+       "status": "not started",
+       "ptsSoFar": 0,
+       "proj": 2.7
+      }
+     ]
+    },
+    {
      "team": "VillageRd Buttkickers",
      "opponent": "Thatcher's Wackers",
      "pts": 0,
-     "proj": 117.4,
+     "proj": 117.3,
      "vsCurrentMedian": 0,
-     "vsProjectedMedian": -4,
+     "vsProjectedMedian": -4.2,
      "startersFinished": 0,
      "startersLeft": [
       {
@@ -2770,99 +2906,7 @@
        "game": "vs TB, Sun 1:00 PM",
        "status": "not started",
        "ptsSoFar": 0,
-       "proj": 6.6
-      }
-     ]
-    },
-    {
-     "team": "Thatcher's Wackers",
-     "opponent": "VillageRd Buttkickers",
-     "pts": 0,
-     "proj": 113.3,
-     "vsCurrentMedian": 0,
-     "vsProjectedMedian": -8.2,
-     "startersFinished": 0,
-     "startersLeft": [
-      {
-       "player": "Bryce Young",
-       "pos": "QB",
-       "nfl": "CAR",
-       "game": "vs BAL, Sun 1:00 PM",
-       "status": "not started",
-       "ptsSoFar": 0,
-       "proj": 21.5
-      },
-      {
-       "player": "Breece Hall",
-       "pos": "RB",
-       "nfl": "NYJ",
-       "game": "@ LAC, Sun 4:05 PM",
-       "status": "not started",
-       "ptsSoFar": 0,
-       "proj": 13.3
-      },
-      {
-       "player": "Chuba Hubbard",
-       "pos": "RB",
-       "nfl": "CAR",
-       "game": "vs BAL, Sun 1:00 PM",
-       "status": "not started",
-       "ptsSoFar": 0,
-       "proj": 20.7
-      },
-      {
-       "player": "Khalil Shakir",
-       "pos": "WR",
-       "nfl": "BUF",
-       "game": "vs MIA, Sun 1:00 PM",
-       "status": "not started",
-       "ptsSoFar": 0,
-       "proj": 9.5
-      },
-      {
-       "player": "Kalif Raymond",
-       "pos": "WR",
-       "nfl": "CHI",
-       "game": "vs NO, Sun 1:00 PM",
-       "status": "not started",
-       "ptsSoFar": 0,
-       "proj": 6.7
-      },
-      {
-       "player": "Travis Kelce",
-       "pos": "TE",
-       "nfl": "KC",
-       "game": "vs ARI, Sun 1:00 PM",
-       "status": "not started",
-       "ptsSoFar": 0,
-       "proj": 11.5
-      },
-      {
-       "player": "Trey McBride",
-       "pos": "TE",
-       "nfl": "ARI",
-       "game": "@ KC, Sun 1:00 PM",
-       "status": "not started",
-       "ptsSoFar": 0,
-       "proj": 13
-      },
-      {
-       "player": "Treylon Burks",
-       "pos": "WR",
-       "nfl": "WSH",
-       "game": "vs CIN, Mon 8:15 PM",
-       "status": "not started",
-       "ptsSoFar": 0,
-       "proj": 8.6
-      },
-      {
-       "player": "Steelers D/ST",
-       "pos": "D/ST",
-       "nfl": "PIT",
-       "game": "@ PHI, Sun 1:00 PM",
-       "status": "not started",
-       "ptsSoFar": 0,
-       "proj": 8.5
+       "proj": 6.5
       }
      ]
     },
@@ -2872,7 +2916,7 @@
      "pts": 0,
      "proj": 113.3,
      "vsCurrentMedian": 0,
-     "vsProjectedMedian": -8.1,
+     "vsProjectedMedian": -8.2,
      "startersFinished": 0,
      "startersLeft": [
       {
@@ -2959,94 +3003,94 @@
      ]
     },
     {
-     "team": "Cow Tippers",
-     "opponent": "Burnin  Ballers",
+     "team": "Thatcher's Wackers",
+     "opponent": "VillageRd Buttkickers",
      "pts": 0,
-     "proj": 111,
+     "proj": 113.1,
      "vsCurrentMedian": 0,
-     "vsProjectedMedian": -10.4,
+     "vsProjectedMedian": -8.4,
      "startersFinished": 0,
      "startersLeft": [
       {
-       "player": "Brock Purdy",
+       "player": "Bryce Young",
        "pos": "QB",
-       "nfl": "SF",
-       "game": "vs MIN, Sun 8:20 PM",
+       "nfl": "CAR",
+       "game": "vs BAL, Sun 1:00 PM",
        "status": "not started",
        "ptsSoFar": 0,
-       "proj": 20.8
+       "proj": 21.5
       },
       {
-       "player": "Rachaad White",
+       "player": "Breece Hall",
        "pos": "RB",
-       "nfl": "WSH",
-       "game": "vs CIN, Mon 8:15 PM",
+       "nfl": "NYJ",
+       "game": "@ LAC, Sun 4:05 PM",
        "status": "not started",
        "ptsSoFar": 0,
-       "proj": 7.8
+       "proj": 13.3
       },
       {
-       "player": "Emmett Johnson",
+       "player": "Chuba Hubbard",
        "pos": "RB",
-       "nfl": "KC",
-       "game": "vs ARI, Sun 1:00 PM",
+       "nfl": "CAR",
+       "game": "vs BAL, Sun 1:00 PM",
+       "status": "not started",
+       "ptsSoFar": 0,
+       "proj": 20.7
+      },
+      {
+       "player": "Khalil Shakir",
+       "pos": "WR",
+       "nfl": "BUF",
+       "game": "vs MIA, Sun 1:00 PM",
        "status": "not started",
        "ptsSoFar": 0,
        "proj": 9.5
       },
       {
-       "player": "Justin Jefferson",
+       "player": "Kalif Raymond",
        "pos": "WR",
-       "nfl": "MIN",
-       "game": "@ SF, Sun 8:20 PM",
+       "nfl": "CHI",
+       "game": "vs NO, Sun 1:00 PM",
        "status": "not started",
        "ptsSoFar": 0,
-       "proj": 20.4
+       "proj": 6.7
       },
       {
-       "player": "Adonai Mitchell",
-       "pos": "WR",
-       "nfl": "NYJ",
-       "game": "@ LAC, Sun 4:05 PM",
-       "status": "not started",
-       "ptsSoFar": 0,
-       "proj": 10.8
-      },
-      {
-       "player": "George Kittle",
+       "player": "Travis Kelce",
        "pos": "TE",
-       "nfl": "SF",
-       "game": "vs MIN, Sun 8:20 PM",
+       "nfl": "KC",
+       "game": "vs ARI, Sun 1:00 PM",
        "status": "not started",
        "ptsSoFar": 0,
-       "proj": 13.2
+       "proj": 11.5
       },
       {
-       "player": "Travis Etienne Jr.",
-       "pos": "RB",
-       "nfl": "NO",
-       "game": "@ CHI, Sun 1:00 PM",
+       "player": "Trey McBride",
+       "pos": "TE",
+       "nfl": "ARI",
+       "game": "@ KC, Sun 1:00 PM",
        "status": "not started",
        "ptsSoFar": 0,
-       "proj": 11.4
+       "proj": 13
       },
       {
-       "player": "Caleb Douglas",
+       "player": "Treylon Burks",
        "pos": "WR",
-       "nfl": "MIA",
-       "game": "@ BUF, Sun 1:00 PM",
+       "nfl": "WSH",
+       "game": "vs CIN, Mon 8:15 PM",
        "status": "not started",
        "ptsSoFar": 0,
-       "proj": 9.8
+       "proj": 8.6
       },
       {
-       "player": "Bills D/ST",
+       "player": "Steelers D/ST",
        "pos": "D/ST",
-       "nfl": "BUF",
-       "game": "vs MIA, Sun 1:00 PM",
+       "nfl": "PIT",
+       "game": "@ PHI, Sun 1:00 PM",
        "status": "not started",
        "ptsSoFar": 0,
-       "proj": 7.1
+       "proj": 8.3
       }
      ]
     },
@@ -3054,9 +3098,9 @@
      "team": "The Fishsticks",
      "opponent": "The Bike slashers",
      "pts": 0,
-     "proj": 107,
+     "proj": 107.9,
      "vsCurrentMedian": 0,
-     "vsProjectedMedian": -14.4,
+     "vsProjectedMedian": -13.6,
      "startersFinished": 0,
      "startersLeft": [
       {
@@ -3075,7 +3119,7 @@
        "game": "vs NYJ, Sun 4:05 PM",
        "status": "not started",
        "ptsSoFar": 0,
-       "proj": 13.1
+       "proj": 14
       },
       {
        "player": "Emari Demercado",
