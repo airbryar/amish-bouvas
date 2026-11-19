@@ -1,5 +1,5 @@
 {
- "fetchedAt": "2026-11-18T19:14:52.932Z",
+ "fetchedAt": "2026-11-19T10:30:17.312Z",
  "notes": [
   "Each week a team plays two games: its head-to-head matchup, plus a game against the league median (the top 6 scores of the week win it). 'record' combines both; 'h2h' and 'vsMedian' split them.",
   "The top 6 seeds make the playoffs. The regular season is 14 weeks.",
@@ -295,7 +295,7 @@
    "pa": 1182.44,
    "streak": "W1",
    "trades": 0,
-   "pickups": 11,
+   "pickups": 12,
    "faabSpent": 254,
    "h2h": "4-6",
    "vsMedian": "5-5",
@@ -447,7 +447,7 @@
    "pa": 1336.36,
    "streak": "L1",
    "trades": 1,
-   "pickups": 31,
+   "pickups": 32,
    "faabSpent": 742,
    "h2h": "3-7",
    "vsMedian": "4-6",
@@ -1997,7 +1997,7 @@
     "home": "The Fishsticks",
     "away": "The Bike slashers",
     "livePoints": "0-0",
-    "projected": "106.97-103.9",
+    "projected": "106.97-121.56",
     "allTimeHeadToHead": "Chad 12-4 vs Brandon",
     "homeRecord": "9-11",
     "awayRecord": "9-11"
@@ -2006,7 +2006,7 @@
     "home": "VillageRd Buttkickers",
     "away": "Thatcher's Wackers",
     "livePoints": "0-0",
-    "projected": "117.41-106.51",
+    "projected": "117.41-113.25",
     "allTimeHeadToHead": "Scott 7-9 vs Thatcher",
     "homeRecord": "14-6",
     "awayRecord": "10-10"
@@ -2032,9 +2032,9 @@
   ],
   "alreadyPlayedStandouts": [],
   "liveStatus": {
-   "asOf": "2026-11-18T19:13:49.297Z",
+   "asOf": "2026-11-19T10:29:13.424Z",
    "currentMedian": 0,
-   "projectedMedian": 119.3,
+   "projectedMedian": 121.4,
    "teams": [
     {
      "team": "Smoketown Rumspringas",
@@ -2042,7 +2042,7 @@
      "pts": 0,
      "proj": 142.7,
      "vsCurrentMedian": 0,
-     "vsProjectedMedian": 23.4,
+     "vsProjectedMedian": 21.3,
      "startersFinished": 0,
      "startersLeft": [
       {
@@ -2134,7 +2134,7 @@
      "pts": 0,
      "proj": 130.4,
      "vsCurrentMedian": 0,
-     "vsProjectedMedian": 11.1,
+     "vsProjectedMedian": 9,
      "startersFinished": 0,
      "startersLeft": [
       {
@@ -2226,7 +2226,7 @@
      "pts": 0,
      "proj": 129.7,
      "vsCurrentMedian": 0,
-     "vsProjectedMedian": 10.4,
+     "vsProjectedMedian": 8.3,
      "startersFinished": 0,
      "startersLeft": [
       {
@@ -2318,7 +2318,7 @@
      "pts": 0,
      "proj": 129.3,
      "vsCurrentMedian": 0,
-     "vsProjectedMedian": 10,
+     "vsProjectedMedian": 7.9,
      "startersFinished": 0,
      "startersLeft": [
       {
@@ -2410,7 +2410,7 @@
      "pts": 0,
      "proj": 129,
      "vsCurrentMedian": 0,
-     "vsProjectedMedian": 9.7,
+     "vsProjectedMedian": 7.6,
      "startersFinished": 0,
      "startersLeft": [
       {
@@ -2497,12 +2497,104 @@
      ]
     },
     {
+     "team": "The Bike slashers",
+     "opponent": "The Fishsticks",
+     "pts": 0,
+     "proj": 121.6,
+     "vsCurrentMedian": 0,
+     "vsProjectedMedian": 0.2,
+     "startersFinished": 0,
+     "startersLeft": [
+      {
+       "player": "Dak Prescott",
+       "pos": "QB",
+       "nfl": "DAL",
+       "game": "vs TEN, Sun 1:00 PM",
+       "status": "not started",
+       "ptsSoFar": 0,
+       "proj": 27.5
+      },
+      {
+       "player": "Jonathan Taylor",
+       "pos": "RB",
+       "nfl": "IND",
+       "game": "@ HOU, Thu 8:15 PM",
+       "status": "not started",
+       "ptsSoFar": 0,
+       "proj": 17.2
+      },
+      {
+       "player": "Ashton Jeanty",
+       "pos": "RB",
+       "nfl": "LV",
+       "game": "@ DEN, Sun 4:25 PM",
+       "status": "not started",
+       "ptsSoFar": 0,
+       "proj": 14
+      },
+      {
+       "player": "George Pickens",
+       "pos": "WR",
+       "nfl": "DAL",
+       "game": "vs TEN, Sun 1:00 PM",
+       "status": "not started",
+       "ptsSoFar": 0,
+       "proj": 15.9
+      },
+      {
+       "player": "Emeka Egbuka",
+       "pos": "WR",
+       "nfl": "TB",
+       "game": "@ DET, Sun 1:00 PM",
+       "status": "not started",
+       "ptsSoFar": 0,
+       "proj": 10.1
+      },
+      {
+       "player": "Brenton Strange",
+       "pos": "TE",
+       "nfl": "JAX",
+       "game": "@ NYG, Sun 4:25 PM",
+       "status": "not started",
+       "ptsSoFar": 0,
+       "proj": 8.1
+      },
+      {
+       "player": "David Montgomery",
+       "pos": "RB",
+       "nfl": "HOU",
+       "game": "vs IND, Thu 8:15 PM",
+       "status": "not started",
+       "ptsSoFar": 0,
+       "proj": 14.1
+      },
+      {
+       "player": "Josh Downs",
+       "pos": "WR",
+       "nfl": "KC",
+       "game": "vs ARI, Sun 1:00 PM",
+       "status": "not started",
+       "ptsSoFar": 0,
+       "proj": 9.2
+      },
+      {
+       "player": "Chargers D/ST",
+       "pos": "D/ST",
+       "nfl": "LAC",
+       "game": "vs NYJ, Sun 4:05 PM",
+       "status": "not started",
+       "ptsSoFar": 0,
+       "proj": 5.6
+      }
+     ]
+    },
+    {
      "team": "Manny's SexPistols",
      "opponent": "Intercourse Encroachment",
      "pts": 0,
      "proj": 121.2,
      "vsCurrentMedian": 0,
-     "vsProjectedMedian": 1.9,
+     "vsProjectedMedian": -0.2,
      "startersFinished": 0,
      "startersLeft": [
       {
@@ -2594,7 +2686,7 @@
      "pts": 0,
      "proj": 117.4,
      "vsCurrentMedian": 0,
-     "vsProjectedMedian": -1.9,
+     "vsProjectedMedian": -4,
      "startersFinished": 0,
      "startersLeft": [
       {
@@ -2681,12 +2773,104 @@
      ]
     },
     {
+     "team": "Thatcher's Wackers",
+     "opponent": "VillageRd Buttkickers",
+     "pts": 0,
+     "proj": 113.3,
+     "vsCurrentMedian": 0,
+     "vsProjectedMedian": -8.2,
+     "startersFinished": 0,
+     "startersLeft": [
+      {
+       "player": "Bryce Young",
+       "pos": "QB",
+       "nfl": "CAR",
+       "game": "vs BAL, Sun 1:00 PM",
+       "status": "not started",
+       "ptsSoFar": 0,
+       "proj": 21.5
+      },
+      {
+       "player": "Breece Hall",
+       "pos": "RB",
+       "nfl": "NYJ",
+       "game": "@ LAC, Sun 4:05 PM",
+       "status": "not started",
+       "ptsSoFar": 0,
+       "proj": 13.3
+      },
+      {
+       "player": "Chuba Hubbard",
+       "pos": "RB",
+       "nfl": "CAR",
+       "game": "vs BAL, Sun 1:00 PM",
+       "status": "not started",
+       "ptsSoFar": 0,
+       "proj": 20.7
+      },
+      {
+       "player": "Khalil Shakir",
+       "pos": "WR",
+       "nfl": "BUF",
+       "game": "vs MIA, Sun 1:00 PM",
+       "status": "not started",
+       "ptsSoFar": 0,
+       "proj": 9.5
+      },
+      {
+       "player": "Kalif Raymond",
+       "pos": "WR",
+       "nfl": "CHI",
+       "game": "vs NO, Sun 1:00 PM",
+       "status": "not started",
+       "ptsSoFar": 0,
+       "proj": 6.7
+      },
+      {
+       "player": "Travis Kelce",
+       "pos": "TE",
+       "nfl": "KC",
+       "game": "vs ARI, Sun 1:00 PM",
+       "status": "not started",
+       "ptsSoFar": 0,
+       "proj": 11.5
+      },
+      {
+       "player": "Trey McBride",
+       "pos": "TE",
+       "nfl": "ARI",
+       "game": "@ KC, Sun 1:00 PM",
+       "status": "not started",
+       "ptsSoFar": 0,
+       "proj": 13
+      },
+      {
+       "player": "Treylon Burks",
+       "pos": "WR",
+       "nfl": "WSH",
+       "game": "vs CIN, Mon 8:15 PM",
+       "status": "not started",
+       "ptsSoFar": 0,
+       "proj": 8.6
+      },
+      {
+       "player": "Steelers D/ST",
+       "pos": "D/ST",
+       "nfl": "PIT",
+       "game": "@ PHI, Sun 1:00 PM",
+       "status": "not started",
+       "ptsSoFar": 0,
+       "proj": 8.5
+      }
+     ]
+    },
+    {
      "team": "Burnin  Ballers",
      "opponent": "Cow Tippers",
      "pts": 0,
      "proj": 113.3,
      "vsCurrentMedian": 0,
-     "vsProjectedMedian": -6,
+     "vsProjectedMedian": -8.1,
      "startersFinished": 0,
      "startersLeft": [
       {
@@ -2778,7 +2962,7 @@
      "pts": 0,
      "proj": 111,
      "vsCurrentMedian": 0,
-     "vsProjectedMedian": -8.3,
+     "vsProjectedMedian": -10.4,
      "startersFinished": 0,
      "startersLeft": [
       {
@@ -2870,7 +3054,7 @@
      "pts": 0,
      "proj": 107,
      "vsCurrentMedian": 0,
-     "vsProjectedMedian": -12.3,
+     "vsProjectedMedian": -14.4,
      "startersFinished": 0,
      "startersLeft": [
       {
@@ -2953,181 +3137,6 @@
        "status": "not started",
        "ptsSoFar": 0,
        "proj": 8.2
-      }
-     ]
-    },
-    {
-     "team": "Thatcher's Wackers",
-     "opponent": "VillageRd Buttkickers",
-     "pts": 0,
-     "proj": 106.5,
-     "vsCurrentMedian": 0,
-     "vsProjectedMedian": -12.8,
-     "startersFinished": 0,
-     "startersLeft": [
-      {
-       "player": "Bryce Young",
-       "pos": "QB",
-       "nfl": "CAR",
-       "game": "vs BAL, Sun 1:00 PM",
-       "status": "not started",
-       "ptsSoFar": 0,
-       "proj": 21.5
-      },
-      {
-       "player": "Breece Hall",
-       "pos": "RB",
-       "nfl": "NYJ",
-       "game": "@ LAC, Sun 4:05 PM",
-       "status": "not started",
-       "ptsSoFar": 0,
-       "proj": 13.3
-      },
-      {
-       "player": "Chuba Hubbard",
-       "pos": "RB",
-       "nfl": "CAR",
-       "game": "vs BAL, Sun 1:00 PM",
-       "status": "not started",
-       "ptsSoFar": 0,
-       "proj": 20.7
-      },
-      {
-       "player": "Khalil Shakir",
-       "pos": "WR",
-       "nfl": "BUF",
-       "game": "vs MIA, Sun 1:00 PM",
-       "status": "not started",
-       "ptsSoFar": 0,
-       "proj": 9.5
-      },
-      {
-       "player": "Treylon Burks",
-       "pos": "WR",
-       "nfl": "WSH",
-       "game": "vs CIN, Mon 8:15 PM",
-       "status": "not started",
-       "ptsSoFar": 0,
-       "proj": 8.6
-      },
-      {
-       "player": "Travis Kelce",
-       "pos": "TE",
-       "nfl": "KC",
-       "game": "vs ARI, Sun 1:00 PM",
-       "status": "not started",
-       "ptsSoFar": 0,
-       "proj": 11.5
-      },
-      {
-       "player": "Trey McBride",
-       "pos": "TE",
-       "nfl": "ARI",
-       "game": "@ KC, Sun 1:00 PM",
-       "status": "not started",
-       "ptsSoFar": 0,
-       "proj": 13
-      },
-      {
-       "player": "Omar Cooper Jr.",
-       "pos": "WR",
-       "nfl": "NYJ",
-       "game": "@ LAC, Sun 4:05 PM",
-       "status": "not started",
-       "ptsSoFar": 0,
-       "proj": 0
-      },
-      {
-       "player": "Steelers D/ST",
-       "pos": "D/ST",
-       "nfl": "PIT",
-       "game": "@ PHI, Sun 1:00 PM",
-       "status": "not started",
-       "ptsSoFar": 0,
-       "proj": 8.5
-      }
-     ]
-    },
-    {
-     "team": "The Bike slashers",
-     "opponent": "The Fishsticks",
-     "pts": 0,
-     "proj": 103.9,
-     "vsCurrentMedian": 0,
-     "vsProjectedMedian": -15.4,
-     "startersFinished": 1,
-     "startersLeft": [
-      {
-       "player": "Tyler Shough",
-       "pos": "QB",
-       "nfl": "NO",
-       "game": "@ CHI, Sun 1:00 PM",
-       "status": "not started",
-       "ptsSoFar": 0,
-       "proj": 17.3
-      },
-      {
-       "player": "Jonathan Taylor",
-       "pos": "RB",
-       "nfl": "IND",
-       "game": "@ HOU, Thu 8:15 PM",
-       "status": "not started",
-       "ptsSoFar": 0,
-       "proj": 17.2
-      },
-      {
-       "player": "Ashton Jeanty",
-       "pos": "RB",
-       "nfl": "LV",
-       "game": "@ DEN, Sun 4:25 PM",
-       "status": "not started",
-       "ptsSoFar": 0,
-       "proj": 14
-      },
-      {
-       "player": "George Pickens",
-       "pos": "WR",
-       "nfl": "DAL",
-       "game": "vs TEN, Sun 1:00 PM",
-       "status": "not started",
-       "ptsSoFar": 0,
-       "proj": 15.9
-      },
-      {
-       "player": "Josh Downs",
-       "pos": "WR",
-       "nfl": "KC",
-       "game": "vs ARI, Sun 1:00 PM",
-       "status": "not started",
-       "ptsSoFar": 0,
-       "proj": 9.2
-      },
-      {
-       "player": "Mark Andrews",
-       "pos": "TE",
-       "nfl": "BAL",
-       "game": "@ CAR, Sun 1:00 PM",
-       "status": "not started",
-       "ptsSoFar": 0,
-       "proj": 7.7
-      },
-      {
-       "player": "David Montgomery",
-       "pos": "RB",
-       "nfl": "HOU",
-       "game": "vs IND, Thu 8:15 PM",
-       "status": "not started",
-       "ptsSoFar": 0,
-       "proj": 14.1
-      },
-      {
-       "player": "Aaron Jones Sr.",
-       "pos": "RB",
-       "nfl": "MIN",
-       "game": "@ SF, Sun 8:20 PM",
-       "status": "not started",
-       "ptsSoFar": 0,
-       "proj": 8.5
       }
      ]
     }
@@ -3304,6 +3313,32 @@
    ],
    "dropped": [
     "Jordan Addison (WR)"
+   ]
+  },
+  {
+   "date": "2026-11-18",
+   "week": 11,
+   "type": "free agent",
+   "team": "Elam's Ramblers",
+   "bid": 0,
+   "added": [
+    "Roman Wilson (WR)"
+   ],
+   "dropped": [
+    "Commanders D/ST (D/ST)"
+   ]
+  },
+  {
+   "date": "2026-11-18",
+   "week": 11,
+   "type": "free agent",
+   "team": "The Bike slashers",
+   "bid": 0,
+   "added": [
+    "Chargers D/ST (D/ST)"
+   ],
+   "dropped": [
+    "Cooper Kupp (WR)"
    ]
   },
   {
