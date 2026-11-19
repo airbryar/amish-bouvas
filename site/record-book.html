@@ -300,8 +300,23 @@ __LOGOS__
     games: E.games.map(function (g) { return [g.p, H.current.teams[g.h[0]], g.h[1], H.current.teams[g.a[0]], g.a[1], g.w, g.p <= reg ? 0 : 1]; }),
   };
   var past = H.seasons.slice().sort(function (a, b) { return a.season - b.season; });
+  
+var manualChamps = (H.manualChampions || []).map(function (c) {
+  return {
+    season: c.season,
+    champ: { m: c.manager },
+    runner: null,
+    score: null,
+    manual: true
+  };
+});
+
   var all = past.concat([curSeason]);
-  var first = past.length ? past[0].season : E.season;
+
+var first = Math.min(
+  past.length ? past[0].season : E.season,
+  ...manualChamps.map(function (c) { return c.season; })
+);
   var lastDone = curSeason.games.reduce(function (mx, g) { return g[6] === 0 ? Math.max(mx, g[0]) : mx; }, 0);
 
   document.getElementById("since-line").textContent = NAMES.abbrev + " · Since " + first;
@@ -318,7 +333,10 @@ __LOGOS__
       var score = null;
       if (final) score = final[1] === champ.m ? [final[2], final[4]] : [final[4], final[2]];
       return { season: s.season, champ: champ, runner: runner, score: score };
-    }).filter(function (c) { return c.champ; });
+    }).filter(function (c) { return c.champ; }).concat(manualChamps).sort(function (a, b) {
+  return b.season - a.season;
+});
+
     document.getElementById("champ-tag").textContent = champs.length + (champs.length === 1 ? " title" : " titles") + " awarded";
     function finalLine(c) {
       var p = el("p", "champ-line");
@@ -351,7 +369,10 @@ __LOGOS__
         var info = el("div");
         var w = el("div", "past-who"); w.append(who(c.champ.m)); info.append(w);
         var d = el("div", "past-detail");
-        d.textContent = (c.runner ? "Beat " + nameOf(c.runner.m) + (c.score ? " " + pts(c.score[0]) + "–" + pts(c.score[1]) : "") + " · " : "") + "No. " + c.champ.seed + " seed, " + c.champ.w + "-" + c.champ.l;
+
+d.textContent = c.manual
+  ? "Inaugural league champion"
+  : (c.runner ? "Beat " + nameOf(c.runner.m) + (c.score ? " " + pts(c.score[0]) + "–" + pts(c.score[1]) : "") + " · " : "") + "No. " + c.champ.seed + " seed, " + c.champ.w + "-" + c.champ.l;
         info.append(d);
         row.append(info);
         list.append(row);
@@ -382,6 +403,13 @@ __LOGOS__
         }
       });
     });
+    
+manualChamps.forEach(function (c) {
+  if (rows[c.champ.m]) {
+    rows[c.champ.m].titles++;
+  }
+});
+
     var list = Object.keys(rows).map(function (k) { return rows[k]; });
     list.forEach(function (r) { var g = r.w + r.l + r.t; r.p = g ? (r.w + r.t / 2) / g : 0; });
     list.sort(function (a, b) { return b.p - a.p || b.titles - a.titles || b.w - a.w; });
