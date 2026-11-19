@@ -1,5 +1,5 @@
 {
- "fetchedAt": "2026-11-19T10:45:52.390Z",
+ "fetchedAt": "2026-11-19T13:49:58.607Z",
  "notes": [
   "Each week a team plays two games: its head-to-head matchup, plus a game against the league median (the top 6 scores of the week win it). 'record' combines both; 'h2h' and 'vsMedian' split them.",
   "The top 6 seeds make the playoffs. The regular season is 14 weeks.",
@@ -1980,7 +1980,7 @@
     "away": "Intercourse Encroachment",
     "livePoints": "0-0",
     "projected": "121.19-129.7",
-    "allTimeHeadToHead": "Randy 5-7 vs Bryan",
+    "allTimeHeadToHead": "Randy 9-9 vs Bryan",
     "homeRecord": "12-8",
     "awayRecord": "13-7"
    },
@@ -1989,7 +1989,7 @@
     "away": "Smoketown Rumspringas",
     "livePoints": "0-0",
     "projected": "129.31-142.74",
-    "allTimeHeadToHead": "Seth 6-3 vs Roger",
+    "allTimeHeadToHead": "Seth 10-6 vs Roger",
     "homeRecord": "8-12",
     "awayRecord": "12-8"
    },
@@ -1998,7 +1998,7 @@
     "away": "The Bike slashers",
     "livePoints": "0-0",
     "projected": "106.97-121.56",
-    "allTimeHeadToHead": "Chad 12-4 vs Brandon",
+    "allTimeHeadToHead": "Chad 14-6 vs Brandon",
     "homeRecord": "9-11",
     "awayRecord": "9-11"
    },
@@ -2007,7 +2007,7 @@
     "away": "Thatcher's Wackers",
     "livePoints": "0-0",
     "projected": "117.41-113.25",
-    "allTimeHeadToHead": "Scott 7-9 vs Thatcher",
+    "allTimeHeadToHead": "Scott 18-19 vs Thatcher",
     "homeRecord": "14-6",
     "awayRecord": "10-10"
    },
@@ -2016,7 +2016,7 @@
     "away": "The Pig  Killers",
     "livePoints": "0-0",
     "projected": "129.02-130.4",
-    "allTimeHeadToHead": "Dwayne 3-10 vs Todd",
+    "allTimeHeadToHead": "Dwayne 11-17 vs Todd",
     "homeRecord": "7-13",
     "awayRecord": "7-13"
    },
@@ -2025,14 +2025,14 @@
     "away": "Cow Tippers",
     "livePoints": "0-0",
     "projected": "113.32-110.96",
-    "allTimeHeadToHead": "Burnie 4-7 vs Doug",
+    "allTimeHeadToHead": "Burnie 11-11 vs Doug",
     "homeRecord": "11-9",
     "awayRecord": "8-12"
    }
   ],
   "alreadyPlayedStandouts": [],
   "liveStatus": {
-   "asOf": "2026-11-19T10:44:48.294Z",
+   "asOf": "2026-11-19T13:49:55.091Z",
    "currentMedian": 0,
    "projectedMedian": 121.4,
    "teams": [
@@ -3149,32 +3149,32 @@
    {
     "home": "The Fishsticks",
     "away": "Angry Mennonites",
-    "allTimeHeadToHead": "Chad 5-8 vs Seth"
+    "allTimeHeadToHead": "Chad 12-14 vs Seth"
    },
    {
     "home": "VillageRd Buttkickers",
     "away": "The Pig  Killers",
-    "allTimeHeadToHead": "Scott 4-8 vs Todd"
+    "allTimeHeadToHead": "Scott 9-12 vs Todd"
    },
    {
     "home": "Intercourse Encroachment",
     "away": "Thatcher's Wackers",
-    "allTimeHeadToHead": "Bryan 10-6 vs Thatcher"
+    "allTimeHeadToHead": "Bryan 14-8 vs Thatcher"
    },
    {
     "home": "Cow Tippers",
     "away": "Elam's Ramblers",
-    "allTimeHeadToHead": "Doug 5-6 vs Dwayne"
+    "allTimeHeadToHead": "Doug 15-10 vs Dwayne"
    },
    {
     "home": "Burnin  Ballers",
     "away": "Smoketown Rumspringas",
-    "allTimeHeadToHead": "Burnie 9-8 vs Roger"
+    "allTimeHeadToHead": "Burnie 14-11 vs Roger"
    },
    {
     "home": "The Bike slashers",
     "away": "Manny's SexPistols",
-    "allTimeHeadToHead": "Brandon 5-11 vs Randy"
+    "allTimeHeadToHead": "Brandon 7-14 vs Randy"
    }
   ]
  },
@@ -3747,6 +3747,1195 @@
  ],
  "history": {
   "seasons": [
+   {
+    "season": 2004,
+    "champion": "Brandon",
+    "runnerUp": null,
+    "finalStandings": []
+   },
+   {
+    "season": 2005,
+    "champion": "a former manager",
+    "runnerUp": "a former manager",
+    "finalStandings": [
+     {
+      "manager": "a former manager",
+      "finish": 1,
+      "seed": 2,
+      "record": "9-4",
+      "pf": 1109
+     },
+     {
+      "manager": "a former manager",
+      "finish": 2,
+      "seed": 4,
+      "record": "9-4",
+      "pf": 984
+     },
+     {
+      "manager": "a former manager",
+      "finish": 3,
+      "seed": 1,
+      "record": "10-3",
+      "pf": 1145
+     },
+     {
+      "manager": "Randy",
+      "finish": 4,
+      "seed": 6,
+      "record": "8-5",
+      "pf": 975
+     },
+     {
+      "manager": "Dwayne",
+      "finish": 5,
+      "seed": 5,
+      "record": "9-4",
+      "pf": 979
+     },
+     {
+      "manager": "a former manager",
+      "finish": 6,
+      "seed": 3,
+      "record": "9-4",
+      "pf": 1037
+     },
+     {
+      "manager": "Chad",
+      "finish": 7,
+      "seed": 8,
+      "record": "4-9",
+      "pf": 960
+     },
+     {
+      "manager": "a former manager",
+      "finish": 8,
+      "seed": 7,
+      "record": "6-7",
+      "pf": 965
+     },
+     {
+      "manager": "Thatcher",
+      "finish": 9,
+      "seed": 10,
+      "record": "4-9",
+      "pf": 877
+     },
+     {
+      "manager": "Scott",
+      "finish": 10,
+      "seed": 9,
+      "record": "4-9",
+      "pf": 907
+     },
+     {
+      "manager": "a former manager",
+      "finish": 11,
+      "seed": 12,
+      "record": "3-10",
+      "pf": 820
+     },
+     {
+      "manager": "a former manager",
+      "finish": 12,
+      "seed": 11,
+      "record": "3-10",
+      "pf": 787
+     }
+    ]
+   },
+   {
+    "season": 2006,
+    "champion": "Randy",
+    "runnerUp": "Scott",
+    "finalStandings": [
+     {
+      "manager": "Randy",
+      "finish": 1,
+      "seed": 6,
+      "record": "7-6",
+      "pf": 921
+     },
+     {
+      "manager": "Scott",
+      "finish": 2,
+      "seed": 1,
+      "record": "10-3",
+      "pf": 1207
+     },
+     {
+      "manager": "a former manager",
+      "finish": 3,
+      "seed": 4,
+      "record": "8-5",
+      "pf": 963
+     },
+     {
+      "manager": "Chad",
+      "finish": 4,
+      "seed": 2,
+      "record": "8-5",
+      "pf": 1073
+     },
+     {
+      "manager": "a former manager",
+      "finish": 5,
+      "seed": 5,
+      "record": "7-6",
+      "pf": 977
+     },
+     {
+      "manager": "Thatcher",
+      "finish": 6,
+      "seed": 3,
+      "record": "8-5",
+      "pf": 1189
+     },
+     {
+      "manager": "a former manager",
+      "finish": 7,
+      "seed": 8,
+      "record": "5-8",
+      "pf": 1016
+     },
+     {
+      "manager": "Burnie",
+      "finish": 8,
+      "seed": 10,
+      "record": "5-8",
+      "pf": 1002
+     },
+     {
+      "manager": "a former manager",
+      "finish": 9,
+      "seed": 9,
+      "record": "5-8",
+      "pf": 1006
+     },
+     {
+      "manager": "a former manager",
+      "finish": 10,
+      "seed": 7,
+      "record": "7-6",
+      "pf": 936
+     },
+     {
+      "manager": "a former manager",
+      "finish": 11,
+      "seed": 11,
+      "record": "5-8",
+      "pf": 972
+     },
+     {
+      "manager": "Dwayne",
+      "finish": 12,
+      "seed": 12,
+      "record": "3-10",
+      "pf": 906
+     }
+    ]
+   },
+   {
+    "season": 2007,
+    "champion": "a former manager",
+    "runnerUp": "Scott",
+    "finalStandings": [
+     {
+      "manager": "a former manager",
+      "finish": 1,
+      "seed": 1,
+      "record": "9-4",
+      "pf": 1248
+     },
+     {
+      "manager": "Scott",
+      "finish": 2,
+      "seed": 2,
+      "record": "9-4",
+      "pf": 991
+     },
+     {
+      "manager": "a former manager",
+      "finish": 3,
+      "seed": 5,
+      "record": "8-5",
+      "pf": 1082
+     },
+     {
+      "manager": "Burnie",
+      "finish": 4,
+      "seed": 6,
+      "record": "7-6",
+      "pf": 1121
+     },
+     {
+      "manager": "a former manager",
+      "finish": 5,
+      "seed": 4,
+      "record": "8-5",
+      "pf": 1116
+     },
+     {
+      "manager": "Thatcher",
+      "finish": 6,
+      "seed": 3,
+      "record": "8-5",
+      "pf": 1193
+     },
+     {
+      "manager": "Randy",
+      "finish": 7,
+      "seed": 9,
+      "record": "6-7",
+      "pf": 951
+     },
+     {
+      "manager": "Dwayne",
+      "finish": 8,
+      "seed": 7,
+      "record": "7-6",
+      "pf": 1025
+     },
+     {
+      "manager": "Chad",
+      "finish": 9,
+      "seed": 10,
+      "record": "6-7",
+      "pf": 942
+     },
+     {
+      "manager": "a former manager",
+      "finish": 10,
+      "seed": 8,
+      "record": "6-7",
+      "pf": 1059
+     },
+     {
+      "manager": "a former manager",
+      "finish": 11,
+      "seed": 11,
+      "record": "3-10",
+      "pf": 883
+     },
+     {
+      "manager": "a former manager",
+      "finish": 12,
+      "seed": 12,
+      "record": "1-12",
+      "pf": 721
+     }
+    ]
+   },
+   {
+    "season": 2008,
+    "champion": "a former manager",
+    "runnerUp": "a former manager",
+    "finalStandings": [
+     {
+      "manager": "a former manager",
+      "finish": 1,
+      "seed": 2,
+      "record": "10-3",
+      "pf": 1053
+     },
+     {
+      "manager": "a former manager",
+      "finish": 2,
+      "seed": 4,
+      "record": "9-4",
+      "pf": 1123
+     },
+     {
+      "manager": "Chad",
+      "finish": 3,
+      "seed": 3,
+      "record": "10-3",
+      "pf": 1041
+     },
+     {
+      "manager": "Dwayne",
+      "finish": 4,
+      "seed": 1,
+      "record": "10-3",
+      "pf": 1117
+     },
+     {
+      "manager": "Scott",
+      "finish": 5,
+      "seed": 5,
+      "record": "6-7",
+      "pf": 1023
+     },
+     {
+      "manager": "a former manager",
+      "finish": 6,
+      "seed": 6,
+      "record": "6-7",
+      "pf": 1007
+     },
+     {
+      "manager": "Thatcher",
+      "finish": 7,
+      "seed": 9,
+      "record": "5-8",
+      "pf": 1011
+     },
+     {
+      "manager": "a former manager",
+      "finish": 8,
+      "seed": 12,
+      "record": "4-9",
+      "pf": 892
+     },
+     {
+      "manager": "a former manager",
+      "finish": 9,
+      "seed": 7,
+      "record": "5-8",
+      "pf": 1111
+     },
+     {
+      "manager": "Burnie",
+      "finish": 10,
+      "seed": 10,
+      "record": "4-9",
+      "pf": 913
+     },
+     {
+      "manager": "Randy",
+      "finish": 11,
+      "seed": 11,
+      "record": "4-9",
+      "pf": 911
+     },
+     {
+      "manager": "a former manager",
+      "finish": 12,
+      "seed": 8,
+      "record": "5-8",
+      "pf": 1038
+     }
+    ]
+   },
+   {
+    "season": 2009,
+    "champion": "Burnie",
+    "runnerUp": "a former manager",
+    "finalStandings": [
+     {
+      "manager": "Burnie",
+      "finish": 1,
+      "seed": 6,
+      "record": "7-6",
+      "pf": 1252
+     },
+     {
+      "manager": "a former manager",
+      "finish": 2,
+      "seed": 1,
+      "record": "9-4",
+      "pf": 1147
+     },
+     {
+      "manager": "Scott",
+      "finish": 3,
+      "seed": 4,
+      "record": "8-5",
+      "pf": 1041
+     },
+     {
+      "manager": "Chad",
+      "finish": 4,
+      "seed": 2,
+      "record": "8-5",
+      "pf": 1115
+     },
+     {
+      "manager": "Todd",
+      "finish": 5,
+      "seed": 3,
+      "record": "8-5",
+      "pf": 1086
+     },
+     {
+      "manager": "a former manager",
+      "finish": 6,
+      "seed": 5,
+      "record": "8-5",
+      "pf": 1032
+     },
+     {
+      "manager": "Randy",
+      "finish": 7,
+      "seed": 7,
+      "record": "7-6",
+      "pf": 1060
+     },
+     {
+      "manager": "a former manager",
+      "finish": 8,
+      "seed": 8,
+      "record": "6-7",
+      "pf": 1010
+     },
+     {
+      "manager": "a former manager",
+      "finish": 9,
+      "seed": 12,
+      "record": "3-10",
+      "pf": 951
+     },
+     {
+      "manager": "a former manager",
+      "finish": 10,
+      "seed": 10,
+      "record": "5-8",
+      "pf": 1024
+     },
+     {
+      "manager": "Thatcher",
+      "finish": 11,
+      "seed": 9,
+      "record": "5-8",
+      "pf": 1086
+     },
+     {
+      "manager": "Dwayne",
+      "finish": 12,
+      "seed": 11,
+      "record": "4-9",
+      "pf": 1057
+     }
+    ]
+   },
+   {
+    "season": 2010,
+    "champion": "Scott",
+    "runnerUp": "Randy",
+    "finalStandings": [
+     {
+      "manager": "Scott",
+      "finish": 1,
+      "seed": 5,
+      "record": "8-5",
+      "pf": 1004
+     },
+     {
+      "manager": "Randy",
+      "finish": 2,
+      "seed": 2,
+      "record": "8-5",
+      "pf": 1220
+     },
+     {
+      "manager": "a former manager",
+      "finish": 3,
+      "seed": 1,
+      "record": "9-4",
+      "pf": 1113
+     },
+     {
+      "manager": "Thatcher",
+      "finish": 4,
+      "seed": 3,
+      "record": "8-5",
+      "pf": 1134
+     },
+     {
+      "manager": "Dwayne",
+      "finish": 5,
+      "seed": 6,
+      "record": "7-6",
+      "pf": 1044
+     },
+     {
+      "manager": "a former manager",
+      "finish": 6,
+      "seed": 4,
+      "record": "8-5",
+      "pf": 1041
+     },
+     {
+      "manager": "Chad",
+      "finish": 7,
+      "seed": 7,
+      "record": "7-6",
+      "pf": 974
+     },
+     {
+      "manager": "a former manager",
+      "finish": 8,
+      "seed": 9,
+      "record": "5-8",
+      "pf": 1099
+     },
+     {
+      "manager": "Todd",
+      "finish": 9,
+      "seed": 8,
+      "record": "6-7",
+      "pf": 1040
+     },
+     {
+      "manager": "a former manager",
+      "finish": 10,
+      "seed": 12,
+      "record": "3-10",
+      "pf": 869
+     },
+     {
+      "manager": "Burnie",
+      "finish": 11,
+      "seed": 10,
+      "record": "5-8",
+      "pf": 1042
+     },
+     {
+      "manager": "a former manager",
+      "finish": 12,
+      "seed": 11,
+      "record": "4-9",
+      "pf": 944
+     }
+    ]
+   },
+   {
+    "season": 2011,
+    "champion": "a former manager",
+    "runnerUp": "Doug",
+    "finalStandings": [
+     {
+      "manager": "a former manager",
+      "finish": 1,
+      "seed": 2,
+      "record": "8-5",
+      "pf": 1189
+     },
+     {
+      "manager": "Doug",
+      "finish": 2,
+      "seed": 4,
+      "record": "7-6",
+      "pf": 1070
+     },
+     {
+      "manager": "Seth",
+      "finish": 3,
+      "seed": 1,
+      "record": "12-1",
+      "pf": 1350
+     },
+     {
+      "manager": "Dwayne",
+      "finish": 4,
+      "seed": 6,
+      "record": "6-6-1",
+      "pf": 1008
+     },
+     {
+      "manager": "Todd",
+      "finish": 5,
+      "seed": 3,
+      "record": "8-5",
+      "pf": 1141
+     },
+     {
+      "manager": "Chad",
+      "finish": 6,
+      "seed": 5,
+      "record": "6-6-1",
+      "pf": 1123
+     },
+     {
+      "manager": "Randy",
+      "finish": 7,
+      "seed": 7,
+      "record": "6-7",
+      "pf": 1200
+     },
+     {
+      "manager": "a former manager",
+      "finish": 8,
+      "seed": 11,
+      "record": "5-8",
+      "pf": 913
+     },
+     {
+      "manager": "Thatcher",
+      "finish": 9,
+      "seed": 9,
+      "record": "5-8",
+      "pf": 1057
+     },
+     {
+      "manager": "Burnie",
+      "finish": 10,
+      "seed": 10,
+      "record": "5-8",
+      "pf": 1055
+     },
+     {
+      "manager": "Scott",
+      "finish": 11,
+      "seed": 8,
+      "record": "6-7",
+      "pf": 1136
+     },
+     {
+      "manager": "a former manager",
+      "finish": 12,
+      "seed": 12,
+      "record": "3-10",
+      "pf": 1008
+     }
+    ]
+   },
+   {
+    "season": 2012,
+    "champion": "Randy",
+    "runnerUp": "Scott",
+    "finalStandings": [
+     {
+      "manager": "Randy",
+      "finish": 1,
+      "seed": 1,
+      "record": "11-2",
+      "pf": 1395.5
+     },
+     {
+      "manager": "Scott",
+      "finish": 2,
+      "seed": 3,
+      "record": "8-5",
+      "pf": 1166
+     },
+     {
+      "manager": "Seth",
+      "finish": 3,
+      "seed": 5,
+      "record": "7-6",
+      "pf": 1191.9
+     },
+     {
+      "manager": "Chad",
+      "finish": 4,
+      "seed": 2,
+      "record": "8-5",
+      "pf": 1275
+     },
+     {
+      "manager": "a former manager",
+      "finish": 5,
+      "seed": 4,
+      "record": "8-5",
+      "pf": 1159.3
+     },
+     {
+      "manager": "Burnie",
+      "finish": 6,
+      "seed": 6,
+      "record": "7-6",
+      "pf": 1173
+     },
+     {
+      "manager": "Doug",
+      "finish": 7,
+      "seed": 8,
+      "record": "6-7",
+      "pf": 1112.6
+     },
+     {
+      "manager": "Dwayne",
+      "finish": 8,
+      "seed": 7,
+      "record": "7-6",
+      "pf": 1160.9
+     },
+     {
+      "manager": "Todd",
+      "finish": 9,
+      "seed": 10,
+      "record": "5-8",
+      "pf": 1063.3
+     },
+     {
+      "manager": "Thatcher",
+      "finish": 10,
+      "seed": 9,
+      "record": "5-8",
+      "pf": 1074.1
+     },
+     {
+      "manager": "a former manager",
+      "finish": 11,
+      "seed": 12,
+      "record": "3-10",
+      "pf": 909.9
+     },
+     {
+      "manager": "Roger",
+      "finish": 12,
+      "seed": 11,
+      "record": "3-10",
+      "pf": 1083.8
+     }
+    ]
+   },
+   {
+    "season": 2013,
+    "champion": "Bryan",
+    "runnerUp": "Burnie",
+    "finalStandings": [
+     {
+      "manager": "Bryan",
+      "finish": 1,
+      "seed": 1,
+      "record": "10-3",
+      "pf": 1218.2
+     },
+     {
+      "manager": "Burnie",
+      "finish": 2,
+      "seed": 6,
+      "record": "7-6",
+      "pf": 1206.1
+     },
+     {
+      "manager": "Thatcher",
+      "finish": 3,
+      "seed": 5,
+      "record": "7-6",
+      "pf": 1272.5
+     },
+     {
+      "manager": "Doug",
+      "finish": 4,
+      "seed": 2,
+      "record": "8-5",
+      "pf": 1288.5
+     },
+     {
+      "manager": "Roger",
+      "finish": 5,
+      "seed": 4,
+      "record": "8-5",
+      "pf": 1226.8
+     },
+     {
+      "manager": "Randy",
+      "finish": 6,
+      "seed": 3,
+      "record": "8-5",
+      "pf": 1254.3
+     },
+     {
+      "manager": "Chad",
+      "finish": 7,
+      "seed": 12,
+      "record": "3-10",
+      "pf": 1040.8
+     },
+     {
+      "manager": "Scott",
+      "finish": 8,
+      "seed": 8,
+      "record": "6-7",
+      "pf": 1248.7
+     },
+     {
+      "manager": "a former manager",
+      "finish": 9,
+      "seed": 10,
+      "record": "4-9",
+      "pf": 1110.4
+     },
+     {
+      "manager": "Todd",
+      "finish": 10,
+      "seed": 9,
+      "record": "6-7",
+      "pf": 1039
+     },
+     {
+      "manager": "Dwayne",
+      "finish": 11,
+      "seed": 11,
+      "record": "4-9",
+      "pf": 1017.8
+     },
+     {
+      "manager": "Seth",
+      "finish": 12,
+      "seed": 7,
+      "record": "7-6",
+      "pf": 1089.6
+     }
+    ]
+   },
+   {
+    "season": 2014,
+    "champion": "Bryan",
+    "runnerUp": "Dwayne",
+    "finalStandings": [
+     {
+      "manager": "Bryan",
+      "finish": 1,
+      "seed": 2,
+      "record": "8-5",
+      "pf": 1143.2
+     },
+     {
+      "manager": "Dwayne",
+      "finish": 2,
+      "seed": 5,
+      "record": "8-5",
+      "pf": 1112.7
+     },
+     {
+      "manager": "Burnie",
+      "finish": 3,
+      "seed": 6,
+      "record": "7-6",
+      "pf": 1140.7
+     },
+     {
+      "manager": "Roger",
+      "finish": 4,
+      "seed": 1,
+      "record": "9-4",
+      "pf": 1333.8
+     },
+     {
+      "manager": "Doug",
+      "finish": 5,
+      "seed": 4,
+      "record": "8-5",
+      "pf": 1255.3
+     },
+     {
+      "manager": "Chad",
+      "finish": 6,
+      "seed": 3,
+      "record": "8-5",
+      "pf": 1350.7
+     },
+     {
+      "manager": "Seth",
+      "finish": 7,
+      "seed": 11,
+      "record": "4-9",
+      "pf": 1102.9
+     },
+     {
+      "manager": "Randy",
+      "finish": 8,
+      "seed": 7,
+      "record": "7-6",
+      "pf": 1093.9
+     },
+     {
+      "manager": "Scott",
+      "finish": 9,
+      "seed": 10,
+      "record": "4-9",
+      "pf": 1134.7
+     },
+     {
+      "manager": "Brandon",
+      "finish": 10,
+      "seed": 9,
+      "record": "5-8",
+      "pf": 990.1
+     },
+     {
+      "manager": "Thatcher",
+      "finish": 11,
+      "seed": 8,
+      "record": "6-7",
+      "pf": 1242.5
+     },
+     {
+      "manager": "Todd",
+      "finish": 12,
+      "seed": 12,
+      "record": "4-9",
+      "pf": 963.7
+     }
+    ]
+   },
+   {
+    "season": 2015,
+    "champion": "Doug",
+    "runnerUp": "Bryan",
+    "finalStandings": [
+     {
+      "manager": "Doug",
+      "finish": 1,
+      "seed": 2,
+      "record": "8-5",
+      "pf": 1244.4
+     },
+     {
+      "manager": "Bryan",
+      "finish": 2,
+      "seed": 1,
+      "record": "11-2",
+      "pf": 1282.3
+     },
+     {
+      "manager": "Dwayne",
+      "finish": 3,
+      "seed": 6,
+      "record": "7-6",
+      "pf": 1131.3
+     },
+     {
+      "manager": "Chad",
+      "finish": 4,
+      "seed": 5,
+      "record": "7-6",
+      "pf": 1143.4
+     },
+     {
+      "manager": "Burnie",
+      "finish": 5,
+      "seed": 4,
+      "record": "8-5",
+      "pf": 1236
+     },
+     {
+      "manager": "Seth",
+      "finish": 6,
+      "seed": 3,
+      "record": "9-4",
+      "pf": 1133.4
+     },
+     {
+      "manager": "Thatcher",
+      "finish": 7,
+      "seed": 8,
+      "record": "6-7",
+      "pf": 1075.1
+     },
+     {
+      "manager": "Randy",
+      "finish": 8,
+      "seed": 7,
+      "record": "6-7",
+      "pf": 1229.7
+     },
+     {
+      "manager": "Todd",
+      "finish": 9,
+      "seed": 10,
+      "record": "4-9",
+      "pf": 1067.7
+     },
+     {
+      "manager": "Brandon",
+      "finish": 10,
+      "seed": 9,
+      "record": "6-7",
+      "pf": 1067.2
+     },
+     {
+      "manager": "Roger",
+      "finish": 11,
+      "seed": 11,
+      "record": "3-10",
+      "pf": 1026.5
+     },
+     {
+      "manager": "Scott",
+      "finish": 12,
+      "seed": 12,
+      "record": "3-10",
+      "pf": 953.6
+     }
+    ]
+   },
+   {
+    "season": 2016,
+    "champion": "Bryan",
+    "runnerUp": "Todd",
+    "finalStandings": [
+     {
+      "manager": "Bryan",
+      "finish": 1,
+      "seed": 2,
+      "record": "10-3",
+      "pf": 1453.3
+     },
+     {
+      "manager": "Todd",
+      "finish": 2,
+      "seed": 4,
+      "record": "7-6",
+      "pf": 1506.1
+     },
+     {
+      "manager": "Thatcher",
+      "finish": 3,
+      "seed": 1,
+      "record": "11-2",
+      "pf": 1295.6
+     },
+     {
+      "manager": "Seth",
+      "finish": 4,
+      "seed": 6,
+      "record": "7-6",
+      "pf": 1353.7
+     },
+     {
+      "manager": "Roger",
+      "finish": 5,
+      "seed": 5,
+      "record": "7-6",
+      "pf": 1378.4
+     },
+     {
+      "manager": "Randy",
+      "finish": 6,
+      "seed": 3,
+      "record": "8-5",
+      "pf": 1241.8
+     },
+     {
+      "manager": "Chad",
+      "finish": 7,
+      "seed": 7,
+      "record": "7-6",
+      "pf": 1279.5
+     },
+     {
+      "manager": "Burnie",
+      "finish": 8,
+      "seed": 8,
+      "record": "6-7",
+      "pf": 1199.7
+     },
+     {
+      "manager": "Scott",
+      "finish": 9,
+      "seed": 10,
+      "record": "5-8",
+      "pf": 1205.5
+     },
+     {
+      "manager": "Dwayne",
+      "finish": 10,
+      "seed": 9,
+      "record": "5-8",
+      "pf": 1323.8
+     },
+     {
+      "manager": "Doug",
+      "finish": 11,
+      "seed": 11,
+      "record": "3-10",
+      "pf": 1210.6
+     },
+     {
+      "manager": "Brandon",
+      "finish": 12,
+      "seed": 12,
+      "record": "2-11",
+      "pf": 1017.9
+     }
+    ]
+   },
+   {
+    "season": 2017,
+    "champion": "Scott",
+    "runnerUp": "Seth",
+    "finalStandings": [
+     {
+      "manager": "Scott",
+      "finish": 1,
+      "seed": 3,
+      "record": "9-4",
+      "pf": 1287.1
+     },
+     {
+      "manager": "Seth",
+      "finish": 2,
+      "seed": 1,
+      "record": "10-3",
+      "pf": 1323.6
+     },
+     {
+      "manager": "Chad",
+      "finish": 3,
+      "seed": 2,
+      "record": "9-4",
+      "pf": 1358.2
+     },
+     {
+      "manager": "Bryan",
+      "finish": 4,
+      "seed": 5,
+      "record": "7-6",
+      "pf": 1153.8
+     },
+     {
+      "manager": "Randy",
+      "finish": 5,
+      "seed": 4,
+      "record": "8-5",
+      "pf": 1267.6
+     },
+     {
+      "manager": "Doug",
+      "finish": 6,
+      "seed": 6,
+      "record": "6-7",
+      "pf": 1250.7
+     },
+     {
+      "manager": "Todd",
+      "finish": 7,
+      "seed": 7,
+      "record": "6-7",
+      "pf": 1238.9
+     },
+     {
+      "manager": "Thatcher",
+      "finish": 8,
+      "seed": 9,
+      "record": "5-8",
+      "pf": 1141.6
+     },
+     {
+      "manager": "Brandon",
+      "finish": 9,
+      "seed": 11,
+      "record": "4-9",
+      "pf": 1034
+     },
+     {
+      "manager": "Dwayne",
+      "finish": 10,
+      "seed": 8,
+      "record": "6-7",
+      "pf": 1221.7
+     },
+     {
+      "manager": "Roger",
+      "finish": 11,
+      "seed": 12,
+      "record": "3-10",
+      "pf": 1083.2
+     },
+     {
+      "manager": "Burnie",
+      "finish": 12,
+      "seed": 10,
+      "record": "5-8",
+      "pf": 1103.9
+     }
+    ]
+   },
    {
     "season": 2018,
     "champion": "Chad",
@@ -4480,122 +5669,122 @@
    {
     "manager": "Dwayne",
     "team": "Elam's Ramblers",
-    "pastSeasons": 8,
+    "pastSeasons": 21,
     "titles": 0,
-    "runnerUps": 0,
-    "playoffTrips": 4,
-    "pastRecord": "71-66",
-    "pastPointsFor": 12432.8
+    "runnerUps": 1,
+    "playoffTrips": 10,
+    "pastRecord": "154-151-1",
+    "pastPointsFor": 26536.9
    },
    {
     "manager": "Roger",
     "team": "Smoketown Rumspringas",
-    "pastSeasons": 8,
+    "pastSeasons": 14,
     "titles": 0,
     "runnerUps": 1,
-    "playoffTrips": 2,
-    "pastRecord": "62-75",
-    "pastPointsFor": 12138.2
+    "playoffTrips": 5,
+    "pastRecord": "95-120",
+    "pastPointsFor": 19270.6
    },
    {
     "manager": "Randy",
     "team": "Manny's SexPistols",
-    "pastSeasons": 8,
-    "titles": 3,
-    "runnerUps": 0,
-    "playoffTrips": 5,
-    "pastRecord": "72-65",
-    "pastPointsFor": 12517
+    "pastSeasons": 21,
+    "titles": 5,
+    "runnerUps": 1,
+    "playoffTrips": 12,
+    "pastRecord": "166-140",
+    "pastPointsFor": 27237.9
    },
    {
     "manager": "Bryan",
     "team": "Intercourse Encroachment",
-    "pastSeasons": 8,
-    "titles": 1,
-    "runnerUps": 0,
-    "playoffTrips": 3,
-    "pastRecord": "66-71",
-    "pastPointsFor": 12358.8
+    "pastSeasons": 13,
+    "titles": 4,
+    "runnerUps": 1,
+    "playoffTrips": 8,
+    "pastRecord": "112-90",
+    "pastPointsFor": 18609.4
    },
    {
     "manager": "Chad",
     "team": "The Fishsticks",
-    "pastSeasons": 8,
+    "pastSeasons": 21,
     "titles": 2,
     "runnerUps": 1,
-    "playoffTrips": 5,
-    "pastRecord": "62-75",
-    "pastPointsFor": 12523.7
+    "playoffTrips": 13,
+    "pastRecord": "153-152-1",
+    "pastPointsFor": 27199.2
    },
    {
     "manager": "Seth",
     "team": "Angry Mennonites",
-    "pastSeasons": 8,
+    "pastSeasons": 15,
     "titles": 0,
-    "runnerUps": 0,
-    "playoffTrips": 3,
-    "pastRecord": "68-69",
-    "pastPointsFor": 12646.6
+    "runnerUps": 1,
+    "playoffTrips": 8,
+    "pastRecord": "124-104",
+    "pastPointsFor": 21191.7
    },
    {
     "manager": "Scott",
     "team": "VillageRd Buttkickers",
-    "pastSeasons": 8,
-    "titles": 0,
-    "runnerUps": 1,
-    "playoffTrips": 4,
-    "pastRecord": "61-76",
-    "pastPointsFor": 12299
+    "pastSeasons": 21,
+    "titles": 2,
+    "runnerUps": 4,
+    "playoffTrips": 11,
+    "pastRecord": "147-159",
+    "pastPointsFor": 26603.6
    },
    {
     "manager": "Doug",
     "team": "Cow Tippers",
-    "pastSeasons": 8,
-    "titles": 1,
-    "runnerUps": 2,
-    "playoffTrips": 4,
-    "pastRecord": "68-69",
-    "pastPointsFor": 12573.5
+    "pastSeasons": 15,
+    "titles": 2,
+    "runnerUps": 3,
+    "playoffTrips": 9,
+    "pastRecord": "114-114",
+    "pastPointsFor": 21005.6
    },
    {
     "manager": "Burnie",
     "team": "Burnin  Ballers",
-    "pastSeasons": 8,
-    "titles": 0,
-    "runnerUps": 0,
-    "playoffTrips": 3,
-    "pastRecord": "67-70",
-    "pastPointsFor": 12270.9
+    "pastSeasons": 20,
+    "titles": 1,
+    "runnerUps": 1,
+    "playoffTrips": 9,
+    "pastRecord": "140-153",
+    "pastPointsFor": 25715.4
    },
    {
     "manager": "Thatcher",
     "team": "Thatcher's Wackers",
-    "pastSeasons": 8,
+    "pastSeasons": 21,
     "titles": 0,
     "runnerUps": 1,
-    "playoffTrips": 2,
-    "pastRecord": "65-72",
-    "pastPointsFor": 12298.9
+    "playoffTrips": 7,
+    "pastRecord": "148-158",
+    "pastPointsFor": 26947.3
    },
    {
     "manager": "Brandon",
     "team": "The Bike slashers",
-    "pastSeasons": 8,
-    "titles": 0,
+    "pastSeasons": 12,
+    "titles": 1,
     "runnerUps": 1,
     "playoffTrips": 8,
-    "pastRecord": "84-53",
-    "pastPointsFor": 13191.4
+    "pastRecord": "101-88",
+    "pastPointsFor": 17300.6
    },
    {
     "manager": "Todd",
     "team": "The Pig  Killers",
-    "pastSeasons": 8,
+    "pastSeasons": 17,
     "titles": 1,
-    "runnerUps": 1,
-    "playoffTrips": 5,
-    "pastRecord": "77-60",
-    "pastPointsFor": 12454.3
+    "runnerUps": 2,
+    "playoffTrips": 8,
+    "pastRecord": "131-123",
+    "pastPointsFor": 22599.8
    }
   ]
  }
