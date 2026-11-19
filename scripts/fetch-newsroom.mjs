@@ -540,7 +540,11 @@ const allTimeCurrent = teams.map((t) => {
     pastSeasons: at.seasons,
     titles: at.titles,
     runnerUps: at.runnerUps,
-    playoffTrips: at.playoffs,
+    playoffTrips: playoffStatsByName[t.manager]?.appearances ?? at.playoffs,
+playoffWins: playoffStatsByName[t.manager]?.wins ?? null,
+playoffLosses: playoffStatsByName[t.manager]?.losses ?? null,
+playoffWinPercentage: playoffStatsByName[t.manager]?.winPercentage ?? null,
+assumed2004PlayoffWins: playoffStatsByName[t.manager]?.assumed2004Wins ?? 0,
     pastRecord: `${at.w}-${at.l}${at.t ? "-" + at.t : ""}`,
     pastPointsFor: r1(at.pf),
   };
