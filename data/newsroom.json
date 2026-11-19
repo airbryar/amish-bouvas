@@ -1,49 +1,123 @@
 {
  "managerFacts": {
   "Bryan": {
-   "facts": []
+   "facts": [
+    "Bryan is a writer and owns Auntie Anne's pretzel franchises.",
+    "Bryan is the only league manager who did not attend high school with the original group of friends.",
+    "Bryan is the oldest manager in the league and grew up in Massachusetts.",
+    "Bryan won three fantasy football championships in his first four years in the league.",
+    "Bryan plays guitar and loves golf.",
+    "Bryan has a big nose, which is fair game for friendly league jokes.",
+    "Bryan has two grandchildren.",
+    "Unlike most of the other managers, Bryan has very few handyman skills.",
+    "Bryan and Chad are brothers-in-law because Bryan married Chad's sister.",
+    "Bryan went to Bandon Dunes in 2026 with Todd and Doug. Scott was left out because the trip filled up too quickly."
+   ]
   },
   "Brandon": {
    "facts": [
-    "Brandon and Burnie are brothers."
+    "Brandon and Burnie are brothers.",
+    "Brandon and Burnie jointly own an Airbnb rental property.",
+    "Brandon's Facebook profile lists him as a senior buyer for Breeo grills; this job information has not been independently confirmed as current.",
+    "Brandon won the league's inaugural championship in 2004."
    ]
   },
   "Burnie": {
    "facts": [
-    "Burnie and Brandon are brothers."
+    "Burnie works as a wedding DJ.",
+    "Burnie and Brandon are brothers.",
+    "Burnie and Brandon jointly own an Airbnb rental property.",
+    "Burnie used to be an excellent golfer when he played regularly. Do not assume his current golf ability has declined."
    ]
   },
   "Scott": {
    "facts": [
-    "Scott broke his wrist in 2026."
+    "Scott owns a successful restaurant in a farmers market and also operates a food truck.",
+    "Other league managers who own farmers market stands joke that Scott is the wealthiest person in the league. This is a running joke, not a verified financial fact.",
+    "Scott is the older brother of Todd and Doug.",
+    "Scott broke his wrist in 2026.",
+    "Scott was left out of a 2026 golf trip to Bandon Dunes with Bryan, Todd, and Doug because the trip filled up too quickly."
    ]
   },
   "Chad": {
-   "facts": []
+   "facts": [
+    "Chad is a pastor who leads worship and helps oversee church building projects.",
+    "Chad and Bryan are brothers-in-law because Bryan married Chad's sister.",
+    "Chad is bald.",
+    "Chad loves hunting and collects sports cards.",
+    "At the 2026 fantasy football draft, Chad's poor Wi-Fi caused the Phillies game they were watching to buffer repeatedly."
+   ]
   },
   "Randy": {
-   "facts": []
+   "facts": [
+    "Randy is the only five-time fantasy football champion in league history.",
+    "Randy attended Albright College.",
+    "Randy has four children.",
+    "Randy is low-key and rarely participates in league trash talk.",
+    "Randy and Roger played high school basketball together.",
+    "Thatcher frequently complains that Randy gets all the lucky breaks."
+   ]
   },
   "Roger": {
-   "facts": []
+   "facts": [
+    "Roger operates a pretzel stand at Reading Terminal Market in Philadelphia.",
+    "Roger's pretzel stand was once shown for a few seconds during a nationally televised NFL game.",
+    "Roger and Randy played high school basketball together.",
+    "Roger is a member of Meadia Heights Golf Club.",
+    "At the 2026 fantasy football draft, Roger was simultaneously drafting teams in two different fantasy leagues.",
+    "Roger and Bryan both work in the pretzel business."
+   ]
   },
   "Doug": {
-   "facts": []
+   "facts": [
+    "Doug owns a produce stand at a farmers market.",
+    "Doug is the brother of Scott and Todd. Scott is the oldest brother.",
+    "Doug enjoys golf but has a high handicap.",
+    "Doug openly brags about the large number of handicap strokes he receives during golf competitions.",
+    "Doug is the only Miami Dolphins fan in the league and frequently gets teased about it.",
+    "Doug went to Bandon Dunes in 2026 with Bryan and Todd. His brother Scott was left out because the trip filled up too quickly."
+   ]
   },
   "Seth": {
-   "facts": []
+   "facts": [
+    "Seth has a reputation as the villain of the fantasy football league.",
+    "Seth and Todd take opposite sides on nearly every league issue.",
+    "Seth occasionally forgets to update his fantasy lineup on game day, especially when his team is out of playoff contention.",
+    "In 2026, Seth complained about the draft lottery rules for teams that missed the playoffs, but other managers pointed out that he had voted against the change he wanted.",
+    "Seth claimed his 2026 lottery vote was an accidental fat-finger mistake."
+   ]
   },
   "Thatcher": {
-   "facts": []
+   "facts": [
+    "Thatcher works as a truck driver for a lumber company.",
+    "Thatcher is an eternal pessimist about his fantasy football team.",
+    "Thatcher frequently complains that Randy gets all the lucky breaks.",
+    "Thatcher enjoys soccer and played soccer in high school."
+   ]
   },
   "Todd": {
-   "facts": []
+   "facts": [
+    "Todd is the eternal optimist who occasionally dabbles in reality.",
+    "Todd owns a meat stand at a farmers market and also operates a puppy breeding business.",
+    "Todd is the brother of Scott and Doug. Scott is the oldest brother.",
+    "Todd is obsessed with Tiger Woods and LeBron James.",
+    "Todd loves golf but has broken 80 only once. Recently his golf scores have been high again.",
+    "Todd went to Bandon Dunes in 2026 with Bryan and Doug. His brother Scott was left out because the trip filled up too quickly.",
+    "Todd and Seth tend to disagree about almost everything.",
+    "Whenever Todd plays Dwayne in fantasy football, Todd proposes that the loser must kiss the winner's bare backside. This is a recurring proposed wager, not necessarily an accepted one."
+   ]
   },
   "Dwayne": {
-   "facts": []
+   "facts": [
+    "Dwayne hangs drywall for a living.",
+    "Dwayne is the only Washington Commanders fan in the league.",
+    "Dwayne is the biggest soccer fan in the league. Thatcher also enjoys soccer.",
+    "Dwayne is the only Android phone user in the league and gets teased constantly for causing green bubbles in group text messages.",
+    "Whenever Dwayne faces Todd in fantasy football, Todd proposes that the loser must kiss the winner's bare backside. This is a recurring proposed wager, not necessarily an accepted one."
+   ]
   }
  },
- "fetchedAt": "2026-11-19T15:01:36.069Z",
+ "fetchedAt": "2026-11-19T15:29:14.571Z",
  "notes": [
   "Each week a team plays two games: its head-to-head matchup, plus a game against the league median (the top 6 scores of the week win it). 'record' combines both; 'h2h' and 'vsMedian' split them.",
   "The top 6 seeds make the playoffs. The regular season is 14 weeks.",
@@ -2078,7 +2152,7 @@
   ],
   "alreadyPlayedStandouts": [],
   "liveStatus": {
-   "asOf": "2026-11-19T15:01:33.224Z",
+   "asOf": "2026-11-19T15:29:11.432Z",
    "currentMedian": 0,
    "projectedMedian": 121.5,
    "teams": [
