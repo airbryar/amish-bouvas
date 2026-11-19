@@ -354,6 +354,14 @@ const powerRankings = prNow
   : [];
 
 // ---------- League history ----------
+
+const recordBook = JSON.parse(
+  fs.readFileSync("data/history.json", "utf8")
+);
+const manualChampions = fs.existsSync("data/manual-champions.json")
+  ? JSON.parse(fs.readFileSync("data/manual-champions.json", "utf8")).champions || []
+  : [];
+
 const history = [];
 const h2h = {}; // "managerA|managerB" -> [winsA, winsB, ties]
 const allTime = {};
@@ -373,34 +381,91 @@ function seasonGames(schedule, ownerOf) {
     addH2h(ma, mb, winner);
   }
 }
-const prevSeasons = (a.status.previousSeasons || []).filter((y) => y < SEASON).sort();
-for (const year of prevSeasons) {
-  let h;
-  try {
-    h = await get(`${leagueUrl(year)}?view=mTeam&view=mMatchupScore&view=mSettings`);
-  } catch (err) {
-    console.log(`::warning::Couldn't read the ${year} season (${err.message})`);
-    continue;
+
+const names = recordBook.managers || {};
+
+for (const s of recordBook.seasons || []) {
+  if (s.season >= SEASON) continue;
+
+  const rows = (s.teams || []).map((t) => ({
+    manager: names[t.m] || "a former manager",
+    finish: t.finish,
+    seed: t.seed,
+    record: `${t.w}-${t.l}${t.t ? "-" + t.t : ""}`,
+    pf: r1(t.pf)
+  })).sort((x, y) => (x.finish || 99) - (y.finish || 99));
+
+  history.push({
+    season: s.season,
+    champion: rows.find((r) => r.finish === 1)?.manager || null,
+    runnerUp: rows.find((r) => r.finish === 2)?.manager || null,
+    finalStandings: rows
+  });
+  
+  // Add historical results to current managers' career totals.
+  for (const t of s.teams || []) {
+    const who = names[t.m];
+    const current = teams.find((x) => x.manager === who);
+    if (!who || !current) continue;
+
+    const mid = current.managerId;
+    const at = (allTime[mid] = allTime[mid] || {
+      manager: who, seasons: 0, titles: 0, runnerUps: 0,
+      playoffs: 0, w: 0, l: 0, t: 0, pf: 0
+    });
+
+    at.seasons++;
+    if (t.finish === 1) at.titles++;
+    if (t.finish === 2) at.runnerUps++;
+    if (t.seed && t.seed <= (s.playoffTeams || 6)) at.playoffs++;
+
+    at.w += t.w || 0;
+    at.l += t.l || 0;
+    at.t += t.t || 0;
+    at.pf += t.pf || 0;
   }
-  const ownerOf = Object.fromEntries(h.teams.map((t) => [t.id, t.primaryOwner]));
-  seasonGames(h.schedule, ownerOf);
-  const pTeams = (h.settings.scheduleSettings || {}).playoffTeamCount || PLAYOFF_TEAMS;
-  const rows = h.teams
-    .map((t) => {
-      const rec = t.record.overall;
-      const mid = t.primaryOwner;
-      const who = firstName[mid] || null;
-      const at = (allTime[mid] = allTime[mid] || { manager: who, seasons: 0, titles: 0, runnerUps: 0, playoffs: 0, w: 0, l: 0, t: 0, pf: 0 });
-      at.seasons++;
-      if (t.rankCalculatedFinal === 1) at.titles++;
-      if (t.rankCalculatedFinal === 2) at.runnerUps++;
-      if (t.playoffSeed && t.playoffSeed <= pTeams) at.playoffs++;
-      at.w += rec.wins; at.l += rec.losses; at.t += rec.ties; at.pf += rec.pointsFor;
-      return { manager: who || "a former manager", finish: t.rankCalculatedFinal, seed: t.playoffSeed, record: `${rec.wins}-${rec.losses}${rec.ties ? "-" + rec.ties : ""}`, pf: r1(rec.pointsFor) };
-    })
-    .sort((x, y) => (x.finish || 99) - (y.finish || 99));
-  history.push({ season: year, champion: rows[0] && rows[0].manager, runnerUp: rows[1] && rows[1].manager, finalStandings: rows });
+
+  // Restore historical head-to-head results.
+  for (const g of s.games || []) {
+    const home = teams.find((x) => x.manager === names[g[1]]);
+    const away = teams.find((x) => x.manager === names[g[3]]);
+    if (!home || !away) continue;
+
+    const winner = g[5] === "H" ? home.managerId
+      : g[5] === "A" ? away.managerId : null;
+
+    addH2h(home.managerId, away.managerId, winner);
+  }
+
 }
+
+for (const c of manualChampions) {
+  if (history.some((h) => h.season === c.season)) continue;
+  if (c.season >= SEASON) continue;
+
+  const who = names[c.manager];
+  if (!who) continue;
+
+  history.push({
+    season: c.season,
+    champion: who,
+    runnerUp: null,
+    finalStandings: []
+  });
+
+  const current = teams.find((t) => t.manager === who);
+  if (current) {
+    const mid = current.managerId;
+    const at = (allTime[mid] = allTime[mid] || {
+      manager: who, seasons: 0, titles: 0, runnerUps: 0,
+      playoffs: 0, w: 0, l: 0, t: 0, pf: 0
+    });
+    at.titles++;
+  }
+}
+
+history.sort((a, b) => a.season - b.season);
+
 // This season's games count toward head-to-head history too
 seasonGames(a.schedule.filter((m) => m.matchupPeriodId <= REG), Object.fromEntries(teams.map((t) => [t.id, t.managerId])));
 
