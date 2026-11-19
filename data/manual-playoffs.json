@@ -1,0 +1,860 @@
+{
+  "source": "Amish Bouvas.xlsx / Playoffs Alltime tab",
+  "coverage": "2005-2025 documented in sheet; Brandon 2004 reconstructed",
+  "caveats": [
+    "Blank year means no playoff result recorded; it does not independently prove non-participation.",
+    "2004 Brandon championship is confirmed, but 3 playoff wins are a commissioner-approved assumption.",
+    "No opponent-level playoff matchups are available from this source.",
+    "Spreadsheet summary totals may be stale; year-by-year entries are primary."
+  ],
+  "managers": [
+    {
+      "manager": "SexPistols (Randy F)",
+      "seasons": [
+        {
+          "season": 2005,
+          "wins": 1,
+          "losses": 1,
+          "source": "playoffs_alltime_sheet"
+        },
+        {
+          "season": 2006,
+          "wins": 3,
+          "losses": 0,
+          "source": "playoffs_alltime_sheet"
+        },
+        {
+          "season": 2010,
+          "wins": 1,
+          "losses": 1,
+          "source": "playoffs_alltime_sheet"
+        },
+        {
+          "season": 2012,
+          "wins": 2,
+          "losses": 0,
+          "source": "playoffs_alltime_sheet"
+        },
+        {
+          "season": 2013,
+          "wins": 0,
+          "losses": 1,
+          "source": "playoffs_alltime_sheet"
+        },
+        {
+          "season": 2016,
+          "wins": 0,
+          "losses": 1,
+          "source": "playoffs_alltime_sheet"
+        },
+        {
+          "season": 2017,
+          "wins": 0,
+          "losses": 1,
+          "source": "playoffs_alltime_sheet"
+        },
+        {
+          "season": 2018,
+          "wins": 1,
+          "losses": 1,
+          "source": "playoffs_alltime_sheet"
+        },
+        {
+          "season": 2020,
+          "wins": 0,
+          "losses": 1,
+          "source": "playoffs_alltime_sheet"
+        },
+        {
+          "season": 2022,
+          "wins": 3,
+          "losses": 0,
+          "source": "playoffs_alltime_sheet"
+        },
+        {
+          "season": 2024,
+          "wins": 3,
+          "losses": 0,
+          "source": "playoffs_alltime_sheet"
+        },
+        {
+          "season": 2025,
+          "wins": 3,
+          "losses": 0,
+          "source": "playoffs_alltime_sheet"
+        }
+      ]
+    },
+    {
+      "manager": "Encroachment (Bryan A)",
+      "seasons": [
+        {
+          "season": 2013,
+          "wins": 2,
+          "losses": 0,
+          "source": "playoffs_alltime_sheet"
+        },
+        {
+          "season": 2014,
+          "wins": 2,
+          "losses": 0,
+          "source": "playoffs_alltime_sheet"
+        },
+        {
+          "season": 2015,
+          "wins": 1,
+          "losses": 1,
+          "source": "playoffs_alltime_sheet"
+        },
+        {
+          "season": 2016,
+          "wins": 2,
+          "losses": 0,
+          "source": "playoffs_alltime_sheet"
+        },
+        {
+          "season": 2017,
+          "wins": 1,
+          "losses": 1,
+          "source": "playoffs_alltime_sheet"
+        },
+        {
+          "season": 2020,
+          "wins": 2,
+          "losses": 0,
+          "source": "playoffs_alltime_sheet"
+        },
+        {
+          "season": 2023,
+          "wins": 1,
+          "losses": 1,
+          "source": "playoffs_alltime_sheet"
+        },
+        {
+          "season": 2025,
+          "wins": 0,
+          "losses": 1,
+          "source": "playoffs_alltime_sheet"
+        }
+      ]
+    },
+    {
+      "manager": "Buttkickers (Scott S)",
+      "seasons": [
+        {
+          "season": 2006,
+          "wins": 1,
+          "losses": 1,
+          "source": "playoffs_alltime_sheet"
+        },
+        {
+          "season": 2007,
+          "wins": 1,
+          "losses": 1,
+          "source": "playoffs_alltime_sheet"
+        },
+        {
+          "season": 2008,
+          "wins": 0,
+          "losses": 1,
+          "source": "playoffs_alltime_sheet"
+        },
+        {
+          "season": 2009,
+          "wins": 1,
+          "losses": 1,
+          "source": "playoffs_alltime_sheet"
+        },
+        {
+          "season": 2010,
+          "wins": 3,
+          "losses": 0,
+          "source": "playoffs_alltime_sheet"
+        },
+        {
+          "season": 2012,
+          "wins": 2,
+          "losses": 1,
+          "source": "playoffs_alltime_sheet"
+        },
+        {
+          "season": 2017,
+          "wins": 3,
+          "losses": 0,
+          "source": "playoffs_alltime_sheet"
+        },
+        {
+          "season": 2019,
+          "wins": 0,
+          "losses": 1,
+          "source": "playoffs_alltime_sheet"
+        },
+        {
+          "season": 2021,
+          "wins": 1,
+          "losses": 1,
+          "source": "playoffs_alltime_sheet"
+        },
+        {
+          "season": 2023,
+          "wins": 1,
+          "losses": 1,
+          "source": "playoffs_alltime_sheet"
+        },
+        {
+          "season": 2024,
+          "wins": 0,
+          "losses": 1,
+          "source": "playoffs_alltime_sheet"
+        }
+      ]
+    },
+    {
+      "manager": "Cow Tippers (Doug S)",
+      "seasons": [
+        {
+          "season": 2006,
+          "wins": 0,
+          "losses": 1,
+          "source": "playoffs_alltime_sheet"
+        },
+        {
+          "season": 2007,
+          "wins": 0,
+          "losses": 1,
+          "source": "playoffs_alltime_sheet"
+        },
+        {
+          "season": 2009,
+          "wins": 0,
+          "losses": 1,
+          "source": "playoffs_alltime_sheet"
+        },
+        {
+          "season": 2011,
+          "wins": 2,
+          "losses": 1,
+          "source": "playoffs_alltime_sheet"
+        },
+        {
+          "season": 2013,
+          "wins": 0,
+          "losses": 1,
+          "source": "playoffs_alltime_sheet"
+        },
+        {
+          "season": 2014,
+          "wins": 0,
+          "losses": 1,
+          "source": "playoffs_alltime_sheet"
+        },
+        {
+          "season": 2015,
+          "wins": 2,
+          "losses": 0,
+          "source": "playoffs_alltime_sheet"
+        },
+        {
+          "season": 2017,
+          "wins": 0,
+          "losses": 1,
+          "source": "playoffs_alltime_sheet"
+        },
+        {
+          "season": 2019,
+          "wins": 1,
+          "losses": 1,
+          "source": "playoffs_alltime_sheet"
+        },
+        {
+          "season": 2021,
+          "wins": 3,
+          "losses": 0,
+          "source": "playoffs_alltime_sheet"
+        },
+        {
+          "season": 2022,
+          "wins": 2,
+          "losses": 1,
+          "source": "playoffs_alltime_sheet"
+        },
+        {
+          "season": 2025,
+          "wins": 1,
+          "losses": 1,
+          "source": "playoffs_alltime_sheet"
+        }
+      ]
+    },
+    {
+      "manager": "Fishsticks (Chad F)",
+      "seasons": [
+        {
+          "season": 2006,
+          "wins": 0,
+          "losses": 1,
+          "source": "playoffs_alltime_sheet"
+        },
+        {
+          "season": 2008,
+          "wins": 1,
+          "losses": 1,
+          "source": "playoffs_alltime_sheet"
+        },
+        {
+          "season": 2009,
+          "wins": 0,
+          "losses": 1,
+          "source": "playoffs_alltime_sheet"
+        },
+        {
+          "season": 2011,
+          "wins": 0,
+          "losses": 1,
+          "source": "playoffs_alltime_sheet"
+        },
+        {
+          "season": 2012,
+          "wins": 0,
+          "losses": 1,
+          "source": "playoffs_alltime_sheet"
+        },
+        {
+          "season": 2014,
+          "wins": 0,
+          "losses": 1,
+          "source": "playoffs_alltime_sheet"
+        },
+        {
+          "season": 2015,
+          "wins": 1,
+          "losses": 1,
+          "source": "playoffs_alltime_sheet"
+        },
+        {
+          "season": 2017,
+          "wins": 0,
+          "losses": 1,
+          "source": "playoffs_alltime_sheet"
+        },
+        {
+          "season": 2018,
+          "wins": 2,
+          "losses": 0,
+          "source": "playoffs_alltime_sheet"
+        },
+        {
+          "season": 2019,
+          "wins": 0,
+          "losses": 1,
+          "source": "playoffs_alltime_sheet"
+        },
+        {
+          "season": 2020,
+          "wins": 2,
+          "losses": 1,
+          "source": "playoffs_alltime_sheet"
+        },
+        {
+          "season": 2021,
+          "wins": 0,
+          "losses": 1,
+          "source": "playoffs_alltime_sheet"
+        },
+        {
+          "season": 2023,
+          "wins": 3,
+          "losses": 0,
+          "source": "playoffs_alltime_sheet"
+        }
+      ]
+    },
+    {
+      "manager": "Fierce Overloards (Josh H)",
+      "seasons": [
+        {
+          "season": 2005,
+          "wins": 0,
+          "losses": 1,
+          "source": "playoffs_alltime_sheet"
+        },
+        {
+          "season": 2007,
+          "wins": 2,
+          "losses": 0,
+          "source": "playoffs_alltime_sheet"
+        },
+        {
+          "season": 2010,
+          "wins": 0,
+          "losses": 1,
+          "source": "playoffs_alltime_sheet"
+        },
+        {
+          "season": 2011,
+          "wins": 2,
+          "losses": 0,
+          "source": "playoffs_alltime_sheet"
+        }
+      ]
+    },
+    {
+      "manager": "Ballers (Burnie S)",
+      "seasons": [
+        {
+          "season": 2007,
+          "wins": 1,
+          "losses": 1,
+          "source": "playoffs_alltime_sheet"
+        },
+        {
+          "season": 2009,
+          "wins": 3,
+          "losses": 0,
+          "source": "playoffs_alltime_sheet"
+        },
+        {
+          "season": 2012,
+          "wins": 0,
+          "losses": 1,
+          "source": "playoffs_alltime_sheet"
+        },
+        {
+          "season": 2013,
+          "wins": 2,
+          "losses": 1,
+          "source": "playoffs_alltime_sheet"
+        },
+        {
+          "season": 2014,
+          "wins": 1,
+          "losses": 1,
+          "source": "playoffs_alltime_sheet"
+        },
+        {
+          "season": 2015,
+          "wins": 0,
+          "losses": 1,
+          "source": "playoffs_alltime_sheet"
+        },
+        {
+          "season": 2018,
+          "wins": 0,
+          "losses": 1,
+          "source": "playoffs_alltime_sheet"
+        },
+        {
+          "season": 2022,
+          "wins": 0,
+          "losses": 1,
+          "source": "playoffs_alltime_sheet"
+        },
+        {
+          "season": 2024,
+          "wins": 0,
+          "losses": 1,
+          "source": "playoffs_alltime_sheet"
+        }
+      ]
+    },
+    {
+      "manager": "Pig Killers (Todd S)",
+      "seasons": [
+        {
+          "season": 2009,
+          "wins": 0,
+          "losses": 1,
+          "source": "playoffs_alltime_sheet"
+        },
+        {
+          "season": 2011,
+          "wins": 0,
+          "losses": 1,
+          "source": "playoffs_alltime_sheet"
+        },
+        {
+          "season": 2016,
+          "wins": 2,
+          "losses": 1,
+          "source": "playoffs_alltime_sheet"
+        },
+        {
+          "season": 2018,
+          "wins": 0,
+          "losses": 1,
+          "source": "playoffs_alltime_sheet"
+        },
+        {
+          "season": 2019,
+          "wins": 3,
+          "losses": 0,
+          "source": "playoffs_alltime_sheet"
+        },
+        {
+          "season": 2023,
+          "wins": 0,
+          "losses": 1,
+          "source": "playoffs_alltime_sheet"
+        },
+        {
+          "season": 2024,
+          "wins": 1,
+          "losses": 1,
+          "source": "playoffs_alltime_sheet"
+        },
+        {
+          "season": 2025,
+          "wins": 0,
+          "losses": 1,
+          "source": "playoffs_alltime_sheet"
+        }
+      ]
+    },
+    {
+      "manager": "Bike Slashers (Brandon S)",
+      "seasons": [
+        {
+          "season": 2004,
+          "wins": 3,
+          "losses": 0,
+          "source": "commissioner_assumption",
+          "note": "Championship confirmed; three wins inferred, individual games unknown"
+        },
+        {
+          "season": 2005,
+          "wins": 0,
+          "losses": 1,
+          "source": "playoffs_alltime_sheet"
+        },
+        {
+          "season": 2008,
+          "wins": 0,
+          "losses": 1,
+          "source": "playoffs_alltime_sheet"
+        },
+        {
+          "season": 2012,
+          "wins": 0,
+          "losses": 1,
+          "source": "playoffs_alltime_sheet"
+        },
+        {
+          "season": 2018,
+          "wins": 1,
+          "losses": 1,
+          "source": "playoffs_alltime_sheet"
+        },
+        {
+          "season": 2019,
+          "wins": 0,
+          "losses": 1,
+          "source": "playoffs_alltime_sheet"
+        },
+        {
+          "season": 2020,
+          "wins": 0,
+          "losses": 1,
+          "source": "playoffs_alltime_sheet"
+        },
+        {
+          "season": 2021,
+          "wins": 0,
+          "losses": 1,
+          "source": "playoffs_alltime_sheet"
+        },
+        {
+          "season": 2022,
+          "wins": 1,
+          "losses": 1,
+          "source": "playoffs_alltime_sheet"
+        },
+        {
+          "season": 2023,
+          "wins": 0,
+          "losses": 1,
+          "source": "playoffs_alltime_sheet"
+        },
+        {
+          "season": 2024,
+          "wins": 0,
+          "losses": 1,
+          "source": "playoffs_alltime_sheet"
+        },
+        {
+          "season": 2025,
+          "wins": 1,
+          "losses": 1,
+          "source": "playoffs_alltime_sheet"
+        }
+      ]
+    },
+    {
+      "manager": "Kurtzy's Kickers (Kendall K)",
+      "seasons": [
+        {
+          "season": 2005,
+          "wins": 2,
+          "losses": 0,
+          "source": "playoffs_alltime_sheet"
+        },
+        {
+          "season": 2006,
+          "wins": 1,
+          "losses": 1,
+          "source": "playoffs_alltime_sheet"
+        },
+        {
+          "season": 2009,
+          "wins": 1,
+          "losses": 1,
+          "source": "playoffs_alltime_sheet"
+        }
+      ]
+    },
+    {
+      "manager": "Gridiron Warriors (Shawn E)",
+      "seasons": [
+        {
+          "season": 2008,
+          "wins": 2,
+          "losses": 0,
+          "source": "playoffs_alltime_sheet"
+        }
+      ]
+    },
+    {
+      "manager": "Backfield Bandits (Mike M)",
+      "seasons": [
+        {
+          "season": 2005,
+          "wins": 2,
+          "losses": 1,
+          "source": "playoffs_alltime_sheet"
+        },
+        {
+          "season": 2007,
+          "wins": 1,
+          "losses": 1,
+          "source": "playoffs_alltime_sheet"
+        },
+        {
+          "season": 2008,
+          "wins": 2,
+          "losses": 1,
+          "source": "playoffs_alltime_sheet"
+        }
+      ]
+    },
+    {
+      "manager": "Wackers (Thatcher B)",
+      "seasons": [
+        {
+          "season": 2006,
+          "wins": 0,
+          "losses": 1,
+          "source": "playoffs_alltime_sheet"
+        },
+        {
+          "season": 2007,
+          "wins": 0,
+          "losses": 1,
+          "source": "playoffs_alltime_sheet"
+        },
+        {
+          "season": 2010,
+          "wins": 1,
+          "losses": 1,
+          "source": "playoffs_alltime_sheet"
+        },
+        {
+          "season": 2013,
+          "wins": 1,
+          "losses": 1,
+          "source": "playoffs_alltime_sheet"
+        },
+        {
+          "season": 2016,
+          "wins": 0,
+          "losses": 1,
+          "source": "playoffs_alltime_sheet"
+        },
+        {
+          "season": 2020,
+          "wins": 1,
+          "losses": 1,
+          "source": "playoffs_alltime_sheet"
+        },
+        {
+          "season": 2021,
+          "wins": 1,
+          "losses": 1,
+          "source": "playoffs_alltime_sheet"
+        }
+      ]
+    },
+    {
+      "manager": "Ramblers (Dwayne L)",
+      "seasons": [
+        {
+          "season": 2005,
+          "wins": 0,
+          "losses": 1,
+          "source": "playoffs_alltime_sheet"
+        },
+        {
+          "season": 2008,
+          "wins": 0,
+          "losses": 1,
+          "source": "playoffs_alltime_sheet"
+        },
+        {
+          "season": 2010,
+          "wins": 0,
+          "losses": 1,
+          "source": "playoffs_alltime_sheet"
+        },
+        {
+          "season": 2011,
+          "wins": 1,
+          "losses": 1,
+          "source": "playoffs_alltime_sheet"
+        },
+        {
+          "season": 2014,
+          "wins": 2,
+          "losses": 1,
+          "source": "playoffs_alltime_sheet"
+        },
+        {
+          "season": 2015,
+          "wins": 1,
+          "losses": 1,
+          "source": "playoffs_alltime_sheet"
+        },
+        {
+          "season": 2020,
+          "wins": 0,
+          "losses": 1,
+          "source": "playoffs_alltime_sheet"
+        },
+        {
+          "season": 2021,
+          "wins": 0,
+          "losses": 1,
+          "source": "playoffs_alltime_sheet"
+        },
+        {
+          "season": 2022,
+          "wins": 0,
+          "losses": 1,
+          "source": "playoffs_alltime_sheet"
+        },
+        {
+          "season": 2024,
+          "wins": 1,
+          "losses": 1,
+          "source": "playoffs_alltime_sheet"
+        }
+      ]
+    },
+    {
+      "manager": "Angry Mennos (Seth B)",
+      "seasons": [
+        {
+          "season": 2011,
+          "wins": 0,
+          "losses": 1,
+          "source": "playoffs_alltime_sheet"
+        },
+        {
+          "season": 2012,
+          "wins": 1,
+          "losses": 1,
+          "source": "playoffs_alltime_sheet"
+        },
+        {
+          "season": 2015,
+          "wins": 0,
+          "losses": 1,
+          "source": "playoffs_alltime_sheet"
+        },
+        {
+          "season": 2016,
+          "wins": 1,
+          "losses": 1,
+          "source": "playoffs_alltime_sheet"
+        },
+        {
+          "season": 2017,
+          "wins": 1,
+          "losses": 1,
+          "source": "playoffs_alltime_sheet"
+        },
+        {
+          "season": 2019,
+          "wins": 1,
+          "losses": 1,
+          "source": "playoffs_alltime_sheet"
+        },
+        {
+          "season": 2022,
+          "wins": 0,
+          "losses": 1,
+          "source": "playoffs_alltime_sheet"
+        },
+        {
+          "season": 2025,
+          "wins": 0,
+          "losses": 1,
+          "source": "playoffs_alltime_sheet"
+        }
+      ]
+    },
+    {
+      "manager": "Rumspringas (Roger M)",
+      "seasons": [
+        {
+          "season": 2013,
+          "wins": 0,
+          "losses": 1,
+          "source": "playoffs_alltime_sheet"
+        },
+        {
+          "season": 2014,
+          "wins": 0,
+          "losses": 1,
+          "source": "playoffs_alltime_sheet"
+        },
+        {
+          "season": 2016,
+          "wins": 0,
+          "losses": 1,
+          "source": "playoffs_alltime_sheet"
+        },
+        {
+          "season": 2018,
+          "wins": 1,
+          "losses": 1,
+          "source": "playoffs_alltime_sheet"
+        },
+        {
+          "season": 2023,
+          "wins": 0,
+          "losses": 1,
+          "source": "playoffs_alltime_sheet"
+        }
+      ]
+    },
+    {
+      "manager": "The Machine (Rob D)",
+      "seasons": [
+        {
+          "season": 2010,
+          "wins": 0,
+          "losses": 1,
+          "source": "playoffs_alltime_sheet"
+        }
+      ]
+    }
+  ]
+}
