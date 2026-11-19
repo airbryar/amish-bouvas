@@ -146,7 +146,7 @@ Each story has:
   ("Monday Night Watch", "Week 10 Recap", "Median Watch", "Trade Desk", "Playoff Race")
 - **headline**: 10 to 90 characters, newspaper style, in normal case
 - **dek**: one sentence under the headline, 170 characters or fewer
-- **body**: 3 to 8 paragraphs, 250 to 520 words in total, plain text (no markdown or HTML)
+- **body**: 2 to 4 short paragraphs, typically 60 to 110 words total. Minor stories can be 25 to 50 words; extraordinary stories can reach 150 words. Plain text only (no markdown or HTML).
 
 ## Steps
 
