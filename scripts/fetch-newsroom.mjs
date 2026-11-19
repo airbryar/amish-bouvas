@@ -626,6 +626,7 @@ const nextWeek = a.schedule
 const tradeDeadline = (a.settings.tradeSettings || {}).deadlineDate;
 
 const out = {
+  managerFacts: managerFacts.managers,
   fetchedAt: new Date().toISOString(),
   notes: [
     "Each week a team plays two games: its head-to-head matchup, plus a game against the league median (the top 6 scores of the week win it). 'record' combines both; 'h2h' and 'vsMedian' split them.",
