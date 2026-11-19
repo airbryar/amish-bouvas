@@ -523,6 +523,15 @@ for (const entry of manualPlayoffs?.managers || []) {
       .reduce((sum, s) => sum + s.wins, 0)
   };
 }
+// Match historical playoff records to current managers by name.
+const playoffStatsByName = {};
+
+for (const [id, stats] of Object.entries(playoffStats)) {
+  const managerName = names[id];
+  if (managerName) {
+    playoffStatsByName[managerName] = stats;
+  }
+}
 const allTimeCurrent = teams.map((t) => {
   const at = allTime[t.managerId] || { seasons: 0, titles: 0, runnerUps: 0, playoffs: 0, w: 0, l: 0, t: 0, pf: 0 };
   return {
