@@ -107,6 +107,13 @@ Before submitting any edition, ask:
 - Use **only** facts from `data/newsroom.json` (fresh league data from ESPN). Don't invent
   quotes, injuries, real-world NFL news or anything not in the data.
 - Read its `notes` first: they explain the median game, records and fields.
+- Read `managerFacts` in `data/newsroom.json` for personal background,
+  relationships, occupations, hobbies, and running jokes about managers.
+  Use these details occasionally to make stories more personal and funny.
+  Connect them creatively to actual fantasy football events, but don't
+  force a personal fact into every article or repeat the same joke too often.
+  Never invent personal facts. Treat dated facts as specific to their year.
+  Keep jokes about injuries lighthearted and avoid sensitive personal topics.
 - Before making any historical claim, verify it against the complete
   league history and career statistics in `data/newsroom.json`.
 - Use `history.allTimeCurrentManagers` for historical playoff appearances,
