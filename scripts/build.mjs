@@ -57,6 +57,9 @@ if (history) {
     : { champions: [] };
 
   history.manualChampions = manual.champions || [];
+  for (const [id, name] of Object.entries(manual.managerNames || {})) {
+  history.managers[id] = name;
+}
 }
 
 // Trades come from scripts/fetch-trades.mjs; an empty list just shows "No trades yet".
