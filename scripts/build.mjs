@@ -50,6 +50,15 @@ const logos = JSON.parse(read("data/logos.json"));
 const brand = fs.existsSync("data/brand.json") ? JSON.parse(read("data/brand.json")) : { custom: false, iconVersion: "1" };
 // Past seasons for the Record Book, from scripts/fetch-history.mjs. Without it, no Record Book.
 const history = fs.existsSync("data/history.json") ? JSON.parse(read("data/history.json")) : null;
+
+if (history) {
+  const manual = fs.existsSync("data/manual-champions.json")
+    ? JSON.parse(read("data/manual-champions.json"))
+    : { champions: [] };
+
+  history.manualChampions = manual.champions || [];
+}
+
 // Trades come from scripts/fetch-trades.mjs; an empty list just shows "No trades yet".
 const trades = fs.existsSync("data/trades.json") ? JSON.parse(read("data/trades.json")) : { through: null, deadline: null, trades: [] };
 addFaab(trades, league); // FAAB amounts entered by hand (tradeFaab in data/league.json)
