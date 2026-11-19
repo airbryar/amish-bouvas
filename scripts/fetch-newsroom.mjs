@@ -487,6 +487,42 @@ const rivalry = (ma, mb) => {
   const wa = ma === x ? wx : wy, wb = ma === x ? wy : wx;
   return `${(byManager[ma] || {}).manager || "?"} ${wa}-${wb}${ties ? "-" + ties : ""} vs ${(byManager[mb] || {}).manager || "?"}`;
 };
+// Use commissioner-maintained playoff records for career playoff stats.
+const playoffIds = {
+  "Randy F": "m3", "Bryan A": "m4", "Scott S": "m7",
+  "Doug S": "m8", "Chad F": "m5", "Josh H": "m13",
+  "Burnie S": "m9", "Todd S": "m12", "Brandon S": "m11",
+  "Kendall K": "m15", "Shawn E": "m18",
+  "Thatcher B": "m10", "Dwayne L": "m1",
+  "Seth B": "m6", "Roger M": "m2"
+};
+
+const playoffStats = {};
+
+for (const entry of manualPlayoffs?.managers || []) {
+  const match = entry.manager.match(/\(([^)]+)\)$/);
+  const id = match && playoffIds[match[1]];
+  if (!id) continue;
+
+  const seasons = entry.seasons.filter(
+    (s) => s.season < SEASON && s.wins + s.losses > 0
+  );
+
+  const wins = seasons.reduce((sum, s) => sum + s.wins, 0);
+  const losses = seasons.reduce((sum, s) => sum + s.losses, 0);
+
+  playoffStats[id] = {
+    appearances: seasons.length,
+    wins,
+    losses,
+    winPercentage: wins + losses
+      ? Number((wins / (wins + losses)).toFixed(3))
+      : null,
+    assumed2004Wins: seasons
+      .filter((s) => s.season === 2004)
+      .reduce((sum, s) => sum + s.wins, 0)
+  };
+}
 const allTimeCurrent = teams.map((t) => {
   const at = allTime[t.managerId] || { seasons: 0, titles: 0, runnerUps: 0, playoffs: 0, w: 0, l: 0, t: 0, pf: 0 };
   return {
