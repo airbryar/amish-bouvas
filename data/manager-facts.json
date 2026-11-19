@@ -1,0 +1,47 @@
+
+{
+  "managers": {
+    "Bryan": {
+      "facts": []
+    },
+    "Brandon": {
+      "facts": [
+        "Brandon and Burnie are brothers."
+      ]
+    },
+    "Burnie": {
+      "facts": [
+        "Burnie and Brandon are brothers."
+      ]
+    },
+    "Scott": {
+      "facts": [
+        "Scott broke his wrist in 2026."
+      ]
+    },
+    "Chad": {
+      "facts": []
+    },
+    "Randy": {
+      "facts": []
+    },
+    "Roger": {
+      "facts": []
+    },
+    "Doug": {
+      "facts": []
+    },
+    "Seth": {
+      "facts": []
+    },
+    "Thatcher": {
+      "facts": []
+    },
+    "Todd": {
+      "facts": []
+    },
+    "Dwayne": {
+      "facts": []
+    }
+  }
+}
