@@ -1,6 +1,51 @@
 {
   "editions": [
     {
+      "id": "2026-11-21",
+      "date": "2026-11-21",
+      "label": "Saturday Edition",
+      "week": 11,
+      "publishedAt": "2026-11-21T10:33:27.295Z",
+      "stories": [
+        {
+          "kicker": "Game of the Week",
+          "headline": "C.J. Stroud did the group project and Chad still might fail",
+          "dek": "Stroud put up 27.5, but the 9-11 Fishsticks are still projected to lose to the 9-11 Bike slashers.",
+          "body": [
+            "C.J. Stroud handed Chad 27.5 points and an early lead. The projection still has the Fishsticks losing 115.4 to 103.1. Imagine doing the whole group project yourself and watching Chad eat the poster board on presentation day.",
+            "Jonathan Taylor has 6.7 points so far for Brandon. That's a lovely little contribution if you're buying a sandwich and the cashier asks whether you'd like to round up. David Montgomery put up 17.4. Brandon, if Dak and Pickens rescue this thing, Montgomery gets to sit in the front on the drive home. Taylor can hold the leftovers upright on his lap.",
+            "Chad's lineup still has Germie Bernard, projected for 3.2. That's the amount of points you find between the couch cushions when you go looking for the remote. Unfortunately, the Fishsticks need the remote. The projection has them 14.1 below the median, and the only button Chad can reach from here is the one that makes the same score reload.",
+            "Chad's Wi-Fi made the Phillies buffer at the draft. If his matchup page freezes on the current score Sunday, somebody needs to get over there and unplug the router before he starts taking screenshots for the playoff committee. Brandon, if you do pass him, let him keep the screenshot. He can frame it next to the participation ribbon the printer is still buffering.",
+            "Both teams are a win behind sixth-place Thatcher. Brandon still has Dak Prescott and George Pickens to play. Chad still has Amon-Ra St. Brown, who should probably bring a second poster board and keep it somewhere Chad can't reach."
+          ]
+        },
+        {
+          "kicker": "Median Watch",
+          "headline": "Doug would like to apply his golf handicap to the median",
+          "dek": "The Cow Tippers are projected to beat Burnie and still finish 0.4 points below the median.",
+          "body": [
+            "Doug is 8-12 and projected to beat Burnie, which is lovely until you see his 116.8 sitting just under the 117.2 median. This is exactly when Doug would set down his golf bag and explain for twenty minutes why the computer owes him strokes.",
+            "Burnie still has Bo Nix and J.K. Dobbins in the same late-afternoon Denver game. Doug will have to watch them take turns touching his lead like kids who have been explicitly told to keep their hands off the cake. Then he'll get to the night game and discover that the cake is also competing against five other cakes for a playoff-relevant win.",
+            "The Cow Tippers have a 3-7 head-to-head record and a 5-5 median record. Doug has basically been getting more Christmas cards from strangers than from the people he actually knows. Now the app thinks he'll beat the guy he's playing and lose to the people minding their own business. Doug, this is why everyone asks who's coming before they agree to golf with you.",
+            "Burnie enters at 11-9. If his team gets both losses the projection suggests, somebody at his next wedding should request a moment of silence for the Ballers' weekend. Give it the full treatment. Dim the lights, have everyone put their phones away, then announce that Doug has asked for extra strokes on the dance floor.",
+            "Brock Purdy, Justin Jefferson and George Kittle all play Sunday night. Doug gets to spend the evening refreshing three players for four tenths of a point. Burnie DJs weddings, so if that lead evaporates, at least somebody here knows how to fade out a song while Doug is still dancing."
+          ]
+        },
+        {
+          "kicker": "Week 11 Preview",
+          "headline": "Bryan puts Randy's lead under the pretzel warmer",
+          "dek": "Randy leads 18.6 to 5.7 so far, but Bryan is projected to win and enters the week one game ahead in the standings.",
+          "body": [
+            "Randy has 18.6 points on the board to Bryan's 5.7, and the forecast still favors Bryan, 118.8 to 113.2. Bryan owns Auntie Anne's franchises, so he knows how to display an unappetizing number until somebody pays full price for it.",
+            "Nico Collins already supplied 15.3 of Randy's points. Tank Dell supplied all 5.7 of Bryan's. If these scores were samples at the mall, Randy would hand you a pretzel and Bryan would hand you the toothpick it came on. Then Bryan would point to the projection and ask how many toothpicks you'd like to order for your next corporate event.",
+            "Bryan enters at 13-7 and Randy at 12-8. Bryan is also 8-2 against the median, which explains why he can look so pleased with himself while sporting a 5-5 head-to-head record. You can beat him in the matchup and he'll still find a way to validate his parking. Imagine being Randy and having to beat a guy who brought a second receipt.",
+            "Randy still has Rashee Rice alongside Mahomes. Every Mahomes touchdown to Rice would give Bryan the pleasant experience of paying for the same pretzel twice. Bryan is currently projected above the median and Randy below, so there's room for the scoreboard to make both of them miserable in different ways. If the app asks Bryan to tip at checkout, we'd like to watch him choose a percentage.",
+            "Patrick Mahomes still has to play for Randy. If he cooks, Bryan can spend Sunday twisting the standings into a shape he likes better. At least he'll already have the uniform."
+          ]
+        }
+      ]
+    },
+    {
       "id": "2026-11-19",
       "date": "2026-11-19",
       "label": "Thursday Edition",
